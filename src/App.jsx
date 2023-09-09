@@ -1,13 +1,13 @@
 import { useState } from 'react'
+import { FaFacebook } from 'react-icons/fa';
+import NavigationBar from './components/NavigationBar';
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <p className=' text-blue-500'>Hello! this is my portfolio</p> 
-    </>
+    <div className='w-full lg:w-[73%] xlg:w-[50%] m-auto'>
+     <NavigationBar/>
+    </div>
   )
 }
 
