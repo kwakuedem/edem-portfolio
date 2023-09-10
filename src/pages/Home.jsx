@@ -348,6 +348,16 @@ function Home() {
   )
 }
 
+function Footer() {
+    return (
+      <div className=''>
+          <div className="py-10 bg-yellow-100">
+                <h2 className='px-10'>Footer</h2>
+            </div>
+      </div>
+    )
+}
+  
 
 function Main() {
     return (
@@ -360,6 +370,7 @@ function Main() {
         <Service/>
         <Portfolio/>
         <Contact/>
+        <Footer/>
       </>
     )
   }
