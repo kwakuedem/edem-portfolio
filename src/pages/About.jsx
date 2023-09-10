@@ -1,6 +1,6 @@
 import React from 'react'
 import Picture from '../assets/Picture.png'
-import { FaDownload,FaFileDownload} from 'react-icons/fa';
+import {FaFileDownload} from 'react-icons/fa';
 function About() {
   return (
     <div className='min-h-screen pt-10'> 

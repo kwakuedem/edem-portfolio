@@ -3,6 +3,7 @@ import { useState } from 'react'
 import NavigationBar from './components/NavigationBar';
 import Home from './pages/Home';
 import About from './pages/About';
+import Skill from './pages/Skill';
 import './App.css'
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
      <NavigationBar/>
      <Home/>
      <About/>
+     <Skill/>
     </div>
 
   )
