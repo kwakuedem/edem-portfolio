@@ -1,16 +1,277 @@
 import React from 'react'
 import Profile from '../assets/Profile.png' 
-import { FaFacebook,FaTwitter,FaLinkedin,FaGithub,FaArrowRight } from 'react-icons/fa';
+import Picture from '../assets/Picture.png'
+import {FaFileDownload} from 'react-icons/fa';
+import AnchorLink from "react-anchor-link-smooth-scroll";
+import { FaFacebook,FaTwitter,FaLinkedin,
+    FaGithub,FaArrowRight,FaCode,FaSortDown,FaSchool, FaHardHat,
+    FaSortUp,FaNetworkWired,FaLock } 
+    from 'react-icons/fa';
+import { useState } from 'react'
+import {} from 'react-icons/fa';
+
+
+
+function NavigationBar() {
+    return (
+      <div className='bg-white fixed top-0 lg:w-[70%] xlg:w-[50%] m-auto'>
+          <div className="nav-wrapper py-5 px-4 flex flex-col lg:flex-row justify-between nav">
+              <div className="brand ">
+                  <span className='font-bold cursor-pointer'>EdTech</span>
+              </div>
+              <div className="nav-menus">
+                  <ul className='flex flex-col lg:flex-row gap-5 '>
+                      <li><AnchorLink href="#home" className='font-semibold'>Home</AnchorLink></li>
+                      <li><AnchorLink href="#skill" className='font-semibold'>Skill</AnchorLink></li>
+                      <li><AnchorLink href="#services" className='font-semibold'>Services</AnchorLink></li>
+                      <li><AnchorLink href="#portfolio" className='font-semibold'>Portfolio</AnchorLink></li>
+                      <li><AnchorLink href="#contact" className='font-semibold'>Contact Me</AnchorLink></li>
+                  </ul>
+              </div>
+          </div>
+         
+      </div>
+    )
+  }
+
+  function About() {
+    return (
+      <div className='min-h-screen pt-20' id='about'> 
+          <div className="heading flex flex-col justify-center items-center">
+              <span className='text-3xl font-bold'>About Me</span>
+              <span className='text-lg font-semibold text-gray-500'>My Introduction</span>
+          </div>
+  
+          <div className="content flex flex-row  pt-20 px-10">
+              <div className="image-card w-[350px] flex-1">
+                  <img src={Picture} className='w-[350px] rounded-md'/>
+              </div>
+  
+              <div className="text-section flex-1 justify-center">
+                  <div>
+                      <p>Web developer, with extensive knowledge and years of experience, 
+                          working in web technologies and Ui / Ux design, delivering quality work
+                          working in web technologies and Ui / Ux design, delivering quality work
+                      </p>
+                  </div>
+  
+                  <div className='flex flex-row space-x-16 pt-10'>
+                      <div className='flex flex-col justify-center items-center'>
+                          <span className='text-2xl font-bold'>05+</span>
+                          <span>Years</span>
+                          <span>experience</span>
+                      </div>
+                      <div className='flex flex-col justify-center items-center'>
+                          <span className='text-2xl font-bold'>10+</span>
+                          <span>Completed</span>
+                          <span>projects</span>
+                      </div>
+                      <div className='flex flex-col justify-center items-center'>
+                          <span className='text-2xl font-bold'>02+</span>
+                          <span>Companies</span>
+                          <span>worked</span>
+                      </div>
+                  </div>
+  
+                  <div className='bg-yellow-600 py-4 px-5 mt-10 rounded-lg w-[50%] flex flex-row justify-center space-x-3'>
+                      <button className='font-bold'>Download CV</button>
+                      <FaFileDownload className='text-lg font-bold'/>
+                  </div>
+                  
+              </div>
+          </div>
+      </div>
+    )
+  }
+
+  function Skill() {
+    const [showSkill, setshowSkills]=useState(false)
+
+    function onShowSkills(){
+        setshowSkills(!showSkill);
+    }
+
+  return (
+    <div className='pt-20 pb-20' id='skill'>
+        <div className="heading flex flex-col justify-center items-center">
+            <span className='text-3xl font-bold'>Skills</span>
+            <span className='text-lg font-semibold text-gray-500'>My technical level</span>
+        </div>
+
+        <div className='flex flex-row justify-around pt-10'>
+        <div className="skill-section space-x-10">
+            <div className="software-dev  ">
+                <FaCode className='text-xl text-yellow-600 mb-3'/>
+                <button  onClick={()=>onShowSkills()} className='flex justify-center items-center space-x-2'>
+                {
+                    showSkill ?
+                    <FaSortUp className='text-xl text-yellow-600'/>
+                    : 
+                    <FaSortDown className='text-xl text-yellow-600'/>
+
+                }
+                <h3 className='text-2xl font-semibold text-gray-600'>Software Developer</h3>
+                </button>
+            </div>
+
+           { showSkill && 
+           <>
+            <div className='ml-5'>
+                <SkillSet heading={"Frontend Developer"}>
+                    <ul>
+                        
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                        <li>React</li>
+                        <li>Tailwind Css</li>
+                        <li>Rust.lang</li>
+                    </ul>
+                </SkillSet>
+            </div>
+
+            <div className='ml-5'>
+            <SkillSet heading={"Backend Developer"}>
+                <ul>
+                    
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>React</li>
+                    <li>Tailwind Css</li>
+                    <li>Rust.lang</li>
+                </ul>
+            </SkillSet>
+            </div>
+            </>
+            }
+
+        </div>
+
+        <div className="skill-section space-x-10">
+            <div className="software-dev  ">
+                <FaNetworkWired className='text-xl text-yellow-600 mb-3'/>
+                <button  onClick={()=>onShowSkills()} className='flex justify-center items-center space-x-2'>
+                {
+                    showSkill ?
+                    <FaSortUp className='text-xl text-yellow-600'/>
+                    : 
+                    <FaSortDown className='text-xl text-yellow-600'/>
+
+                }
+                <h3 className='text-2xl font-semibold text-gray-600'>Network Engineer</h3>
+                </button>
+            </div>
+
+           { showSkill && 
+           <>
+            <div className='ml-5'>
+                <SkillSet heading={"Office Networking"}>
+                    <ul>
+                        
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                        <li>React</li>
+                        <li>Tailwind Css</li>
+                        <li>Rust.lang</li>
+                    </ul>
+                </SkillSet>
+            </div>
+            </>
+            }
+
+        </div>
+
+        <div className="skill-section space-x-10">
+            <div className="software-dev  ">
+                <FaLock className='text-xl text-yellow-600 mb-3'/>
+                <button  onClick={()=>onShowSkills()} className='flex justify-center items-center space-x-2'>
+                {
+                    showSkill ?
+                    <FaSortUp className='text-xl text-yellow-600'/>
+                    : 
+                    <FaSortDown className='text-xl text-yellow-600'/>
+
+                }
+                <h3 className='text-2xl font-semibold text-gray-600'>Cyber Security Analist</h3>
+                </button>
+            </div>
+
+           { showSkill && 
+           <>
+            <div className='ml-5'>
+                <SkillSet heading={"SIEM Tool"}>
+                    <ul>
+                        
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                        <li>React</li>
+                        <li>Tailwind Css</li>
+                        <li>Rust.lang</li>
+                    </ul>
+                </SkillSet>
+            </div>
+            </>
+            }
+
+        </div>
+        </div>
+       
+    </div>
+  )
+}
+
+
+
+function SkillSet({heading, children}) {
+    const [showSkills, setShowSkills] = useState(false)
+    return(
+        <>
+        
+        <button onClick={()=>setShowSkills(!showSkills)} className="software-devision">
+        <span>{}</span>
+        <div className="flex space-x-2">
+        <FaSortDown className='text-xl text-yellow-600'/>
+        <span className='text-lg  text-gray-600'>{heading}</span>
+        </div>
+        </button>
+       {
+        showSkills && <div className='prose list-outside'>
+        {children}
+        </div>
+       }
+        </>
+
+    )
+}
+
+function Qualification() {
+  return (
+    <div className='min-h-screen ' id='skill'>
+        <div className="heading flex flex-col justify-center items-center">
+              <span className='text-3xl font-bold'>Qualification</span>
+              <span className='text-lg font-semibold text-gray-500'>My Personal Journey</span>
+
+              <FaHardHat/>
+          </div>
+    </div>
+  )
+}
+
 
 function Home() {
   return (
-    <div className=' min-h-screen pt-32 max-xl:pt-52'>
+    <>
+    <NavigationBar/>
+    <div className=' min-h-screen pt-32 max-xl:pt-52 ' id='home'>
         <div className='flex flex-row gap-7 px-3'> 
             <div className="social-link-wrapper px-3 flex flex-col gap-8 items-center mt-16">
-                <a href=""><FaFacebook className='text-2xl text-yellow-600'/></a>
-                <a href=""><FaGithub className='text-2xl text-yellow-600'/></a>
-                <a href=""><FaTwitter className='text-2xl text-yellow-600'/></a>
-                <a href=""><FaLinkedin className='text-2xl text-yellow-600'/></a>
+                <a href="" className='hover:translate-y-2'><FaFacebook className='text-2xl text-yellow-600'/></a>
+                <a href="" className='hover:translate-y-2'><FaGithub className='text-2xl text-yellow-600'/></a>
+                <a href="" className='hover:translate-y-2'><FaTwitter className='text-2xl text-yellow-600'/></a>
+                <a href="" className='hover:translate-y-2'><FaLinkedin className='text-2xl text-yellow-600'/></a>
             </div>
 
             <div className='flex flex-col'>
@@ -38,14 +299,18 @@ function Home() {
                         <img src={Profile} alt="" className='lg:w-[400px] xl:w-[350px]' />
                     </div>
                 </div>
-                <div className='mt-10 xl:mt-10 max-xl:mt-20  w-[20%] gap-2 bg-yellow-600 flex justify-center items-center rounded-md'>
-                    <button className='bg-yellow-600 py-4 text-lg font-bold '>About Me</button><FaArrowRight/>
-                </div>
+                <AnchorLink href='#about' className='mt-10 xl:mt-10 max-xl:mt-20  w-[20%] gap-2 bg-yellow-600 flex justify-center items-center rounded-md ring-2 ring-blue-800 hover:-translate-y-3 hover:text-yellow-600 hover:bg-white hover:ring-yellow-600'>
+                    <button className='py-4 text-lg font-bold '>About Me</button><FaArrowRight/>
+                </AnchorLink>
             </div>
            
             
         </div>
     </div>
+    <About/>
+    <Skill/>
+    <Qualification/>
+    </>
   )
 }
 
