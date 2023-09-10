@@ -6,7 +6,7 @@ import './App.css'
 
 function App() {
   return (
-    <div className='w-full lg:w-[73%] xlg:w-[50%] m-auto'>
+    <div className='w-full lg:w-[70%] xlg:w-[50%] m-auto '>
      <NavigationBar/>
      <Home/>
     </div>
