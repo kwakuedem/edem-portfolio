@@ -8,10 +8,10 @@ import { FaFacebook,FaTwitter,FaLinkedin,
     FaSortUp,FaNetworkWired,FaLock } 
     from 'react-icons/fa';
 import { useState } from 'react'
-import {} from 'react-icons/fa';
+import Resume from '../assets/resume.pdf'
 
 
-
+//Navigation bar 
 function NavigationBar() {
     return (
       <div className='bg-white fixed top-0 lg:w-[70%] xlg:w-[50%] m-auto'>
@@ -34,21 +34,22 @@ function NavigationBar() {
     )
   }
 
-  function About() {
+//About page
+function About() {
     return (
       <div className='min-h-screen pt-20' id='about'> 
-          <div className="heading flex flex-col justify-center items-center">
+          <div className="heading flex flex-col justify-center items-center hover:translate-x-2">
               <span className='text-3xl font-bold'>About Me</span>
               <span className='text-lg font-semibold text-gray-500'>My Introduction</span>
           </div>
   
           <div className="content flex flex-row  pt-20 px-10">
-              <div className="image-card w-[350px] flex-1">
+              <div className="image-card w-[350px] flex-1 hover:scale-110">
                   <img src={Picture} className='w-[350px] rounded-md'/>
               </div>
   
               <div className="text-section flex-1 justify-center">
-                  <div>
+                  <div className='hover:scale-105 cursor-pointer'>
                       <p>Web developer, with extensive knowledge and years of experience, 
                           working in web technologies and Ui / Ux design, delivering quality work
                           working in web technologies and Ui / Ux design, delivering quality work
@@ -56,27 +57,27 @@ function NavigationBar() {
                   </div>
   
                   <div className='flex flex-row space-x-16 pt-10'>
-                      <div className='flex flex-col justify-center items-center'>
+                      <div className='flex flex-col justify-center items-center hover:translate-x-2 cursor-pointer'>
                           <span className='text-2xl font-bold'>05+</span>
                           <span>Years</span>
                           <span>experience</span>
                       </div>
-                      <div className='flex flex-col justify-center items-center'>
+                      <div className='flex flex-col justify-center items-center hover:translate-x-2 cursor-pointer'>
                           <span className='text-2xl font-bold'>10+</span>
                           <span>Completed</span>
                           <span>projects</span>
                       </div>
-                      <div className='flex flex-col justify-center items-center'>
+                      <div className='flex flex-col justify-center items-center hover:translate-x-2 cursor-pointer'>
                           <span className='text-2xl font-bold'>02+</span>
                           <span>Companies</span>
                           <span>worked</span>
                       </div>
                   </div>
   
-                  <div className='bg-yellow-600 py-4 px-5 mt-10 rounded-lg w-[50%] flex flex-row justify-center space-x-3'>
+                  <a href={Resume}><div className='bg-yellow-600 text-blue-800 py-4 px-5 mt-10 rounded-lg w-[50%] flex flex-row justify-center space-x-3 ring-2 ring-blue-800 hover:scale-105 hover:translate-x-1 hover:bg-white hover:text-yellow-600 hover:ring-2 hover:ring-yellow-600'>
                       <button className='font-bold'>Download CV</button>
                       <FaFileDownload className='text-lg font-bold'/>
-                  </div>
+                  </div></a>
                   
               </div>
           </div>
@@ -84,7 +85,8 @@ function NavigationBar() {
     )
   }
 
-  function Skill() {
+//Skills page
+function Skill() {
     const [showSkill, setshowSkills]=useState(false)
 
     function onShowSkills(){
@@ -93,7 +95,7 @@ function NavigationBar() {
 
   return (
     <div className='pt-20 pb-20' id='skill'>
-        <div className="heading flex flex-col justify-center items-center">
+        <div className="heading flex flex-col justify-center items-center hover:scale-105 hover:translate-x-2 cursor-pointer">
             <span className='text-3xl font-bold'>Skills</span>
             <span className='text-lg font-semibold text-gray-500'>My technical level</span>
         </div>
@@ -247,10 +249,11 @@ function SkillSet({heading, children}) {
     )
 }
 
+//Qualification page
 function Qualification() {
   return (
-    <div className='min-h-screen ' id='skill'>
-        <div className="heading flex flex-col justify-center items-center">
+    <div className='min-h-screen pt-10' id='skill'>
+        <div className="heading flex flex-col justify-center items-center hover:scale-105 cursor-pointer">
               <span className='text-3xl font-bold'>Qualification</span>
               <span className='text-lg font-semibold text-gray-500'>My Personal Journey</span>
 
@@ -260,11 +263,47 @@ function Qualification() {
   )
 }
 
+//Services page
+function Service() {
+    return (
+      <div className='min-h-screen pt-20' id='services'>
+          <div className="heading flex flex-col justify-center items-center hover:scale-105 cursor-pointer">
+                <span className='text-3xl font-bold'>Services</span>
+                <span className='text-lg font-semibold text-gray-500'>What I offer</span>
+            </div>
+      </div>
+    )
+}
 
+//Portfolio page
+function Portfolio() {
+    return (
+        <div className='min-h-screen pt-20' id='portfolio'>
+            <div className="heading flex flex-col justify-center items-center hover:scale-105 cursor-pointer">
+                <span className='text-3xl font-bold'>Portfolio</span>
+                <span className='text-lg font-semibold text-gray-500'>Most recent works</span>
+            </div>
+        </div>
+    )
+}
+
+//Contact page
+function Contact() {
+    return (
+      <div className='min-h-screen pt-20' id='contact'>
+          <div className="heading flex flex-col justify-center items-center hover:scale-105 cursor-pointer">
+                <span className='text-3xl font-bold'>Contact Me</span>
+                <span className='text-lg font-semibold text-gray-500'>Get in touch</span>
+            </div>
+      </div>
+    )
+}
+  
+//Home page
 function Home() {
   return (
     <>
-    <NavigationBar/>
+ 
     <div className=' min-h-screen pt-32 max-xl:pt-52 ' id='home'>
         <div className='flex flex-row gap-7 px-3'> 
             <div className="social-link-wrapper px-3 flex flex-col gap-8 items-center mt-16">
@@ -277,14 +316,14 @@ function Home() {
             <div className='flex flex-col'>
                 <div className="intro-text-wrapper flex flex-row ">
                     <div className='flex flex-col flex-1'>
-                        <div className="name flex flex-col pb-4">
+                        <div className="name flex flex-col pb-4 hover:scale-105 cursor-pointer">
                             <span className='text-3xl font-bold pb-4 leading-6 tracking-wide'>Hi, I am</span> 
                             <span  className='text-3xl font-bold pb-4 leading-6 tracking-wide'>Edem Kwaku</span> 
                             <span  className='text-3xl font-bold pb-4 leading-6 tracking-wide'>Avorley</span>
                         </div>
                     
-                        <span className='text-gray-500 text-lg font-semibold pb-3'>IT Professional</span>
-                        <span className='text-gray-500 text-lg'>
+                        <span className='text-gray-500 text-lg font-semibold pb-3 hover:scale-105 cursor-pointer'>IT Professional</span>
+                        <span className='text-gray-500 text-lg hover:scale-105 cursor-pointer'>
                             Lorem ipsum dolor sit amet consectetur 
                             adipisicing elit. Sequi perspiciatis accusamus
                             soluta iure <br/>quaerat numquam  placeat maxime neque
@@ -295,7 +334,7 @@ function Home() {
                         </span>
                     </div>
 
-                    <div className="profile-im pr-4 flex justify-center items-center flex-1">
+                    <div className="profile-im pr-4 flex justify-center items-center flex-1 hover:scale-110">
                         <img src={Profile} alt="" className='lg:w-[400px] xl:w-[350px]' />
                     </div>
                 </div>
@@ -303,15 +342,26 @@ function Home() {
                     <button className='py-4 text-lg font-bold '>About Me</button><FaArrowRight/>
                 </AnchorLink>
             </div>
-           
-            
         </div>
     </div>
-    <About/>
-    <Skill/>
-    <Qualification/>
     </>
   )
 }
 
-export default Home
+
+function Main() {
+    return (
+      <>
+        <NavigationBar/>
+        <Home/>
+        <About/>
+        <Skill/>
+        <Qualification/>
+        <Service/>
+        <Portfolio/>
+        <Contact/>
+      </>
+    )
+  }
+  
+  export default Main
