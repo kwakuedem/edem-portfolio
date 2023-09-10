@@ -38,7 +38,7 @@ function Home() {
                         <img src={Profile} alt="" className='lg:w-[400px] xl:w-[350px]' />
                     </div>
                 </div>
-                <div className='mt-10 xl:mt-10 max-xl:mt-20  w-56 gap-3 bg-yellow-600 flex justify-center items-center rounded-md'>
+                <div className='mt-10 xl:mt-10 max-xl:mt-20  w-[20%] gap-2 bg-yellow-600 flex justify-center items-center rounded-md'>
                     <button className='bg-yellow-600 py-4 text-lg font-bold '>About Me</button><FaArrowRight/>
                 </div>
             </div>
