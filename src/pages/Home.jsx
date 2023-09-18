@@ -195,7 +195,6 @@ function Skill() {
                     <li>JavaScript</li>
                     <li>React</li>
                     <li>Tailwind Css</li>
-                    <li>Rust.lang</li>
                   </ul>
                 </SkillSet>
               </div>
@@ -235,16 +234,14 @@ function Skill() {
 
           {showSkill && (
             <>
-              <div className="ml-5">
-                <SkillSet heading={"Office Networking"}>
-                  <ul>
-                    <li>Office Networking</li>
-                    <li>LAN</li>
-                    <li>Wireless Networking</li>
-                    <li>Switching</li>
-                    <li>Routing</li>
-                  </ul>
-                </SkillSet>
+              <div className="ml-5 prose list-outside">
+                <ul>
+                  <li>Office Networking</li>
+                  <li>LAN</li>
+                  <li>Wireless Networking</li>
+                  <li>Switching</li>
+                  <li>Routing</li>
+                </ul>
               </div>
             </>
           )}
@@ -270,16 +267,15 @@ function Skill() {
 
           {showSkill && (
             <>
-              <div className="ml-5">
-                <SkillSet heading={"SIEM Tool"}>
-                  <ul>
-                    <li>Python</li>
-                    <li>Detection and Responds</li>
-                    <li>Assets, Threats and Vulneralbility</li>
-                    <li>Manage Security Risks</li>
-                    <li>Linux and SQL</li>
-                  </ul>
-                </SkillSet>
+              <div className="ml-5 prose list-outside">
+                <ul>
+                  <li>SIEM Tool(Splunk Technology)</li>
+                  <li>Python</li>
+                  <li>Detection and Responds</li>
+                  <li>Assets, Threats and Vulneralbility</li>
+                  <li>Manage Security Risks</li>
+                  <li>Linux and SQL</li>
+                </ul>
               </div>
             </>
           )}
