@@ -605,7 +605,7 @@ function Home() {
           <div className="flex flex-col px-2 md:px-0">
             <div className="intro-text-wrapper flex flex-col md:flex-row">
               <div className="flex flex-col flex-1">
-                <div className="name flex flex-col pb-4 px-4 hover:scale-105 cursor-pointer">
+                <div className="name flex flex-col pb-4 hover:scale-105 cursor-pointer">
                   <span className="text-lg lg:text-3xl font-bold pb-4 leading-3 lg:leading-6 lg:tracking-wide">
                     Hi, I am
                   </span>
