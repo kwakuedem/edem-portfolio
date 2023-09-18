@@ -29,32 +29,49 @@ function NavigationBar() {
     <div className="bg-yellow-600 fixed z-10 w-full lg:top-0 lg:w-[70%] xlg:w-[50%] md:m-auto">
       <div className="nav-wrapper py-5 px-4 flex flex-col md:flex-row md:justify-between opacity-90 md:bg-white">
         <div className="brand pb-3 md:pb-0">
-          <span className="font-bold cursor-pointer text-blue-900 md:text-gray-900">EdTech</span>
+          <span className="font-bold cursor-pointer text-blue-900 md:text-gray-900">
+            EdTech
+          </span>
         </div>
         <div className="nav-menus">
           <ul className="flex  lg:flex-row gap-3 md:gap-5 ">
             <li>
-              <AnchorLink href="#home" className="font-semibold text-blue-900 md:text-gray-900">
+              <AnchorLink
+                href="#home"
+                className="font-semibold text-blue-900 md:text-gray-900"
+              >
                 Home
               </AnchorLink>
             </li>
             <li>
-              <AnchorLink href="#skill" className="font-semibold text-blue-900 md:text-gray-900">
+              <AnchorLink
+                href="#skill"
+                className="font-semibold text-blue-900 md:text-gray-900"
+              >
                 Skill
               </AnchorLink>
             </li>
             <li>
-              <AnchorLink href="#services" className="font-semibold text-blue-900 md:text-gray-900">
+              <AnchorLink
+                href="#services"
+                className="font-semibold text-blue-900 md:text-gray-900"
+              >
                 Services
               </AnchorLink>
             </li>
             <li>
-              <AnchorLink href="#portfolio" className="font-semibold text-blue-900 md:text-gray-900">
+              <AnchorLink
+                href="#portfolio"
+                className="font-semibold text-blue-900 md:text-gray-900"
+              >
                 Portfolio
               </AnchorLink>
             </li>
             <li>
-              <AnchorLink href="#contact" className="font-semibold text-blue-900 md:text-gray-900">
+              <AnchorLink
+                href="#contact"
+                className="font-semibold text-blue-900 md:text-gray-900"
+              >
                 Contact Me
               </AnchorLink>
             </li>
@@ -609,11 +626,14 @@ function Home() {
                   IT Professional
                 </span>
                 <span className="text-gray-500 text-lg hover:scale-105 cursor-pointer md:px-4">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
-                  perspiciatis accusamus soluta iure <br />
-                  quaerat numquam placeat maxime neque adipisicing elit. Sequi
-                  perspiciatis accusamus soluta <br />
-                  adipisicing elit. Sequi perspiciatis accusamus
+                  Attentive, focused and highly motivated IT professional
+                  seeking to utilize his skills for the enhancement of the next
+                  team he joins. Committed to driving continuous improvements
+                  for IT operations through identification of process
+                  enhancement opportunities. My goal is to be part of a
+                  challenging organization to utilize and enhance his knowledge
+                  and skills to gain professional experience whiles helping the
+                  organization to achieve its goals.
                   <br />
                 </span>
               </div>
