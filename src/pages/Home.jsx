@@ -26,7 +26,7 @@ import Resume from "../assets/resume.pdf";
 //Navigation bar
 function NavigationBar() {
   return (
-    <div className="bg-yellow-400 fixed z-10 w-full lg:top-0 lg:w-[70%] xlg:w-[50%] md:m-auto">
+    <div className="bg-yellow-600 opacity-90 md:opacity-0 fixed z-10 w-full lg:top-0 lg:w-[70%] xlg:w-[50%] md:m-auto">
       <div className="nav-wrapper py-5 px-4 flex flex-col md:flex-row md:justify-between opacity-90 md:bg-white">
         <div className="brand pb-3 md:pb-0">
           <span className="font-bold cursor-pointer">EdTech</span>
