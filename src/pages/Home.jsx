@@ -203,12 +203,11 @@ function Skill() {
               <div className="ml-5">
                 <SkillSet heading={"Backend Developer"}>
                   <ul>
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>JavaScript</li>
-                    <li>React</li>
-                    <li>Tailwind Css</li>
-                    <li>Rust.lang</li>
+                    <li>Python</li>
+                    <li>Php</li>
+                    <li>Rust</li>
+                    <li>Laravel</li>
+                    <li>Django</li>
                   </ul>
                 </SkillSet>
               </div>
@@ -239,12 +238,11 @@ function Skill() {
               <div className="ml-5">
                 <SkillSet heading={"Office Networking"}>
                   <ul>
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>JavaScript</li>
-                    <li>React</li>
-                    <li>Tailwind Css</li>
-                    <li>Rust.lang</li>
+                    <li>Office Networking</li>
+                    <li>LAN</li>
+                    <li>Wireless Networking</li>
+                    <li>Switching</li>
+                    <li>Routing</li>
                   </ul>
                 </SkillSet>
               </div>
@@ -275,12 +273,11 @@ function Skill() {
               <div className="ml-5">
                 <SkillSet heading={"SIEM Tool"}>
                   <ul>
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>JavaScript</li>
-                    <li>React</li>
-                    <li>Tailwind Css</li>
-                    <li>Rust.lang</li>
+                    <li>Python</li>
+                    <li>Detection and Responds</li>
+                    <li>Assets, Threats and Vulneralbility</li>
+                    <li>Manage Security Risks</li>
+                    <li>Linux and SQL</li>
                   </ul>
                 </SkillSet>
               </div>
