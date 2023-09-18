@@ -32,7 +32,7 @@ import Resume from "../assets/resume.pdf";
 function NavigationBar() {
   return (
     <div className="bg-yellow-600 fixed z-10 w-full lg:top-0 lg:w-[70%] xlg:w-[50%] md:m-auto">
-      <div className="nav-wrapper py-5 px-4 flex flex-col md:flex-row md:justify-between opacity-90 md:bg-white">
+      <div className="nav-wrapper py-5 px-4 flex flex-col md:flex-row md:justify-between md:bg-white">
         <div className="brand pb-3 md:pb-0">
           <span className="font-bold cursor-pointer text-blue-900 md:text-gray-900">
             EdTech
@@ -480,7 +480,7 @@ function Service() {
       </div>
 
       <div className="sevice-wrapper pt-20 px-10 grid md:grid-cols-2 gap-5 gap-y-5 lg:grid-cols-3">
-        <div className="software-wrapper flex flex-col gap-5 ring-1 ring-yellow-600 justify-bottom items-bottom py-10 px-3 rounded-md">
+        <div className="software-wrapper flex flex-col gap-5 ring-1 ring-yellow-600 shadow-lg shadow-blue-800 justify-bottom items-bottom py-10 px-3 rounded-md">
           <FaLaptopCode className="text-4xl mt-10  text-yellow-600" />
           <p className="p-y text-semibold text-lg text-gray-700">
             Software Development
@@ -491,7 +491,7 @@ function Service() {
           </div>
         </div>
 
-        <div className="network-wrapper flex flex-col gap-5 ring-1 ring-yellow-600 justify-bottom items-bottom py-10 px-3 rounded-md">
+        <div className="network-wrapper flex flex-col gap-5 ring-1 ring-yellow-600 shadow-lg shadow-blue-800 justify-bottom items-bottom py-10 px-3 rounded-md">
           <FaNetworkWired className="text-4xl mt-10  text-yellow-600" />
           <p className="p-y text-semibold text-lg text-gray-700">
             Computer Networking
@@ -502,7 +502,7 @@ function Service() {
           </div>
         </div>
 
-        <div className="hardware-wrapper flex flex-col gap-5 ring-1 ring-yellow-600 justify-bottom items-bottom py-10 px-3 rounded-md">
+        <div className="hardware-wrapper flex flex-col gap-5 ring-1 ring-yellow-600 shadow-lg shadow-blue-800 justify-bottom items-bottom py-10 px-3 rounded-md">
           <MdOutlineHardware className="text-4xl mt-10  text-yellow-600" />
           <p className="p-y text-semibold text-lg text-gray-700">
             Computer Hardware and Software
@@ -513,7 +513,7 @@ function Service() {
           </div>
         </div>
 
-        <div className="security-wrapper flex flex-col gap-5 ring-1 ring-yellow-600 justify-bottom items-bottom py-10 px-3 rounded-md">
+        <div className="security-wrapper flex flex-col gap-5 ring-1 ring-yellow-600 shadow-lg shadow-blue-800 justify-bottom items-bottom py-10 px-3 rounded-md">
           <MdOutlineSecurity className="text-4xl mt-10  text-yellow-600" />
           <p className="p-y text-semibold text-lg text-gray-700">
             Computer Security
@@ -711,7 +711,7 @@ function Home() {
 //Footer
 function Footer() {
   return (
-    <div className="bg-yellow-600 opacity-90 py-3 px-1">
+    <div className="bg-yellow-600 opacity-90 py-3 px-1 w-full">
       <div className="  grid grid-cols-2 gap-y-6  px-10 md:px-20">
         <ul className="flex flex-col gap-2 md:gap-3 px-6 py-6">
           <div className="pb-4">
@@ -782,7 +782,7 @@ function Main() {
       <Service />
       <Portfolio />
       <Contact />
-      <Footer />
+  
     </>
   );
 }
