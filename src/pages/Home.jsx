@@ -105,10 +105,12 @@ function About() {
         <div className="text-section flex-1 justify-center pt-6 md:pt-0">
           <div className="hover:scale-105 cursor-pointer w-[80%] m-auto md:m-0 md:w-full md:pt-6 lg:pt-0 md:px-16 lg:px-8">
             <p className="text-lg">
-              Web developer, with extensive knowledge and years of experience,
-              working in web technologies and Ui / Ux design, delivering quality
-              work working in web technologies and Ui / Ux design, delivering
-              quality work
+              I have knowledge in Web development, Computer networking, Computer
+              Security, Linux and Windows Server Administration, and Computer
+              Hardware.With extensive knowledge and years of experience, working
+              in web technologies and Ui / Ux design,networking, Cybersecurity,
+              linux and windows server administration and computer Hardware, I
+              ensure on delivering quality work.
             </p>
           </div>
 
