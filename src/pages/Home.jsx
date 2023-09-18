@@ -34,27 +34,27 @@ function NavigationBar() {
         <div className="nav-menus">
           <ul className="flex  lg:flex-row gap-3 md:gap-5 ">
             <li>
-              <AnchorLink href="#home" className="font-semibold text-blue-900 md:text-white">
+              <AnchorLink href="#home" className="font-semibold text-blue-900 md:text-gray-900">
                 Home
               </AnchorLink>
             </li>
             <li>
-              <AnchorLink href="#skill" className="font-semibold text-blue-900 md:text-white">
+              <AnchorLink href="#skill" className="font-semibold text-blue-900 md:text-gray-900">
                 Skill
               </AnchorLink>
             </li>
             <li>
-              <AnchorLink href="#services" className="font-semibold text-blue-900 md:text-white">
+              <AnchorLink href="#services" className="font-semibold text-blue-900 md:text-gray-900">
                 Services
               </AnchorLink>
             </li>
             <li>
-              <AnchorLink href="#portfolio" className="font-semibold text-blue-900 md:text-white">
+              <AnchorLink href="#portfolio" className="font-semibold text-blue-900 md:text-gray-900">
                 Portfolio
               </AnchorLink>
             </li>
             <li>
-              <AnchorLink href="#contact" className="font-semibold text-blue-900 md:text-white">
+              <AnchorLink href="#contact" className="font-semibold text-blue-900 md:text-gray-900">
                 Contact Me
               </AnchorLink>
             </li>
