@@ -3,7 +3,12 @@ import Profile from "../assets/Profile.png";
 import Picture from "../assets/Picture.png";
 import { FaFileDownload } from "react-icons/fa";
 import AnchorLink from "react-anchor-link-smooth-scroll";
-import { MdOutlineEmail, MdOutlineLocationOn } from "react-icons/md";
+import {
+  MdOutlineEmail,
+  MdOutlineSecurity,
+  MdOutlineLocationOn,
+  MdOutlineHardware,
+} from "react-icons/md";
 import { FiPhone } from "react-icons/fi";
 import {
   FaFacebook,
@@ -14,9 +19,9 @@ import {
   FaCode,
   FaSortDown,
   FaHardHat,
+  FaLaptopCode,
   FaSortUp,
   FaNetworkWired,
-  FaLock,
   FaFile,
   FaCalendar,
 } from "react-icons/fa";
@@ -169,7 +174,7 @@ function Skill() {
       <div className="flex px-10 lg:px-0 gap-8 lg:gap-0 flex-col lg:flex-row lg:justify-around pt-10">
         <div className="skill-section space-x-10">
           <div className="software-dev  flex lg:flex-none justify-center">
-            <FaCode className="text-xl text-yellow-600 mb-3" />
+            <FaLaptopCode className="text-xl text-yellow-600 mb-3" />
             <button
               onClick={() => onShowSkills()}
               className="flex justify-center items-center space-x-2"
@@ -249,7 +254,7 @@ function Skill() {
 
         <div className="skill-section space-x-10">
           <div className="software-dev  flex lg:flex-none justify-center ">
-            <FaLock className="text-xl text-yellow-600 mb-3" />
+            <MdOutlineSecurity className="text-xl text-yellow-600 mb-3" />
             <button
               onClick={() => onShowSkills()}
               className="flex justify-center items-center space-x-2"
@@ -418,7 +423,7 @@ function Qualification(props) {
             </div>
           </div>
         </div>
-        <div className="work pt-20 ">
+        <div className="work pt-20">
           <div className="text flex gap-4 item-center px-10 lg:px-0">
             <FaFile className="text-2xl text-blue-900 opacity-80" />
             <h3 className="text-xl  text-blue-900 opacity-80 font-bold">
@@ -426,7 +431,7 @@ function Qualification(props) {
             </h3>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 gap-y-10 justify-center item-center pt-10 px-8 lg:px-0">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 gap-y-10 justify-center item-center pt-10 px-8 lg:px-10">
             <div className="education-section pt-5 flex flex-col ring-1 ring-yellow-600 rounded-md p-10 w-[90%] h-52 shadow-xl m-auto lg:w-full lg:m-0">
               <span className="font-bold text-gray-600">
                 IT Support Specialist (National Service)
@@ -472,6 +477,52 @@ function Service() {
         <span className="text-lg font-semibold text-gray-500">
           What I offer
         </span>
+      </div>
+
+      <div className="sevice-wrapper pt-20 px-10 grid md:grid-cols-2 gap-5 gap-y-5 lg:grid-cols-3">
+        <div className="software-wrapper flex flex-col gap-5 ring-1 ring-yellow-600 justify-bottom items-bottom py-10 px-3 rounded-md">
+          <FaLaptopCode className="text-4xl mt-10  text-yellow-600" />
+          <p className="p-y text-semibold text-lg text-gray-700">
+            Software Development
+          </p>
+          <div className="flex flex-row gap-4 items-center ring-1 ring-blue-900 w-[60%] hover:bg-blue-800 hover:text-white hover:ring-2 hover:ring-yellow-600 rounded-md py-2 px-3">
+            <span className="text-lg">View More</span>
+            <FaArrowRight />
+          </div>
+        </div>
+
+        <div className="network-wrapper flex flex-col gap-5 ring-1 ring-yellow-600 justify-bottom items-bottom py-10 px-3 rounded-md">
+          <FaNetworkWired className="text-4xl mt-10  text-yellow-600" />
+          <p className="p-y text-semibold text-lg text-gray-700">
+            Computer Networking
+          </p>
+          <div className="flex flex-row gap-4 items-center ring-1 ring-blue-900 w-[60%] hover:bg-blue-800 hover:text-white hover:ring-2 hover:ring-yellow-600 rounded-md py-2 px-3">
+            <span className="text-lg">View More</span>
+            <FaArrowRight />
+          </div>
+        </div>
+
+        <div className="hardware-wrapper flex flex-col gap-5 ring-1 ring-yellow-600 justify-bottom items-bottom py-10 px-3 rounded-md">
+          <MdOutlineHardware className="text-4xl mt-10  text-yellow-600" />
+          <p className="p-y text-semibold text-lg text-gray-700">
+            Computer Hardware and Software
+          </p>
+          <div className="flex flex-row gap-4 items-center ring-1 ring-blue-900 w-[60%] hover:bg-blue-800 hover:text-white hover:ring-2 hover:ring-yellow-600 rounded-md py-2 px-3">
+            <span className="text-lg">View More</span>
+            <FaArrowRight />
+          </div>
+        </div>
+
+        <div className="security-wrapper flex flex-col gap-5 ring-1 ring-yellow-600 justify-bottom items-bottom py-10 px-3 rounded-md">
+          <MdOutlineSecurity className="text-4xl mt-10  text-yellow-600" />
+          <p className="p-y text-semibold text-lg text-gray-700">
+            Computer Security
+          </p>
+          <div className="flex flex-row gap-4 items-center ring-1 ring-blue-900 w-[60%] hover:bg-blue-800 hover:text-white hover:ring-2 hover:ring-yellow-600 rounded-md py-2 px-3">
+            <span className="text-lg">View More</span>
+            <FaArrowRight />
+          </div>
+        </div>
       </div>
     </div>
   );
