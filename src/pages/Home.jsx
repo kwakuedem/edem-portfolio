@@ -695,7 +695,7 @@ function Home() {
   return (
     <>
       <div
-        className=" min-h-screen lg:pt-32 max-xl:pt-52 px-2 bg-gray-400"
+        className=" min-h-screen pt-0 pb-10 lg:pt-32 max-xl:pt-52 px-2 bg-gray-400"
         id="home"
       >
         <div className="flex flex-col lg:flex-row gap-7 lg:py-3 px-6 lg:px-20 ">
