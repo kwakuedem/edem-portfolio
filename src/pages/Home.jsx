@@ -640,7 +640,7 @@ function Contact() {
           </div>
         </div>
 
-        <form action="" method="post" className="pt-10 flex-1">
+        <form action="" method="post" className="pt-10 flex-1" autoComplete="off">
           <div className="form-group py-2">
             <input
               type="text" name="name"
