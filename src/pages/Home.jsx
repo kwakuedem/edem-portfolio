@@ -133,7 +133,7 @@ function NavigationBar() {
   }
   return (
     <>
-      <div className="bg-white px-2 lg:px-20  sticky m-auto py-4 z-10 w-full top-0 flex justify-between ">
+      <div className="bg-white px-2 lg:px-20  sticky m-auto py-4 z-10 w-full top-0 flex justify-between ring-2 ring-gray-300">
         <div className="brand pl-5  flex justify-center">
           <span className="font-bold text-2xl cursor-pointer text-yellow-600 ">
             EdTech
@@ -533,7 +533,7 @@ function Service() {
         </span>
       </div>
 
-      <div className="sevice-wrapper pt-20 px-10 grid md:grid-cols-2 gap-5 gap-y-5 lg:grid-cols-3">
+      <div className="sevice-wrapper pt-20 px-4 lg:px-10 grid md:grid-cols-2 gap-5 gap-y-5 lg:grid-cols-3">
         <div className="software-wrapper flex flex-col gap-5 ring-1 ring-yellow-600 shadow-lg shadow-blue-800 justify-bottom items-bottom py-10 px-3 rounded-md">
           <FaLaptopCode className="text-4xl mt-10  text-yellow-600" />
           <p className="p-y text-semibold text-lg text-gray-700">
