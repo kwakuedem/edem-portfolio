@@ -134,13 +134,13 @@ function NavigationBar() {
   return (
     <>
       <div className="bg-white px-2 lg:px-20  sticky m-auto py-4 z-10 w-full top-0 flex justify-between ">
-        <div className="brand  flex justify-center">
+        <div className="brand pl-5  flex justify-center">
           <span className="font-bold text-2xl cursor-pointer text-yellow-600 ">
             EdTech
           </span>
         </div>
         <div
-          className="px-3 bg-yellow-500 py-1 cursor-pointer"
+          className="px-3 mr-5 bg-yellow-500 py-1 cursor-pointer shadow-lg shadow-gray-300 rounded-md"
           onClick={() => onShowMenu()}
         >
           <MdMenu className="text-blue-800 text-2xl font-bold" />
