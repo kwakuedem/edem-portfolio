@@ -40,22 +40,24 @@ function NavigationBar() {
   }
   function Menu() {
     return (
-      <div className="fixed m-auto top-0 w-full z-[200] h-full">
-        <div className="bg-black relative z-10 w-full top-0 h-full ">
+      <div className="fixed m-auto top-0 w-full  z-[200] h-full">
+        <div className="bg-black relative transition duration-1000 z-10 w-full top-0 h-full ">
           <div
             className="nav-wrapper py-5 px-4 flex flex-col relative"
             onClick={() => onShowMenu()}
           >
             <div className="absolute right-7 ">
-            <p className="text-white font-bold text-xl  md md:left-20 cursor-pointer px-3 py-1 flex items-center bg-red-300 rounded-full">
-              x
-            </p>
+              <p className="text-white font-bold text-xl  md md:left-20 cursor-pointer px-3 py-1 flex items-center bg-red-300 rounded-full">
+                x
+              </p>
             </div>
-            
+
             <div className="brand pb-3 md:pb-0 flex  justify-center">
-              <span className="font-bold text-2xl cursor-pointer text-white pt-4">
-                EdTech
-              </span>
+              <AnchorLink href="#home">
+                <span className="font-bold text-2xl cursor-pointer text-white pt-4">
+                  EdTech
+                </span>
+              </AnchorLink>
             </div>
             <div className="nav-menus flex justify-center pt-4 lg:pt-32 flex-col md:flex-row">
               <ul className="flex flex-col gap-3 md:gap-5 px-4 pb-6 lg:pb-0">
@@ -105,16 +107,28 @@ function NavigationBar() {
                 <div>
                   <p className="text-white font-bold text-xl pb-5">Follow</p>
                   <div className=" social-links flex gap-x-2 lg:gap-x-4">
-                    <a href="https://web.facebook.com/edem.kwaku.581" className="hover:translate-y-2">
+                    <a
+                      href="https://web.facebook.com/edem.kwaku.581"
+                      className="hover:translate-y-2"
+                    >
                       <FaFacebook className="text-2xl text-gray-400" />
                     </a>
-                    <a href="https://github.com/kwakuedem" className="hover:translate-y-2">
+                    <a
+                      href="https://github.com/kwakuedem"
+                      className="hover:translate-y-2"
+                    >
                       <FaGithub className="text-2xl text-gray-400" />
                     </a>
-                    <a href="https://twitter.com/edemkwaku4" className="hover:translate-y-2">
+                    <a
+                      href="https://twitter.com/edemkwaku4"
+                      className="hover:translate-y-2"
+                    >
                       <FaTwitter className="text-2xl text-gray-400" />
                     </a>
-                    <a href="https://www.linkedin.com/in/avorley-edem-kwaku-b1ab48232/" className="hover:translate-y-2">
+                    <a
+                      href="https://www.linkedin.com/in/avorley-edem-kwaku-b1ab48232/"
+                      className="hover:translate-y-2"
+                    >
                       <FaLinkedin className="text-2xl text-gray-400" />
                     </a>
                   </div>
@@ -384,8 +398,8 @@ function Qualification() {
       <div className="sub-heading  item-center gap-40 pt-16">
         <div className="education">
           <div className="text px-10 lg:px-0 flex gap-4 item-center">
-            <FaHardHat className="text-2xl text-blue-900 opacity-80" />
-            <h3 className="text-xl  text-blue-900 opacity-80 font-bold">
+            <FaHardHat className="text-2xl text-blue-900 opacity-80 md:ml-8" />
+            <h3 className="text-xl   text-blue-900 opacity-80 font-bold">
               Education
             </h3>
           </div>
@@ -484,7 +498,7 @@ function Qualification() {
         </div>
         <div className="work-section">
           <div className="text flex gap-4 pt-16 item-center px-10 lg:px-0">
-            <FaFile className="text-2xl text-blue-900 opacity-80" />
+            <FaFile className="text-2xl text-blue-900 opacity-80 md:ml-4" />
             <h3 className="text-xl  text-blue-900 opacity-80 font-bold">
               Work
             </h3>
@@ -622,121 +636,118 @@ function Contact() {
       )
       .then(
         (response) => {
-          alert("Message sent Successfully!",response.status,response.text);
+          alert("Message sent Successfully!", response.status, response.text);
         },
         (error) => {
-          alert("Oooops! Something went wrong",error);
+          alert("Oooops! Something went wrong", error);
         }
-      )};
+      );
+  };
 
-    return (
-      <div className="pt-20 lg:px-20 bg-white" id="contact">
-        <div className="heading flex flex-col justify-center items-center hover:scale-105 cursor-pointer">
-          <span className="text-3xl font-bold text-blue-800 opacity-70">
-            Contact Me
-          </span>
-          <span className="text-lg font-semibold text-gray-500">
-            Get in touch
-          </span>
-        </div>
+  return (
+    <div className="pt-20 lg:px-20 bg-white" id="contact">
+      <div className="heading flex flex-col justify-center items-center hover:scale-105 cursor-pointer">
+        <span className="text-3xl font-bold text-blue-800 opacity-70">
+          Contact Me
+        </span>
+        <span className="text-lg font-semibold text-gray-500">
+          Get in touch
+        </span>
+      </div>
 
-        <div className="flex flex-col md:flex-row px-10 ">
-          <div className=" flex flex-col flex-1">
-            <div className="flex flex-row gap-4 pt-8">
-              <FiPhone className=" text-3xl text-yellow-600 mt-5" />
-              <div className="flex flex-col">
-                <span className=" font-bold text-xl opacity-70">Call Me</span>
-                <span className="text-gray-400">+233 540 908 248</span>
-                <span className="text-gray-400">+233 256 344 845</span>
-                <span className="text-gray-400">+233 200 786 190</span>
-              </div>
-            </div>
-
-            <div className="flex flex-row gap-4 pt-6">
-              <MdOutlineEmail className="rotate-0 text-3xl text-yellow-600 mt-5" />
-              <div className="flex flex-col">
-                <span className=" font-bold text-xl opacity-70">Email</span>
-                <span className="text-gray-400">
-                  edemkwakuavorley@gmail.com
-                </span>
-                <span className="text-gray-400">edenkwaku85@gmail.com</span>
-              </div>
-            </div>
-
-            <div className="flex flex-row gap-4 pt-6">
-              <MdOutlineLocationOn className="rotate-0 text-3xl text-yellow-600 mt-5" />
-              <div className="flex flex-col">
-                <span className=" font-bold text-xl opacity-70">Location</span>
-                <span className="text-gray-400">
-                  edemkwakuavorley@gmail.com
-                </span>
-                <span className="text-gray-400">edenkwaku85@gmail.com</span>
-              </div>
+      <div className="flex flex-col md:flex-row px-10 ">
+        <div className=" flex flex-col flex-1">
+          <div className="flex flex-row gap-4 pt-8">
+            <FiPhone className=" text-3xl text-yellow-600 mt-5" />
+            <div className="flex flex-col">
+              <span className=" font-bold text-xl opacity-70">Call Me</span>
+              <span className="text-gray-400">+233 540 908 248</span>
+              <span className="text-gray-400">+233 256 344 845</span>
+              <span className="text-gray-400">+233 200 786 190</span>
             </div>
           </div>
 
-          <form
-            action=""
-            id="myForm"
-            ref={form}
-            className="pt-10 flex-1"
-            autoComplete="off"
-            onSubmit={sendEmail}
-          >
-            <div className="form-group py-2">
-              <input
-                onChange={(e) => setName(e.target.value)}
-                value={name}
-                type="text"
-                name="user_name"
-                placeholder="name"
-                className="bg-gray-100 ring-1 w-full px-2 py-3 rounded-md"
-              />
+          <div className="flex flex-row gap-4 pt-6">
+            <MdOutlineEmail className="rotate-0 text-3xl text-yellow-600 mt-5" />
+            <div className="flex flex-col">
+              <span className=" font-bold text-xl opacity-70">Email</span>
+              <span className="text-gray-400">edemkwakuavorley@gmail.com</span>
+              <span className="text-gray-400">edenkwaku85@gmail.com</span>
             </div>
-            <div className="form-group py-2">
-              <input
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                name="user_email"
-                placeholder="Email"
-                className="bg-gray-100 ring-1 w-full px-2 py-3 rounded-md"
-              />
-            </div>
-            <div className="form-group py-2">
-              <input
-                type="text"
-                value={subject}
-                onChange={(e) => setSubject(e.target.value)}
-                name="user_subject"
-                placeholder="subject"
-                className="bg-gray-100 ring-1 w-full px-2 py-3 rounded-md"
-              />
-            </div>
-            <div className="form-group py-3">
-              <textarea
-                cols={30}
-                rows={4}
-                type="text"
-                name="user_message"
-                value={message}
-                onChange={(e) => setMessage(e.target.value)}
-                placeholder="Message"
-                className="bg-gray-100 ring-1 w-full px-2 py-3 rounded-md"
-              ></textarea>
-            </div>
+          </div>
 
-            <div className="mb-10 flex justify-end">
-              <input
-                type="submit"
-                value="Send Message"
-                className="text-lg bg-blue-600 py-3 px-10 text-white rounded-md"
-              />
+          <div className="flex flex-row gap-4 pt-6">
+            <MdOutlineLocationOn className="rotate-0 text-3xl text-yellow-600 mt-5" />
+            <div className="flex flex-col">
+              <span className=" font-bold text-xl opacity-70">Location</span>
+              <span className="text-gray-400">edemkwakuavorley@gmail.com</span>
+              <span className="text-gray-400">edenkwaku85@gmail.com</span>
             </div>
-          </form>
+          </div>
         </div>
+
+        <form
+          action=""
+          id="myForm"
+          ref={form}
+          className="pt-10 flex-1"
+          autoComplete="off"
+          onSubmit={sendEmail}
+        >
+          <div className="form-group py-2">
+            <input
+              onChange={(e) => setName(e.target.value)}
+              value={name}
+              type="text"
+              name="user_name"
+              placeholder="name"
+              className="bg-gray-100 ring-1 w-full px-2 py-3 rounded-md"
+            />
+          </div>
+          <div className="form-group py-2">
+            <input
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              name="user_email"
+              placeholder="Email"
+              className="bg-gray-100 ring-1 w-full px-2 py-3 rounded-md"
+            />
+          </div>
+          <div className="form-group py-2">
+            <input
+              type="text"
+              value={subject}
+              onChange={(e) => setSubject(e.target.value)}
+              name="user_subject"
+              placeholder="subject"
+              className="bg-gray-100 ring-1 w-full px-2 py-3 rounded-md"
+            />
+          </div>
+          <div className="form-group py-3">
+            <textarea
+              cols={30}
+              rows={4}
+              type="text"
+              name="user_message"
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
+              placeholder="Message"
+              className="bg-gray-100 ring-1 w-full px-2 py-3 rounded-md"
+            ></textarea>
+          </div>
+
+          <div className="mb-10 flex justify-end">
+            <input
+              type="submit"
+              value="Send Message"
+              className="text-lg bg-blue-600 py-3 px-10 text-white rounded-md"
+            />
+          </div>
+        </form>
       </div>
-    );
+    </div>
+  );
 }
 
 //Home page
@@ -822,11 +833,14 @@ function Home() {
 function Footer() {
   return (
     <div className="bg-yellow-600 opacity-90 py-3 px-1 w-full">
-      <div className="  grid grid-cols-2 gap-y-6  px-10 md:px-20">
-        <ul className="flex flex-col gap-2 md:gap-3 px-6 py-6">
-          <div className="pb-4">
-            <p className="text-xl text-blue-900 font-bold opacity-80">EdTech</p>
-            <p className="text-base text-white">IT Profesional</p>
+      <div className="  grid grid-cols-1 lg:grid-cols-2 gap-y-1 md:gap-y-6  px-10 md:px-20">
+        <ul className="flex flex-col md:flex-row gap-2 md:gap-3 px-6 py-6 md:justify-center md:items-center">
+          <div className="pb-4 md:flex md:flex-col md:justify-center  md:pt-3 md:gap-4">
+            <AnchorLink href="#home">
+              <p className="text-xl text-blue-900 font-bold opacity-80">
+                EdTech
+              </p>
+            </AnchorLink>
           </div>
           <li>
             <AnchorLink href="#home" className="font-semibold">
@@ -854,8 +868,8 @@ function Footer() {
             </AnchorLink>
           </li>
         </ul>
-        <div className="flex flex-col justify-center">
-          <div className="social-link-wrapper py-3  md:px-3 flex flex-row gap-4 items-center  ">
+        <div className="flex flex-col md:flex-row px-6 justify-center">
+          <div className="social-link-wrapper py-1 md:py-3  md:px-3 flex flex-row gap-4 items-center  ">
             <a href="" className="lg:hover:translate-y-2">
               <FaFacebook className="text-2xl text-blue-900" />
             </a>
@@ -869,10 +883,14 @@ function Footer() {
               <FaLinkedin className="text-2xl text-blue-900" />
             </a>
           </div>
-          <div className="flex flex-col justify-center items-center">
-            <p>Developed with</p>
-            <p className="text-2xl">&hearts;</p>
-            <p>By Edem Kwaku Avorley</p>
+          <div className="flex flex-row pt-3 md:pt-0 pb-4 md:pb-0 md:flex-col md:justify-center md:items-center">
+            <span>
+              Developed with
+              <span className="text-3xl text-red-600 px-2 md:px-0">
+                &hearts;
+              </span>
+              By Edem
+            </span>
           </div>
         </div>
       </div>
