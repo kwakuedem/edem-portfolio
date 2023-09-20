@@ -31,12 +31,11 @@ import Resume from "../assets/resume.pdf";
 import SkillSet from "../components/SkillSet";
 
 //Navigation bar
-function NavigationBar({ showMenus, setShowMenus }) {
+function NavigationBar() {
   const [showMenu, setShowMenu] = useState(false);
-  showMenus = showMenu;
+
   function onShowMenu() {
     setShowMenu(!showMenu);
-    setShowMenus = setShowMenu;
   }
   function Menu() {
     return (
@@ -135,7 +134,7 @@ function NavigationBar({ showMenus, setShowMenus }) {
   }
   return (
     <>
-      <div className="bg-white lg:px-20  sticky m-auto py-3 z-10 w-full top-0 flex justify-between ">
+      <div className="bg-white px-2 lg:px-20  sticky m-auto py-4 z-10 w-full top-0 flex justify-between ">
         <div className="brand  flex justify-center">
           <span className="font-bold text-2xl cursor-pointer text-yellow-600 ">
             EdTech
@@ -157,7 +156,7 @@ function NavigationBar({ showMenus, setShowMenus }) {
 //About page
 function About() {
   return (
-    <div className="min-h-screen pt-20 lg:px-20 bg-blue-100" id="about ">
+    <div className="min-h-screen pb-10 pt-20 lg:px-20 bg-blue-100" id="about ">
       <div className="heading flex flex-col justify-center items-center hover:translate-x-2">
         <span className="text-3xl font-bold text-blue-900 opacity-80">
           About Me
@@ -169,13 +168,13 @@ function About() {
 
       <div className="content flex flex-col lg:flex-row pt-10 lg:pt-20 lg:px-10">
         <div className="flex justify-center item-center">
-          <div className="image-card w-[90%] lg:w-[350px] flex lg:flex-1 justify-center items-center lg:hover:scale-110">
+          <div className="image-card w-full lg:w-[350px] flex lg:flex-1 justify-center items-center lg:hover:scale-110">
             <img src={Picture} className="w-[90%] lg:w-[350px] rounded-md" />
           </div>
         </div>
 
         <div className="text-section flex-1 justify-center pt-6 md:pt-0">
-          <div className="hover:scale-105 cursor-pointer w-[80%] m-auto md:m-0 md:w-full md:pt-6 lg:pt-0 md:px-16 lg:px-8">
+          <div className="hover:scale-105 cursor-pointer w-[90%] m-auto md:m-0 md:w-full md:pt-6 lg:pt-0 md:px-16 lg:px-8">
             <p className="text-lg">
               I have knowledge in Web development, Computer networking, Computer
               Security, Linux and Windows Server Administration, and Computer
@@ -187,17 +186,17 @@ function About() {
           </div>
 
           <div className="flex flex-col gap-6 lg:gap-0 lg:flex-row lg:space-x-16 pt-10">
-            <div className="flex flex-col py-10 lg:py-0 lg:justify-center ring-2 w-[80%] m-auto lg:m-0 lg:ring-0 items-center hover:translate-x-2 cursor-pointer">
+            <div className="flex flex-col py-10 lg:py-0 lg:justify-center ring-2 w-[90%] m-auto lg:ring-0 items-center hover:translate-x-2 cursor-pointer">
               <span className="text-2xl font-bold">05+</span>
               <span>Years</span>
               <span>experience</span>
             </div>
-            <div className="flex flex-col py-10 lg:py-0 lg:justify-center ring-2 w-[80%] m-auto lg:m-0 lg:ring-0 items-center hover:translate-x-2 cursor-pointer">
+            <div className="flex flex-col py-10 lg:py-0 lg:justify-center ring-2 w-[90%] m-auto lg:ring-0 items-center hover:translate-x-2 cursor-pointer">
               <span className="text-2xl font-bold">10+</span>
               <span>Completed</span>
               <span>projects</span>
             </div>
-            <div className="flex flex-col py-10 lg:py-0 lg:justify-center ring-2 w-[80%] m-auto lg:m-0 lg:ring-0 items-center hover:translate-x-2 cursor-pointer">
+            <div className="flex flex-col py-10 lg:py-0 lg:justify-center ring-2 w-[90%] m-auto lg:ring-0 items-center hover:translate-x-2 cursor-pointer">
               <span className="text-2xl font-bold">02+</span>
               <span>Companies</span>
               <span>worked</span>
@@ -368,7 +367,7 @@ function Skill() {
 //Qualification page
 function Qualification(props) {
   return (
-    <div className="min-h-screen lg:pb-10 pt-10 lg:px-20" id="skill">
+    <div className="min-h-screen pb-10 pt-10 lg:px-20" id="skill">
       <div className="heading flex flex-col justify-center items-center hover:scale-105 cursor-pointer">
         <span className="text-3xl font-bold text-blue-900 opacity-80">
           Qualification
@@ -479,7 +478,7 @@ function Qualification(props) {
             </div>
           </div>
         </div>
-        <div className="work pt-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 lg:gap-y-10 justify-center item-center pt-10 md:px-8">
           <div className="text flex gap-4 item-center px-10 lg:px-0">
             <FaFile className="text-2xl text-blue-900 opacity-80" />
             <h3 className="text-xl  text-blue-900 opacity-80 font-bold">
@@ -487,8 +486,8 @@ function Qualification(props) {
             </h3>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 gap-y-10 justify-center item-center pt-10 px-8 lg:px-10">
-            <div className="education-section pt-5 flex flex-col ring-1 ring-yellow-600 rounded-md p-10 w-[90%] h-52 shadow-xl m-auto lg:w-full lg:m-0">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 lg:gap-y-10 justify-center item-center pt-10 md:px-8">
+            <div className="education-section pt-5 flex flex-col ring-1 ring-yellow-600 rounded-md p-10 w-[90%] m-auto h-52 shadow-xl">
               <span className="font-bold text-gray-600">
                 IT Support Specialist (National Service)
               </span>
@@ -503,7 +502,7 @@ function Qualification(props) {
               </span>
             </div>
 
-            <div className="education-section pt-5 flex flex-col ring-1 ring-yellow-600 rounded-md p-10 w-[90%] h-52 shadow-xl m-auto lg:w-full lg:m-0">
+            <div className="education-section pt-5 flex flex-col ring-1 ring-yellow-600 rounded-md p-10 w-[90%] m-auto h-52 shadow-xl">
               <span className="font-bold text-gray-600">
                 IT Support Specialist (Intenship)
               </span>
@@ -528,7 +527,7 @@ function Qualification(props) {
 function Service() {
   return (
     <div
-      className="min-h-screen lg:pb-20 pt-20 lg:px-20 bg-purple-200"
+      className="min-h-screen pb-20 pt-20 lg:px-20 bg-purple-200"
       id="services"
     >
       <div className="heading flex flex-col justify-center items-center hover:scale-105 cursor-pointer">
