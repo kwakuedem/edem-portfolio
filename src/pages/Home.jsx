@@ -105,16 +105,16 @@ function NavigationBar() {
                 <div>
                   <p className="text-white font-bold text-xl pb-5">Follow</p>
                   <div className=" social-links flex gap-x-2 lg:gap-x-4">
-                    <a href="" className="hover:translate-y-2">
+                    <a href="https://web.facebook.com/edem.kwaku.581" className="hover:translate-y-2">
                       <FaFacebook className="text-2xl text-gray-400" />
                     </a>
-                    <a href="" className="hover:translate-y-2">
+                    <a href="https://github.com/kwakuedem" className="hover:translate-y-2">
                       <FaGithub className="text-2xl text-gray-400" />
                     </a>
-                    <a href="" className="hover:translate-y-2">
+                    <a href="https://twitter.com/edemkwaku4" className="hover:translate-y-2">
                       <FaTwitter className="text-2xl text-gray-400" />
                     </a>
-                    <a href="" className="hover:translate-y-2">
+                    <a href="https://www.linkedin.com/in/avorley-edem-kwaku-b1ab48232/" className="hover:translate-y-2">
                       <FaLinkedin className="text-2xl text-gray-400" />
                     </a>
                   </div>
