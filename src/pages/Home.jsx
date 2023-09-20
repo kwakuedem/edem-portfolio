@@ -185,17 +185,17 @@ function About() {
           </div>
 
           <div className="flex flex-col gap-6 lg:gap-0 lg:flex-row lg:space-x-16 pt-10">
-            <div className="flex flex-col py-10 lg:py-0 lg:justify-center ring-2 w-[90%] m-auto lg:ring-0 items-center hover:translate-x-2 cursor-pointer">
+            <div className="flex flex-col py-10 lg:py-0 lg:justify-center ring-2 w-[90%] rounded-md m-auto lg:ring-0 items-center hover:translate-x-2 cursor-pointer">
               <span className="text-2xl font-bold">05+</span>
               <span>Years</span>
               <span>experience</span>
             </div>
-            <div className="flex flex-col py-10 lg:py-0 lg:justify-center ring-2 w-[90%] m-auto lg:ring-0 items-center hover:translate-x-2 cursor-pointer">
+            <div className="flex flex-col py-10 lg:py-0 lg:justify-center ring-2 w-[90%] rounded-md m-auto lg:ring-0 items-center hover:translate-x-2 cursor-pointer">
               <span className="text-2xl font-bold">10+</span>
               <span>Completed</span>
               <span>projects</span>
             </div>
-            <div className="flex flex-col py-10 lg:py-0 lg:justify-center ring-2 w-[90%] m-auto lg:ring-0 items-center hover:translate-x-2 cursor-pointer">
+            <div className="flex flex-col py-10 lg:py-0 lg:justify-center ring-2 w-[90%] rounded-md m-auto lg:ring-0 items-center hover:translate-x-2 cursor-pointer">
               <span className="text-2xl font-bold">02+</span>
               <span>Companies</span>
               <span>worked</span>
