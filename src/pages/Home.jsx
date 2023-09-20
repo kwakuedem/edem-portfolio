@@ -618,7 +618,7 @@ function Contact() {
         "kB-zDe4i9kpoF0Ec2"
       )
       .then(
-        (result) => {
+        (response) => {
           alert('SUCCESS!', response.status, response.text);
         },
         (error) => {
