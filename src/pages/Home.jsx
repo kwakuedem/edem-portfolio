@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useRef } from "react";
+import emailjs from "@emailjs/browser";
 import Profile from "../assets/Profile.png";
 import Picture from "../assets/Picture.png";
 import { FaFileDownload } from "react-icons/fa";
@@ -598,93 +599,140 @@ function Portfolio() {
 
 //Contact page
 function Contact() {
-  return (
-    <div className="pt-20 lg:px-20 bg-white" id="contact">
-      <div className="heading flex flex-col justify-center items-center hover:scale-105 cursor-pointer">
-        <span className="text-3xl font-bold text-blue-800 opacity-70">
-          Contact Me
-        </span>
-        <span className="text-lg font-semibold text-gray-500">
-          Get in touch
-        </span>
-      </div>
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [subject, setSubject] = useState("");
+  const [message, setMessage] = useState("");
 
-      <div className="flex flex-col md:flex-row px-10 ">
-        <div className=" flex flex-col flex-1">
-          <div className="flex flex-row gap-4 pt-8">
-            <FiPhone className=" text-3xl text-yellow-600 mt-5" />
-            <div className="flex flex-col">
-              <span className=" font-bold text-xl opacity-70">Call Me</span>
-              <span className="text-gray-400">+233 540 908 248</span>
-              <span className="text-gray-400">+233 256 344 845</span>
-              <span className="text-gray-400">+233 200 786 190</span>
-            </div>
-          </div>
+  const form = useRef();
 
-          <div className="flex flex-row gap-4 pt-6">
-            <MdOutlineEmail className="rotate-0 text-3xl text-yellow-600 mt-5" />
-            <div className="flex flex-col">
-              <span className=" font-bold text-xl opacity-70">Email</span>
-              <span className="text-gray-400">edemkwakuavorley@gmail.com</span>
-              <span className="text-gray-400">edenkwaku85@gmail.com</span>
-            </div>
-          </div>
+  const sendEmail = (e) => {
+    e.preventDefault();
 
-          <div className="flex flex-row gap-4 pt-6">
-            <MdOutlineLocationOn className="rotate-0 text-3xl text-yellow-600 mt-5" />
-            <div className="flex flex-col">
-              <span className=" font-bold text-xl opacity-70">Location</span>
-              <span className="text-gray-400">edemkwakuavorley@gmail.com</span>
-              <span className="text-gray-400">edenkwaku85@gmail.com</span>
-            </div>
-          </div>
+    emailjs
+      .sendForm(
+        "YOUR_SERVICE_ID",
+        "YOUR_TEMPLATE_ID",
+        form.current,
+        "YOUR_PUBLIC_KEY"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+
+    return (
+      <div className="pt-20 lg:px-20 bg-white" id="contact">
+        <div className="heading flex flex-col justify-center items-center hover:scale-105 cursor-pointer">
+          <span className="text-3xl font-bold text-blue-800 opacity-70">
+            Contact Me
+          </span>
+          <span className="text-lg font-semibold text-gray-500">
+            Get in touch
+          </span>
         </div>
 
-        <form action="" method="post" className="pt-10 flex-1" autoComplete="off">
-          <div className="form-group py-2">
-            <input
-              type="text" name="name"
-              placeholder="name"
-              className="bg-gray-100 ring-1 w-full px-2 py-3 rounded-md"
-            />
-          </div>
-          <div className="form-group py-2">
-            <input
-              type="email" name="email"
-              placeholder="Email"
-              className="bg-gray-100 ring-1 w-full px-2 py-3 rounded-md"
-            />
-          </div>
-          <div className="form-group py-2">
-            <input
-              type="text" name="subject"
-              placeholder="subject"
-              className="bg-gray-100 ring-1 w-full px-2 py-3 rounded-md"
-            />
-          </div>
-          <div className="form-group py-3">
-            <textarea
-              cols={30}
-              rows={4}
-              type="text"
-              name="message"
-              placeholder="Message"
-              className="bg-gray-100 ring-1 w-full px-2 py-3 rounded-md"
-            ></textarea>
+        <div className="flex flex-col md:flex-row px-10 ">
+          <div className=" flex flex-col flex-1">
+            <div className="flex flex-row gap-4 pt-8">
+              <FiPhone className=" text-3xl text-yellow-600 mt-5" />
+              <div className="flex flex-col">
+                <span className=" font-bold text-xl opacity-70">Call Me</span>
+                <span className="text-gray-400">+233 540 908 248</span>
+                <span className="text-gray-400">+233 256 344 845</span>
+                <span className="text-gray-400">+233 200 786 190</span>
+              </div>
+            </div>
+
+            <div className="flex flex-row gap-4 pt-6">
+              <MdOutlineEmail className="rotate-0 text-3xl text-yellow-600 mt-5" />
+              <div className="flex flex-col">
+                <span className=" font-bold text-xl opacity-70">Email</span>
+                <span className="text-gray-400">
+                  edemkwakuavorley@gmail.com
+                </span>
+                <span className="text-gray-400">edenkwaku85@gmail.com</span>
+              </div>
+            </div>
+
+            <div className="flex flex-row gap-4 pt-6">
+              <MdOutlineLocationOn className="rotate-0 text-3xl text-yellow-600 mt-5" />
+              <div className="flex flex-col">
+                <span className=" font-bold text-xl opacity-70">Location</span>
+                <span className="text-gray-400">
+                  edemkwakuavorley@gmail.com
+                </span>
+                <span className="text-gray-400">edenkwaku85@gmail.com</span>
+              </div>
+            </div>
           </div>
 
-          <div className="mb-10 flex justify-end">
-            <button
-              type="submit"
-              className="text-lg bg-blue-600 py-3 px-10 text-white rounded-md"
-            >
-              Submit Message
-            </button>
-          </div>
-        </form>
+          <form
+            action=""
+            ref={form}
+            className="pt-10 flex-1"
+            autoComplete="off"
+            onSubmit={sendEmail}
+          >
+            <div className="form-group py-2">
+              <input
+                onChange={(e) => setName(e.target.value)}
+                value={name}
+                type="text"
+                name="user_name"
+                placeholder="name"
+                className="bg-gray-100 ring-1 w-full px-2 py-3 rounded-md"
+              />
+            </div>
+            <div className="form-group py-2">
+              <input
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                name="user_email"
+                placeholder="Email"
+                className="bg-gray-100 ring-1 w-full px-2 py-3 rounded-md"
+              />
+            </div>
+            <div className="form-group py-2">
+              <input
+                type="text"
+                value={subject}
+                onChange={(e) => setSubject(e.target.value)}
+                name="user_subject"
+                placeholder="subject"
+                className="bg-gray-100 ring-1 w-full px-2 py-3 rounded-md"
+              />
+            </div>
+            <div className="form-group py-3">
+              <textarea
+                cols={30}
+                rows={4}
+                type="text"
+                name="user_message"
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
+                placeholder="Message"
+                className="bg-gray-100 ring-1 w-full px-2 py-3 rounded-md"
+              ></textarea>
+            </div>
+
+            <div className="mb-10 flex justify-end">
+              <input
+                type="submit"
+                value="Send Message"
+                className="text-lg bg-blue-600 py-3 px-10 text-white rounded-md"
+              />
+            </div>
+          </form>
+        </div>
       </div>
-    </div>
-  );
+    );
+  };
 }
 
 //Home page
