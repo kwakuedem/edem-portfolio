@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
+
 import Profile from "../assets/Profile.png";
 import Picture from "../assets/Picture.png";
 import { FaFileDownload } from "react-icons/fa";
@@ -611,8 +612,8 @@ function Contact() {
 
     emailjs
       .sendForm(
-        "YOUR_SERVICE_ID",
-        "YOUR_TEMPLATE_ID",
+        "service_h0a0lro",
+        "template_50l1l64",
         form.current,
         "YOUR_PUBLIC_KEY"
       )
@@ -623,7 +624,7 @@ function Contact() {
         (error) => {
           console.log(error.text);
         }
-      );
+      )};
 
     return (
       <div className="pt-20 lg:px-20 bg-white" id="contact">
@@ -732,7 +733,6 @@ function Contact() {
         </div>
       </div>
     );
-  };
 }
 
 //Home page
