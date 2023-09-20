@@ -20,7 +20,6 @@ import {
   FaSortDown,
   FaHardHat,
   FaLaptopCode,
- 
   FaSortUp,
   FaNetworkWired,
   FaFile,
@@ -365,7 +364,7 @@ function Skill() {
 }
 
 //Qualification page
-function Qualification(props) {
+function Qualification() {
   return (
     <div className="min-h-screen pb-10 pt-10 lg:px-20" id="skill">
       <div className="heading flex flex-col justify-center items-center hover:scale-105 cursor-pointer">
@@ -526,10 +525,7 @@ function Qualification(props) {
 //Services page
 function Service() {
   return (
-    <div
-      className="min-h-screen pb-20 pt-20 lg:px-20 bg-white"
-      id="services"
-    >
+    <div className="min-h-screen pb-20 pt-20 lg:px-20 bg-white" id="services">
       <div className="heading flex flex-col justify-center items-center hover:scale-105 cursor-pointer">
         <span className="text-3xl font-bold">Services</span>
         <span className="text-lg font-semibold text-gray-500">
@@ -695,7 +691,7 @@ function Home() {
   return (
     <>
       <div
-        className=" min-h-screen pt-0 pb-10 lg:pt-32 max-xl:pt-52 px-2 bg-white"
+        className=" min-h-screen pt-10 pb-10 lg:pt-32 px-2 bg-white"
         id="home"
       >
         <div className="flex flex-col lg:flex-row gap-7 lg:py-3 px-6 lg:px-20 ">
@@ -831,22 +827,19 @@ function Footer() {
   );
 }
 
-//Menu
-
+//Main
 function Main() {
   return (
     <>
-      <div className="relative">
-        <NavigationBar />
-        <Home />
-        <About />
-        <Skill />
-        <Qualification />
-        <Service />
-        <Portfolio />
-        <Contact />
-        <Footer />
-      </div>
+      <NavigationBar />
+      <Home />
+      <About />
+      <Skill />
+      <Qualification />
+      <Service />
+      <Portfolio />
+      <Contact />
+      <Footer />
     </>
   );
 }
