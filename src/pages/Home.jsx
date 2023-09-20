@@ -41,14 +41,17 @@ function NavigationBar() {
   function Menu() {
     return (
       <div className="fixed m-auto top-0 w-full z-[200] h-full">
-        <div className="bg-black  z-10 w-full top-0 h-full ">
+        <div className="bg-black relative z-10 w-full top-0 h-full ">
           <div
             className="nav-wrapper py-5 px-4 flex flex-col relative"
             onClick={() => onShowMenu()}
           >
-            <p className="text-white font-bold text-xl absolute left-8 top-4 md md:left-20 cursor-pointer px-3 py-1 flex items-center bg-red-300 rounded-full">
+            <div className="absolute right-7 ">
+            <p className="text-white font-bold text-xl  md md:left-20 cursor-pointer px-3 py-1 flex items-center bg-red-300 rounded-full">
               x
             </p>
+            </div>
+            
             <div className="brand pb-3 md:pb-0 flex  justify-center">
               <span className="font-bold text-2xl cursor-pointer text-white pt-4">
                 EdTech
@@ -614,15 +617,15 @@ function Contact() {
       .sendForm(
         "service_79wqo8m",
         "template_50l1l64",
-        form.current,
+        "#myForm",
         "kB-zDe4i9kpoF0Ec2"
       )
       .then(
         (response) => {
-          alert('SUCCESS!', response.status, response.text);
+          alert("Message sent Successfully!",response.status,response.text);
         },
         (error) => {
-          alert('FAILED...', error);
+          alert("Oooops! Something went wrong",error);
         }
       )};
 
@@ -674,6 +677,7 @@ function Contact() {
 
           <form
             action=""
+            id="myForm"
             ref={form}
             className="pt-10 flex-1"
             autoComplete="off"
