@@ -612,17 +612,17 @@ function Contact() {
 
     emailjs
       .sendForm(
-        "service_h0a0lro",
+        "service_79wqo8m",
         "template_50l1l64",
         form.current,
-        "YOUR_PUBLIC_KEY"
+        "kB-zDe4i9kpoF0Ec2"
       )
       .then(
         (result) => {
-          console.log(result.text);
+          alert('SUCCESS!', response.status, response.text);
         },
         (error) => {
-          console.log(error.text);
+          alert('FAILED...', error);
         }
       )};
 
