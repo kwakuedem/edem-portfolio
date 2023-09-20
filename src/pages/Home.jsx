@@ -5,6 +5,7 @@ import { FaFileDownload } from "react-icons/fa";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import {
   MdOutlineEmail,
+  MdMenu,
   MdOutlineSecurity,
   MdOutlineLocationOn,
   MdOutlineHardware,
@@ -16,10 +17,10 @@ import {
   FaLinkedin,
   FaGithub,
   FaArrowRight,
-  FaCode,
   FaSortDown,
   FaHardHat,
   FaLaptopCode,
+ 
   FaSortUp,
   FaNetworkWired,
   FaFile,
@@ -27,70 +28,136 @@ import {
 } from "react-icons/fa";
 import { useState } from "react";
 import Resume from "../assets/resume.pdf";
+import SkillSet from "../components/SkillSet";
 
 //Navigation bar
-function NavigationBar() {
+function NavigationBar({ showMenus, setShowMenus }) {
+  const [showMenu, setShowMenu] = useState(false);
+  showMenus = showMenu;
+  function onShowMenu() {
+    setShowMenu(!showMenu);
+    setShowMenus = setShowMenu;
+  }
+  function Menu() {
+    return (
+      <div className="fixed m-auto top-0 w-full z-[200] h-full">
+        <div className="bg-black  z-10 w-full top-0 h-full ">
+          <div
+            className="nav-wrapper py-5 px-4 flex flex-col relative"
+            onClick={() => onShowMenu()}
+          >
+            <p className="text-white font-bold text-xl absolute left-8 top-4 md md:left-20 cursor-pointer px-3 py-1 flex items-center bg-red-300 rounded-full">
+              x
+            </p>
+            <div className="brand pb-3 md:pb-0 flex  justify-center">
+              <span className="font-bold text-2xl cursor-pointer text-white pt-4">
+                EdTech
+              </span>
+            </div>
+            <div className="nav-menus flex justify-center pt-4 lg:pt-32 flex-col md:flex-row">
+              <ul className="flex flex-col gap-3 md:gap-5 px-4 pb-6 lg:pb-0">
+                <p className="text-white font-bold text-xl text underline">
+                  Menu
+                </p>
+                <li>
+                  <AnchorLink href="#home" className="font-semibold text-white">
+                    Home
+                  </AnchorLink>
+                </li>
+                <li>
+                  <AnchorLink
+                    href="#skill"
+                    className="font-semibold text-white"
+                  >
+                    Skill
+                  </AnchorLink>
+                </li>
+                <li>
+                  <AnchorLink
+                    href="#services"
+                    className="font-semibold text-white"
+                  >
+                    Services
+                  </AnchorLink>
+                </li>
+                <li>
+                  <AnchorLink
+                    href="#portfolio"
+                    className="font-semibold text-white"
+                  >
+                    Portfolio
+                  </AnchorLink>
+                </li>
+                <li>
+                  <AnchorLink
+                    href="#contact"
+                    className="font-semibold text-white"
+                  >
+                    Contact Me
+                  </AnchorLink>
+                </li>
+              </ul>
+              <hr className="" />
+              <div className="follow px-4 lg:px-0 pt-6 lg:pt-0 lg:ml-6 flex flex-col lg:flex-row gap-8">
+                <div>
+                  <p className="text-white font-bold text-xl pb-5">Follow</p>
+                  <div className=" social-links flex gap-x-2 lg:gap-x-4">
+                    <a href="" className="hover:translate-y-2">
+                      <FaFacebook className="text-2xl text-gray-400" />
+                    </a>
+                    <a href="" className="hover:translate-y-2">
+                      <FaGithub className="text-2xl text-gray-400" />
+                    </a>
+                    <a href="" className="hover:translate-y-2">
+                      <FaTwitter className="text-2xl text-gray-400" />
+                    </a>
+                    <a href="" className="hover:translate-y-2">
+                      <FaLinkedin className="text-2xl text-gray-400" />
+                    </a>
+                  </div>
+                </div>
+
+                <div className="contact pb-6 lg:pb-0">
+                  <div className="flex flex-col">
+                    <span className=" font-bold text-white text-xl pb-4">
+                      Call or What'sApp Me
+                    </span>
+                    <span className="text-gray-400">+233 540 908 248</span>
+                    <span className="text-gray-400">+233 200 786 190</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
   return (
-    <div className="bg-yellow-600 fixed z-10 w-full lg:top-0 lg:w-[70%] xlg:w-[50%] md:m-auto">
-      <div className="nav-wrapper py-5 px-4 flex flex-col md:flex-row md:justify-between md:bg-white">
-        <div className="brand pb-3 md:pb-0">
-          <span className="font-bold cursor-pointer text-blue-900 md:text-gray-900">
+    <>
+      <div className="bg-white lg:px-20  sticky m-auto py-3 z-10 w-full top-0 flex justify-between ">
+        <div className="brand  flex justify-center">
+          <span className="font-bold text-2xl cursor-pointer text-yellow-600 ">
             EdTech
           </span>
         </div>
-        <div className="nav-menus">
-          <ul className="flex  lg:flex-row gap-3 md:gap-5 ">
-            <li>
-              <AnchorLink
-                href="#home"
-                className="font-semibold text-blue-900 md:text-gray-900"
-              >
-                Home
-              </AnchorLink>
-            </li>
-            <li>
-              <AnchorLink
-                href="#skill"
-                className="font-semibold text-blue-900 md:text-gray-900"
-              >
-                Skill
-              </AnchorLink>
-            </li>
-            <li>
-              <AnchorLink
-                href="#services"
-                className="font-semibold text-blue-900 md:text-gray-900"
-              >
-                Services
-              </AnchorLink>
-            </li>
-            <li>
-              <AnchorLink
-                href="#portfolio"
-                className="font-semibold text-blue-900 md:text-gray-900"
-              >
-                Portfolio
-              </AnchorLink>
-            </li>
-            <li>
-              <AnchorLink
-                href="#contact"
-                className="font-semibold text-blue-900 md:text-gray-900"
-              >
-                Contact Me
-              </AnchorLink>
-            </li>
-          </ul>
+        <div
+          className="px-3 bg-yellow-500 py-1 cursor-pointer"
+          onClick={() => onShowMenu()}
+        >
+          <MdMenu className="text-blue-800 text-2xl font-bold" />
         </div>
       </div>
-    </div>
+
+      {showMenu && Menu()}
+    </>
   );
 }
 
 //About page
 function About() {
   return (
-    <div className="min-h-screen pt-20" id="about">
+    <div className="min-h-screen pt-20 lg:px-20 bg-blue-100" id="about ">
       <div className="heading flex flex-col justify-center items-center hover:translate-x-2">
         <span className="text-3xl font-bold text-blue-900 opacity-80">
           About Me
@@ -100,7 +167,7 @@ function About() {
         </span>
       </div>
 
-      <div className="content flex flex-col lg:flex-row pt-10 lg:pt-20 px-10 lg:px-10">
+      <div className="content flex flex-col lg:flex-row pt-10 lg:pt-20 lg:px-10">
         <div className="flex justify-center item-center">
           <div className="image-card w-[90%] lg:w-[350px] flex lg:flex-1 justify-center items-center lg:hover:scale-110">
             <img src={Picture} className="w-[90%] lg:w-[350px] rounded-md" />
@@ -139,7 +206,7 @@ function About() {
 
           <a
             href={Resume}
-            className="flex justify-center items-center lg:justify-none items-start"
+            className="flex justify-center items-center lg:justify-none"
           >
             <div className="bg-yellow-600 text-blue-800 py-4 px-5 mt-10 rounded-lg lg:w-[50%] flex flex-row justify-center space-x-3 ring-2 ring-blue-800 hover:scale-105 hover:translate-x-1 hover:bg-white hover:text-yellow-600 hover:ring-2 hover:ring-yellow-600">
               <button className="font-bold">Download CV</button>
@@ -154,14 +221,22 @@ function About() {
 
 //Skills page
 function Skill() {
-  const [showSkill, setshowSkills] = useState(false);
+  const [showSkillDeveloper, setshowSkillDeveloper] = useState(false);
+  const [showSkillNetworking, setshowSkillNetworking] = useState(false);
+  const [showSkillSecurity, setshowSkillSecurity] = useState(false);
 
-  function onShowSkills() {
-    setshowSkills(!showSkill);
+  function onShowSkillDeveloper() {
+    setshowSkillDeveloper(!showSkillDeveloper);
+  }
+  function onShowSkillNetworking() {
+    setshowSkillNetworking(!showSkillNetworking);
+  }
+  function onShowSkillSecurity() {
+    setshowSkillSecurity(!showSkillSecurity);
   }
 
   return (
-    <div className="pt-20 pb-20" id="skill">
+    <div className="pt-20 pb-20 lg:px-20 bg-orange-100" id="skill">
       <div className="heading flex flex-col justify-center items-center hover:scale-105 hover:translate-x-2 cursor-pointer">
         <span className="text-3xl font-bold text-blue-900 opacity-80">
           Skills
@@ -176,10 +251,10 @@ function Skill() {
           <div className="software-dev  flex lg:flex-none justify-center">
             <FaLaptopCode className="text-xl text-yellow-600 mb-3" />
             <button
-              onClick={() => onShowSkills()}
+              onClick={() => onShowSkillDeveloper()}
               className="flex justify-center items-center space-x-2"
             >
-              {showSkill ? (
+              {showSkillDeveloper ? (
                 <FaSortUp className="text-xl text-yellow-600" />
               ) : (
                 <FaSortDown className="text-xl text-yellow-600" />
@@ -190,7 +265,7 @@ function Skill() {
             </button>
           </div>
 
-          {showSkill && (
+          {showSkillDeveloper && (
             <>
               <div className="ml-5">
                 <SkillSet heading={"Frontend Developer"}>
@@ -223,10 +298,10 @@ function Skill() {
           <div className="software-dev flex lg:flex-none justify-center ">
             <FaNetworkWired className="text-xl text-yellow-600 mb-3" />
             <button
-              onClick={() => onShowSkills()}
+              onClick={() => onShowSkillNetworking()}
               className="flex justify-center items-center space-x-2"
             >
-              {showSkill ? (
+              {showSkillNetworking ? (
                 <FaSortUp className="text-xl text-yellow-600" />
               ) : (
                 <FaSortDown className="text-xl text-yellow-600" />
@@ -237,7 +312,7 @@ function Skill() {
             </button>
           </div>
 
-          {showSkill && (
+          {showSkillNetworking && (
             <>
               <div className="ml-5 prose list-outside">
                 <ul>
@@ -256,10 +331,10 @@ function Skill() {
           <div className="software-dev  flex lg:flex-none justify-center ">
             <MdOutlineSecurity className="text-xl text-yellow-600 mb-3" />
             <button
-              onClick={() => onShowSkills()}
+              onClick={() => onShowSkillSecurity()}
               className="flex justify-center items-center space-x-2"
             >
-              {showSkill ? (
+              {showSkillSecurity ? (
                 <FaSortUp className="text-xl text-yellow-600" />
               ) : (
                 <FaSortDown className="text-xl text-yellow-600" />
@@ -270,7 +345,7 @@ function Skill() {
             </button>
           </div>
 
-          {showSkill && (
+          {showSkillSecurity && (
             <>
               <div className="ml-5 prose list-outside">
                 <ul>
@@ -290,29 +365,10 @@ function Skill() {
   );
 }
 
-function SkillSet({ heading, children }) {
-  const [showSkills, setShowSkills] = useState(false);
-  return (
-    <>
-      <button
-        onClick={() => setShowSkills(!showSkills)}
-        className="software-devision"
-      >
-        <span>{}</span>
-        <div className="flex space-x-2">
-          <FaSortDown className="text-xl text-yellow-600" />
-          <span className="text-lg  text-gray-600">{heading}</span>
-        </div>
-      </button>
-      {showSkills && <div className="prose list-outside">{children}</div>}
-    </>
-  );
-}
-
 //Qualification page
 function Qualification(props) {
   return (
-    <div className="min-h-screen pt-10" id="skill">
+    <div className="min-h-screen lg:pb-10 pt-10 lg:px-20" id="skill">
       <div className="heading flex flex-col justify-center items-center hover:scale-105 cursor-pointer">
         <span className="text-3xl font-bold text-blue-900 opacity-80">
           Qualification
@@ -330,7 +386,7 @@ function Qualification(props) {
               Education
             </h3>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 lg:gap-y-10 justify-center item-center pt-10 px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 lg:gap-y-10 justify-center item-center pt-10 md:px-8">
             <div className="education-section pt-5 flex flex-col w-[90%] h-52 shadow-xl  m-auto lg:w-full lg:m-0 ring-1 ring-yellow-600 rounded-md px-10">
               <span className="font-bold text-gray-600">
                 B'Tech <br />
@@ -471,7 +527,10 @@ function Qualification(props) {
 //Services page
 function Service() {
   return (
-    <div className="min-h-screen pt-20" id="services">
+    <div
+      className="min-h-screen lg:pb-20 pt-20 lg:px-20 bg-purple-200"
+      id="services"
+    >
       <div className="heading flex flex-col justify-center items-center hover:scale-105 cursor-pointer">
         <span className="text-3xl font-bold">Services</span>
         <span className="text-lg font-semibold text-gray-500">
@@ -531,7 +590,7 @@ function Service() {
 //Portfolio page
 function Portfolio() {
   return (
-    <div className="min-h-screen pt-20" id="portfolio">
+    <div className="min-h-screen pt-20 lg:px-20 bg-yellow-100" id="portfolio">
       <div className="heading flex flex-col justify-center items-center hover:scale-105 cursor-pointer">
         <span className="text-3xl font-bold">Portfolio</span>
         <span className="text-lg font-semibold text-gray-500">
@@ -545,7 +604,7 @@ function Portfolio() {
 //Contact page
 function Contact() {
   return (
-    <div className="pt-20" id="contact">
+    <div className="pt-20 lg:px-20 bg-green-200" id="contact">
       <div className="heading flex flex-col justify-center items-center hover:scale-105 cursor-pointer">
         <span className="text-3xl font-bold text-blue-800 opacity-70">
           Contact Me
@@ -636,9 +695,12 @@ function Contact() {
 function Home() {
   return (
     <>
-      <div className=" min-h-screen pt-32 max-xl:pt-52 px-2" id="home">
-        <div className="flex flex-col lg:flex-row gap-7 px-6 lg:px-3">
-          <div className="social-link-wrapper  md:px-3 flex lg:flex-col gap-8 items-center mt-0 lg:mt-16">
+      <div
+        className=" min-h-screen lg:pt-32 max-xl:pt-52 px-2 bg-gray-400"
+        id="home"
+      >
+        <div className="flex flex-col lg:flex-row gap-7 lg:py-3 px-6 lg:px-20 ">
+          <div className="md:px-3 flex lg:flex-col gap-8 items-center mt-0 lg:mt-16">
             <a href="" className="hover:translate-y-2">
               <FaFacebook className="text-2xl text-yellow-600" />
             </a>
@@ -653,7 +715,7 @@ function Home() {
             </a>
           </div>
 
-          <div className="flex flex-col px-2 md:px-0">
+          <div className="flex flex-col md:px-0">
             <div className="intro-text-wrapper flex flex-col md:flex-row">
               <div className="flex flex-col flex-1">
                 <div className="name flex flex-col pb-4 hover:scale-105 cursor-pointer">
@@ -684,11 +746,11 @@ function Home() {
                 </span>
               </div>
 
-              <div className="profile-im visible pr-4 flex justify-center pt-6 lg:pt-0 items-center flex-1 hover:scale-110">
+              <div className="profile visible pr-4 lg:pr-0 flex justify-center pt-6 lg:pt-0 items-center flex-1 hover:scale-110">
                 <img
                   src={Profile}
                   alt=""
-                  className="w-[250px] md:300px lg:w-[400px] xl:w-[350px]"
+                  className="w-[250px] md:300px lg:w-[400px] xl:w-[350px] lg:ml-14"
                 />
               </div>
             </div>
@@ -770,19 +832,22 @@ function Footer() {
   );
 }
 
+//Menu
+
 function Main() {
   return (
     <>
-      <NavigationBar />
-
-      <Home />
-      <About />
-      <Skill />
-      <Qualification />
-      <Service />
-      <Portfolio />
-      <Contact />
-  
+      <div className="relative">
+        <NavigationBar />
+        <Home />
+        <About />
+        <Skill />
+        <Qualification />
+        <Service />
+        <Portfolio />
+        <Contact />
+        <Footer />
+      </div>
     </>
   );
 }
