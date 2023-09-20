@@ -643,21 +643,21 @@ function Contact() {
         <form action="" method="post" className="pt-10 flex-1">
           <div className="form-group py-2">
             <input
-              type="text"
+              type="text" name="name"
               placeholder="name"
               className="bg-gray-100 ring-1 w-full px-2 py-3 rounded-md"
             />
           </div>
           <div className="form-group py-2">
             <input
-              type="email"
+              type="email" name="email"
               placeholder="Email"
               className="bg-gray-100 ring-1 w-full px-2 py-3 rounded-md"
             />
           </div>
           <div className="form-group py-2">
             <input
-              type="text"
+              type="text" name="subject"
               placeholder="subject"
               className="bg-gray-100 ring-1 w-full px-2 py-3 rounded-md"
             />
@@ -667,6 +667,7 @@ function Contact() {
               cols={30}
               rows={4}
               type="text"
+              name="message"
               placeholder="Message"
               className="bg-gray-100 ring-1 w-full px-2 py-3 rounded-md"
             ></textarea>
