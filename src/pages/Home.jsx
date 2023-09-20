@@ -156,7 +156,7 @@ function NavigationBar() {
 //About page
 function About() {
   return (
-    <div className="min-h-screen pb-10 pt-20 lg:px-20 bg-blue-100" id="about ">
+    <div className="min-h-screen pb-10 pt-20 lg:px-20 bg-white" id="about ">
       <div className="heading flex flex-col justify-center items-center hover:translate-x-2">
         <span className="text-3xl font-bold text-blue-900 opacity-80">
           About Me
@@ -235,7 +235,7 @@ function Skill() {
   }
 
   return (
-    <div className="pt-20 pb-20 lg:px-20 bg-orange-100" id="skill">
+    <div className="pt-20 pb-20 lg:px-20 bg-white" id="skill">
       <div className="heading flex flex-col justify-center items-center hover:scale-105 hover:translate-x-2 cursor-pointer">
         <span className="text-3xl font-bold text-blue-900 opacity-80">
           Skills
@@ -478,15 +478,15 @@ function Qualification(props) {
             </div>
           </div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 lg:gap-y-10 justify-center item-center pt-10 md:px-8">
-          <div className="text flex gap-4 item-center px-10 lg:px-0">
+        <div className="work-section">
+          <div className="text flex gap-4 pt-16 item-center px-10 lg:px-0">
             <FaFile className="text-2xl text-blue-900 opacity-80" />
             <h3 className="text-xl  text-blue-900 opacity-80 font-bold">
               Work
             </h3>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 lg:gap-y-10 justify-center item-center pt-10 md:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 lg:gap-y-10 justify-center item-center pt-10">
             <div className="education-section pt-5 flex flex-col ring-1 ring-yellow-600 rounded-md p-10 w-[90%] m-auto h-52 shadow-xl">
               <span className="font-bold text-gray-600">
                 IT Support Specialist (National Service)
@@ -527,7 +527,7 @@ function Qualification(props) {
 function Service() {
   return (
     <div
-      className="min-h-screen pb-20 pt-20 lg:px-20 bg-purple-200"
+      className="min-h-screen pb-20 pt-20 lg:px-20 bg-white"
       id="services"
     >
       <div className="heading flex flex-col justify-center items-center hover:scale-105 cursor-pointer">
@@ -589,7 +589,7 @@ function Service() {
 //Portfolio page
 function Portfolio() {
   return (
-    <div className="min-h-screen pt-20 lg:px-20 bg-yellow-100" id="portfolio">
+    <div className="min-h-screen pt-20 lg:px-20 bg-white" id="portfolio">
       <div className="heading flex flex-col justify-center items-center hover:scale-105 cursor-pointer">
         <span className="text-3xl font-bold">Portfolio</span>
         <span className="text-lg font-semibold text-gray-500">
@@ -603,7 +603,7 @@ function Portfolio() {
 //Contact page
 function Contact() {
   return (
-    <div className="pt-20 lg:px-20 bg-green-200" id="contact">
+    <div className="pt-20 lg:px-20 bg-white" id="contact">
       <div className="heading flex flex-col justify-center items-center hover:scale-105 cursor-pointer">
         <span className="text-3xl font-bold text-blue-800 opacity-70">
           Contact Me
@@ -649,21 +649,21 @@ function Contact() {
             <input
               type="text"
               placeholder="name"
-              className="bg-gray-100 w-full px-2 py-3 rounded-md"
+              className="bg-gray-100 ring-1 w-full px-2 py-3 rounded-md"
             />
           </div>
           <div className="form-group py-2">
             <input
               type="email"
               placeholder="Email"
-              className="bg-gray-100 w-full px-2 py-3 rounded-md"
+              className="bg-gray-100 ring-1 w-full px-2 py-3 rounded-md"
             />
           </div>
           <div className="form-group py-2">
             <input
               type="text"
               placeholder="subject"
-              className="bg-gray-100 w-full px-2 py-3 rounded-md"
+              className="bg-gray-100 ring-1 w-full px-2 py-3 rounded-md"
             />
           </div>
           <div className="form-group py-3">
@@ -672,7 +672,7 @@ function Contact() {
               rows={4}
               type="text"
               placeholder="Message"
-              className="bg-gray-100 w-full px-2 py-3 rounded-md"
+              className="bg-gray-100 ring-1 w-full px-2 py-3 rounded-md"
             ></textarea>
           </div>
 
@@ -695,7 +695,7 @@ function Home() {
   return (
     <>
       <div
-        className=" min-h-screen pt-0 pb-10 lg:pt-32 max-xl:pt-52 px-2 bg-gray-400"
+        className=" min-h-screen pt-0 pb-10 lg:pt-32 max-xl:pt-52 px-2 bg-white"
         id="home"
       >
         <div className="flex flex-col lg:flex-row gap-7 lg:py-3 px-6 lg:px-20 ">
