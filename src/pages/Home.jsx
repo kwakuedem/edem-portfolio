@@ -269,9 +269,9 @@ function Skill() {
         </span>
       </div>
 
-      <div className="flex px-10 lg:px-0 gap-8 lg:gap-0 flex-col md:flex-row lg:justify-around pt-10">
+      <div className="flex mx-5 md:px-10 lg:px-0 gap-8 lg:gap-0 flex-col md:flex-row lg:justify-around pt-10">
         <div className="skill-section space-x-10">
-          <div className="software-dev  flex lg:flex-none justify-center">
+          <div className="software-dev  flex lg:flex-none md:justify-center">
             <FaLaptopCode className="text-xl text-yellow-600 mb-3" />
             <button
               onClick={() => onShowSkillDeveloper()}
@@ -318,7 +318,7 @@ function Skill() {
         </div>
 
         <div className="skill-section space-x-10">
-          <div className="software-dev flex lg:flex-none justify-center ">
+          <div className="software-dev flex lg:flex-none md:justify-center ">
             <FaNetworkWired className="text-xl text-yellow-600 mb-3" />
             <button
               onClick={() => onShowSkillNetworking()}
@@ -351,7 +351,7 @@ function Skill() {
         </div>
 
         <div className="skill-section space-x-10">
-          <div className="software-dev  flex lg:flex-none justify-center ">
+          <div className="software-dev  flex lg:flex-none md:justify-center ">
             <MdOutlineSecurity className="text-xl text-yellow-600 mb-3" />
             <button
               onClick={() => onShowSkillSecurity()}
@@ -406,7 +406,7 @@ function Qualification() {
 
       <div className="sub-heading  item-center gap-40 pt-16">
         <div className="education">
-          <div className="text px-10 lg:px-0 flex gap-4 item-center">
+          <div className="text px-5 md:px-10  lg:px-0 flex gap-4 item-center">
             <FaHardHat className="text-2xl text-blue-900 opacity-80 md:ml-8" />
             <h3 className="text-xl   text-blue-900 opacity-80 font-bold">
               Education
@@ -506,14 +506,14 @@ function Qualification() {
           </div>
         </div>
         <div className="work-section">
-          <div className="text flex gap-4 pt-16 item-center px-10 lg:px-0">
+          <div className="text flex gap-4 pt-16 item-center px-5 md:px-10 lg:px-0">
             <FaFile className="text-2xl text-blue-900 opacity-80 md:ml-4" />
             <h3 className="text-xl  text-blue-900 opacity-80 font-bold">
               Work
             </h3>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 lg:gap-y-10 justify-center item-center pt-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 lg:gap-y-10 justify-center item-center pt-6 md:pt-10">
             <div className="education-section pt-5 flex flex-col ring-1 ring-yellow-600 rounded-md p-10 w-[90%] m-auto h-52 shadow-xl">
               <span className="font-bold text-gray-600">
                 IT Support Specialist (National Service)
@@ -570,7 +570,7 @@ function Service() {
           <p className="p-y text-semibold text-lg text-gray-700">
             Software Development
           </p>
-          <div className="flex flex-row gap-4 items-center ring-1 ring-blue-900 w-[60%] md:w-[40%] lg:w-[60%]  hover:bg-blue-800 hover:text-white hover:ring-2 hover:ring-yellow-600 rounded-md py-2 px-3">
+          <div className="flex flex-row gap-4 items-center ring-1 ring-blue-900 w-[50%] md:w-[40%] lg:w-[60%]  hover:bg-blue-800 hover:text-white hover:ring-2 hover:ring-yellow-600 rounded-md py-2 px-3">
             <span className="text-lg">View More</span>
             <FaArrowRight />
           </div>
@@ -581,7 +581,7 @@ function Service() {
           <p className="p-y text-semibold text-lg text-gray-700">
             Computer Networking
           </p>
-          <div className="flex flex-row gap-4 items-center ring-1 ring-blue-900 w-[60%] md:w-[40%] lg:w-[60%] hover:bg-blue-800 hover:text-white hover:ring-2 hover:ring-yellow-600 rounded-md py-2 px-3">
+          <div className="flex flex-row gap-4 items-center ring-1 ring-blue-900 w-[50%] md:w-[40%] lg:w-[60%] hover:bg-blue-800 hover:text-white hover:ring-2 hover:ring-yellow-600 rounded-md py-2 px-3">
             <span className="text-lg">View More</span>
             <FaArrowRight />
           </div>
@@ -592,7 +592,7 @@ function Service() {
           <p className="p-y text-semibold text-lg text-gray-700">
             Computer Hardware and Software
           </p>
-          <div className="flex flex-row gap-4 items-center ring-1 ring-blue-900 w-[60%] md:w-[40%] lg:w-[60%] hover:bg-blue-800 hover:text-white hover:ring-2 hover:ring-yellow-600 rounded-md py-2 px-3">
+          <div className="flex flex-row gap-4 items-center ring-1 ring-blue-900 w-[50%] md:w-[40%] lg:w-[60%] hover:bg-blue-800 hover:text-white hover:ring-2 hover:ring-yellow-600 rounded-md py-2 px-3">
             <span className="text-lg">View More</span>
             <FaArrowRight />
           </div>
@@ -603,7 +603,7 @@ function Service() {
           <p className="p-y text-semibold text-lg text-gray-700">
             Computer Security
           </p>
-          <div className="flex flex-row gap-4 items-center ring-1 ring-blue-900 w-[60%] md:w-[40%] lg:w-[60%] hover:bg-blue-800 hover:text-white hover:ring-2 hover:ring-yellow-600 rounded-md py-2 px-3">
+          <div className="flex flex-row gap-4 items-center ring-1 ring-blue-900 w-[50%] md:w-[40%] lg:w-[60%] hover:bg-blue-800 hover:text-white hover:ring-2 hover:ring-yellow-600 rounded-md py-2 px-3">
             <span className="text-lg">View More</span>
             <FaArrowRight />
           </div>
@@ -670,7 +670,7 @@ function Contact() {
         </span>
       </div>
 
-      <div className="flex flex-col md:flex-row px-10 ">
+      <div className="flex flex-col md:flex-row px-4 md:px-10 ">
         <div className=" flex flex-col flex-1">
           <div className="flex flex-row gap-4 pt-8">
             <FiPhone className=" text-3xl text-yellow-600 mt-5" />
@@ -842,7 +842,7 @@ function Home() {
             </div>
             <AnchorLink
               href="#about"
-              className="mt-0 md:mt-14  lg:mt-20 m-auto w-[70%] md:w-[40%] lg:w-[20%] gap-2 bg-yellow-600 flex justify-center items-center rounded-md ring-2 ring-blue-800 hover:-translate-y-3 hover:text-yellow-600 hover:bg-white hover:ring-yellow-600"
+              className="mt-12 md:mt-14  lg:mt-20 m-auto w-[70%] md:w-[40%] lg:w-[20%] gap-2 bg-yellow-600 flex justify-center items-center rounded-md ring-2 ring-blue-800 hover:-translate-y-3 hover:text-yellow-600 hover:bg-white hover:ring-yellow-600"
             >
               <button className="py-2 lg:py-4 text-lg font-bold ">
                 About Me
