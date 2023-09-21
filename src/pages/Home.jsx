@@ -40,7 +40,7 @@ function NavigationBar() {
   }
   function Menu() {
     return (
-      <div className="fixed m-auto top-0 w-full  z-[200] h-full">
+      <div className="fixed m-auto top-0 w-full  z-[200] h-full ">
         <div className="bg-black relative transition duration-1000 z-10 w-full top-0 h-full ">
           <div
             className="nav-wrapper py-5 px-4 flex flex-col relative"
@@ -152,7 +152,7 @@ function NavigationBar() {
   }
   return (
     <>
-      <div className="bg-white px-2 lg:px-20  sticky m-auto py-4 z-10 w-full top-0 flex justify-between ring-2 ring-gray-300">
+      <div className="bg-white px-2 lg:px-20  sticky py-4 z-10 w-full top-0 flex justify-between ring-2 ring-gray-300 2xl:w-[80%] m-auto">
         <div className="brand pl-5  flex justify-center">
           <span className="font-bold text-2xl cursor-pointer text-yellow-600 ">
             EdTech
@@ -174,7 +174,10 @@ function NavigationBar() {
 //About page
 function About() {
   return (
-    <div className="min-h-screen pb-10 pt-20 lg:px-20 bg-white" id="about ">
+    <div
+      className="min-h-screen pb-10 pt-20 md:pt-0 lg:pt-20 lg:px-20 bg-white 2xl:w-[80%] m-auto"
+      id="about "
+    >
       <div className="heading flex flex-col justify-center items-center hover:translate-x-2">
         <span className="text-3xl font-bold text-blue-900 opacity-80">
           About Me
@@ -253,7 +256,10 @@ function Skill() {
   }
 
   return (
-    <div className="pt-20 pb-20 lg:px-20 bg-white" id="skill">
+    <div
+      className="pt-20 pb-20 lg:px-20 bg-white 2xl:w-[80%] m-auto"
+      id="skill"
+    >
       <div className="heading flex flex-col justify-center items-center hover:scale-105 hover:translate-x-2 cursor-pointer">
         <span className="text-3xl font-bold text-blue-900 opacity-80">
           Skills
@@ -263,7 +269,7 @@ function Skill() {
         </span>
       </div>
 
-      <div className="flex px-10 lg:px-0 gap-8 lg:gap-0 flex-col lg:flex-row lg:justify-around pt-10">
+      <div className="flex px-10 lg:px-0 gap-8 lg:gap-0 flex-col md:flex-row lg:justify-around pt-10">
         <div className="skill-section space-x-10">
           <div className="software-dev  flex lg:flex-none justify-center">
             <FaLaptopCode className="text-xl text-yellow-600 mb-3" />
@@ -385,7 +391,10 @@ function Skill() {
 //Qualification page
 function Qualification() {
   return (
-    <div className="min-h-screen pb-10 pt-10 lg:px-20" id="skill">
+    <div
+      className="min-h-screen pb-10 pt-10 lg:px-20 2xl:w-[80%] m-auto"
+      id="skill"
+    >
       <div className="heading flex flex-col justify-center items-center hover:scale-105 cursor-pointer">
         <span className="text-3xl font-bold text-blue-900 opacity-80">
           Qualification
@@ -544,7 +553,10 @@ function Qualification() {
 //Services page
 function Service() {
   return (
-    <div className="min-h-screen pb-20 pt-20 lg:px-20 bg-white" id="services">
+    <div
+      className="min-h-screen 2xl:w-[80%] m-auto pb-20 pt-20 lg:px-20 bg-white"
+      id="services"
+    >
       <div className="heading flex flex-col justify-center items-center hover:scale-105 cursor-pointer">
         <span className="text-3xl font-bold">Services</span>
         <span className="text-lg font-semibold text-gray-500">
@@ -558,7 +570,7 @@ function Service() {
           <p className="p-y text-semibold text-lg text-gray-700">
             Software Development
           </p>
-          <div className="flex flex-row gap-4 items-center ring-1 ring-blue-900 w-[60%] hover:bg-blue-800 hover:text-white hover:ring-2 hover:ring-yellow-600 rounded-md py-2 px-3">
+          <div className="flex flex-row gap-4 items-center ring-1 ring-blue-900 w-[60%] md:w-[40%] lg:w-[60%]  hover:bg-blue-800 hover:text-white hover:ring-2 hover:ring-yellow-600 rounded-md py-2 px-3">
             <span className="text-lg">View More</span>
             <FaArrowRight />
           </div>
@@ -569,7 +581,7 @@ function Service() {
           <p className="p-y text-semibold text-lg text-gray-700">
             Computer Networking
           </p>
-          <div className="flex flex-row gap-4 items-center ring-1 ring-blue-900 w-[60%] hover:bg-blue-800 hover:text-white hover:ring-2 hover:ring-yellow-600 rounded-md py-2 px-3">
+          <div className="flex flex-row gap-4 items-center ring-1 ring-blue-900 w-[60%] md:w-[40%] lg:w-[60%] hover:bg-blue-800 hover:text-white hover:ring-2 hover:ring-yellow-600 rounded-md py-2 px-3">
             <span className="text-lg">View More</span>
             <FaArrowRight />
           </div>
@@ -580,7 +592,7 @@ function Service() {
           <p className="p-y text-semibold text-lg text-gray-700">
             Computer Hardware and Software
           </p>
-          <div className="flex flex-row gap-4 items-center ring-1 ring-blue-900 w-[60%] hover:bg-blue-800 hover:text-white hover:ring-2 hover:ring-yellow-600 rounded-md py-2 px-3">
+          <div className="flex flex-row gap-4 items-center ring-1 ring-blue-900 w-[60%] md:w-[40%] lg:w-[60%] hover:bg-blue-800 hover:text-white hover:ring-2 hover:ring-yellow-600 rounded-md py-2 px-3">
             <span className="text-lg">View More</span>
             <FaArrowRight />
           </div>
@@ -591,7 +603,7 @@ function Service() {
           <p className="p-y text-semibold text-lg text-gray-700">
             Computer Security
           </p>
-          <div className="flex flex-row gap-4 items-center ring-1 ring-blue-900 w-[60%] hover:bg-blue-800 hover:text-white hover:ring-2 hover:ring-yellow-600 rounded-md py-2 px-3">
+          <div className="flex flex-row gap-4 items-center ring-1 ring-blue-900 w-[60%] md:w-[40%] lg:w-[60%] hover:bg-blue-800 hover:text-white hover:ring-2 hover:ring-yellow-600 rounded-md py-2 px-3">
             <span className="text-lg">View More</span>
             <FaArrowRight />
           </div>
@@ -604,7 +616,10 @@ function Service() {
 //Portfolio page
 function Portfolio() {
   return (
-    <div className="min-h-screen pt-20 lg:px-20 bg-white" id="portfolio">
+    <div
+      className="min-h-screen pt-20 lg:px-20 bg-white 2xl:w-[80%] m-auto"
+      id="portfolio"
+    >
       <div className="heading flex flex-col justify-center items-center hover:scale-105 cursor-pointer">
         <span className="text-3xl font-bold">Portfolio</span>
         <span className="text-lg font-semibold text-gray-500">
@@ -645,7 +660,7 @@ function Contact() {
   };
 
   return (
-    <div className="pt-20 lg:px-20 bg-white" id="contact">
+    <div className="pt-20 lg:px-20 bg-white 2xl:w-[80%] m-auto" id="contact">
       <div className="heading flex flex-col justify-center items-center hover:scale-105 cursor-pointer">
         <span className="text-3xl font-bold text-blue-800 opacity-70">
           Contact Me
@@ -755,21 +770,33 @@ function Home() {
   return (
     <>
       <div
-        className=" min-h-screen pt-10 pb-10 lg:pt-32 px-2 bg-white"
+        className=" min-h-screen pt-10 pb-10 lg:pt-32 px-2 bg-white 2xl:w-[80%] m-auto"
         id="home"
       >
         <div className="flex flex-col lg:flex-row gap-7 lg:py-3 px-6 lg:px-20 ">
           <div className="md:px-3 flex lg:flex-col gap-8 items-center mt-0 lg:mt-16">
-            <a href="" className="hover:translate-y-2">
+            <a
+              href="https://web.facebook.com/edem.kwaku.581"
+              className="hover:translate-y-2"
+            >
               <FaFacebook className="text-2xl text-yellow-600" />
             </a>
-            <a href="" className="hover:translate-y-2">
+            <a
+              href="https://github.com/kwakuedem"
+              className="hover:translate-y-2"
+            >
               <FaGithub className="text-2xl text-yellow-600" />
             </a>
-            <a href="" className="hover:translate-y-2">
+            <a
+              href="https://twitter.com/edemkwaku4"
+              className="hover:translate-y-2"
+            >
               <FaTwitter className="text-2xl text-yellow-600" />
             </a>
-            <a href="" className="hover:translate-y-2">
+            <a
+              href="https://www.linkedin.com/in/avorley-edem-kwaku-b1ab48232/"
+              className="hover:translate-y-2"
+            >
               <FaLinkedin className="text-2xl text-yellow-600" />
             </a>
           </div>
@@ -777,7 +804,7 @@ function Home() {
           <div className="flex flex-col md:px-0">
             <div className="intro-text-wrapper flex flex-col md:flex-row">
               <div className="flex flex-col flex-1">
-                <div className="name flex flex-col pb-4 hover:scale-105 cursor-pointer">
+                <div className="name flex md:pl-3 lg:pl-0 flex-col pb-4 hover:scale-105 cursor-pointer">
                   <span className="text-lg lg:text-3xl font-bold pb-4 leading-3 lg:leading-6 lg:tracking-wide">
                     Hi, I am
                   </span>
@@ -815,7 +842,7 @@ function Home() {
             </div>
             <AnchorLink
               href="#about"
-              className="mt-0 xl:mt-10 max-xl:mt-20 m-auto w-[70%] lg:w-[20%] gap-2 bg-yellow-600 flex justify-center items-center rounded-md ring-2 ring-blue-800 hover:-translate-y-3 hover:text-yellow-600 hover:bg-white hover:ring-yellow-600"
+              className="mt-0 md:mt-14  lg:mt-20 m-auto w-[70%] md:w-[40%] lg:w-[20%] gap-2 bg-yellow-600 flex justify-center items-center rounded-md ring-2 ring-blue-800 hover:-translate-y-3 hover:text-yellow-600 hover:bg-white hover:ring-yellow-600"
             >
               <button className="py-2 lg:py-4 text-lg font-bold ">
                 About Me
@@ -833,7 +860,7 @@ function Home() {
 function Footer() {
   return (
     <div className="bg-yellow-600 opacity-90 py-3 px-1 w-full">
-      <div className="  grid grid-cols-1 lg:grid-cols-2 gap-y-1 md:gap-y-6  px-10 md:px-20">
+      <div className="  grid grid-cols-1 lg:grid-cols-2 gap-y-1 lg:gap-y-6  px-10 md:px-20">
         <ul className="flex flex-col md:flex-row gap-2 md:gap-3 px-6 py-6 md:justify-center md:items-center">
           <div className="pb-4 md:flex md:flex-col md:justify-center  md:pt-3 md:gap-4">
             <AnchorLink href="#home">
@@ -870,16 +897,28 @@ function Footer() {
         </ul>
         <div className="flex flex-col md:flex-row px-6 justify-center">
           <div className="social-link-wrapper py-1 md:py-3  md:px-3 flex flex-row gap-4 items-center  ">
-            <a href="" className="lg:hover:translate-y-2">
+            <a
+              href="https://web.facebook.com/edem.kwaku.581"
+              className="hover:translate-y-2"
+            >
               <FaFacebook className="text-2xl text-blue-900" />
             </a>
-            <a href="" className="lg:hover:translate-y-2">
+            <a
+              href="https://github.com/kwakuedem"
+              className="hover:translate-y-2"
+            >
               <FaGithub className="text-2xl text-blue-900" />
             </a>
-            <a href="" className="lg:hover:translate-y-2">
+            <a
+              href="https://twitter.com/edemkwaku4"
+              className="hover:translate-y-2"
+            >
               <FaTwitter className="text-2xl text-blue-900" />
             </a>
-            <a href="" className="lg:hover:translate-y-2">
+            <a
+              href="https://www.linkedin.com/in/avorley-edem-kwaku-b1ab48232/"
+              className="hover:translate-y-2"
+            >
               <FaLinkedin className="text-2xl text-blue-900" />
             </a>
           </div>
