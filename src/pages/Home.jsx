@@ -762,7 +762,7 @@ function Contact() {
             <input
               type="submit"
               value="Send Message"
-              className="text-lg bg-yellow-600 py-3 px-10 text-white rounded-md"
+              className="text-lg bg-yellow-600 py-3 px-10 text-blue-900 font-bold rounded-md"
             />
           </div>
         </form>
