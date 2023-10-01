@@ -554,13 +554,36 @@ function Qualification() {
 
 //Services page
 function Service() {
+  const [showCardSoftware, setShowCardSoftware] = useState(false);
+  const [showCardNetworking, setShowCardNetworking] = useState(false);
+  const [showCardHardSoftware, setShowCardHardSoftware] = useState(false);
+  const [showCardSecurity, setShowCardSecurity] = useState(false);
+
+  const onShowCardSoftware = () => {
+    setShowCardSoftware(!showCardSoftware);
+  };
+
+  const onShowCardNetworking = () => {
+    setShowCardNetworking(!showCardNetworking);
+  };
+
+  const onShowCardHardSoftWare = () => {
+    setShowCardHardSoftware(!showCardHardSoftware);
+  };
+
+  const onShowCardSecurity = () => {
+    setShowCardSecurity(!showCardSecurity);
+  };
+
   return (
     <div
-      className="min-h-screen 2xl:w-[80%] m-auto pb-20 pt-20 lg:px-20 bg-white"
+      className="min-h-screen 2xl:w-[80%] m-auto pb-20 pt-20 lg:px-20 bg-white relative"
       id="services"
     >
       <div className="heading flex flex-col justify-center items-center hover:scale-105 cursor-pointer">
-        <span className="text-3xl font-bold  text-blue-900 opacity-80">Services</span>
+        <span className="text-3xl font-bold  text-blue-900 opacity-80">
+          Services
+        </span>
         <span className="text-lg font-semibold text-gray-500">
           What I offer
         </span>
@@ -572,8 +595,13 @@ function Service() {
           <p className="p-y text-semibold text-lg text-gray-700">
             Software Development
           </p>
-          <div className="flex flex-row gap-4 items-center ring-1 ring-blue-900 w-[50%] md:w-[40%] lg:w-[60%]  hover:bg-blue-800 hover:text-white hover:ring-2 hover:ring-yellow-600 rounded-md py-2 px-3">
-            <span className="text-lg">View More</span>
+          <div
+            onClick={() => {
+              onShowCardSoftware();
+            }}
+            className="flex flex-row gap-4 items-center ring-1 ring-blue-900 w-[50%] md:w-[40%] lg:w-[60%]  hover:bg-blue-800 hover:text-white hover:ring-2 hover:ring-yellow-600 rounded-md py-2 px-3"
+          >
+            <span className="cursor-pointer text-lg">View More</span>
             <FaArrowRight />
           </div>
         </div>
@@ -583,8 +611,13 @@ function Service() {
           <p className="p-y text-semibold text-lg text-gray-700">
             Computer Networking
           </p>
-          <div className="flex flex-row gap-4 items-center ring-1 ring-blue-900 w-[50%] md:w-[40%] lg:w-[60%] hover:bg-blue-800 hover:text-white hover:ring-2 hover:ring-yellow-600 rounded-md py-2 px-3">
-            <span className="text-lg">View More</span>
+          <div
+            onClick={() => {
+              onShowCardNetworking();
+            }}
+            className="flex flex-row gap-4 items-center ring-1 ring-blue-900 w-[50%] md:w-[40%] lg:w-[60%] hover:bg-blue-800 hover:text-white hover:ring-2 hover:ring-yellow-600 rounded-md py-2 px-3"
+          >
+            <span className="cursor-pointer text-lg">View More</span>
             <FaArrowRight />
           </div>
         </div>
@@ -594,8 +627,13 @@ function Service() {
           <p className="p-y text-semibold text-lg text-gray-700">
             Computer Hardware and Software
           </p>
-          <div className="flex flex-row gap-4 items-center ring-1 ring-blue-900 w-[50%] md:w-[40%] lg:w-[60%] hover:bg-blue-800 hover:text-white hover:ring-2 hover:ring-yellow-600 rounded-md py-2 px-3">
-            <span className="text-lg">View More</span>
+          <div
+            onClick={() => {
+              onShowCardHardSoftWare();
+            }}
+            className="flex flex-row gap-4 items-center ring-1 ring-blue-900 w-[50%] md:w-[40%] lg:w-[60%] hover:bg-blue-800 hover:text-white hover:ring-2 hover:ring-yellow-600 rounded-md py-2 px-3"
+          >
+            <span className="cursor-pointer text-lg">View More</span>
             <FaArrowRight />
           </div>
         </div>
@@ -605,12 +643,229 @@ function Service() {
           <p className="p-y text-semibold text-lg text-gray-700">
             Computer Security
           </p>
-          <div className="flex flex-row gap-4 items-center ring-1 ring-blue-900 w-[50%] md:w-[40%] lg:w-[60%] hover:bg-blue-800 hover:text-white hover:ring-2 hover:ring-yellow-600 rounded-md py-2 px-3">
-            <span className="text-lg">View More</span>
+          <div
+            onClick={() => {
+              onShowCardSecurity();
+            }}
+            className="flex flex-row gap-4 items-center ring-1 ring-blue-900 w-[50%] md:w-[40%] lg:w-[60%] hover:bg-blue-800 hover:text-white hover:ring-2 hover:ring-yellow-600 rounded-md py-2 px-3"
+          >
+            <span className="cursor-pointer text-lg">View More</span>
             <FaArrowRight />
           </div>
         </div>
       </div>
+
+      {/* Software Development Service card */}
+      {showCardSoftware && (
+        <div className="software-overlay min-h-screen lg:px-10 z-[100] bg-gray-100 flex justify-center left-0 items-center fixed  top-0">
+          <div className="">
+            <div
+              className="absolute right-7 top-4"
+              onClick={() => {
+                onShowCardSoftware();
+              }}
+            >
+              <p className="text-white font-bold text-xl md:left-20 cursor-pointer px-3 py-1 flex items-center bg-red-300 rounded-full">
+                x
+              </p>
+            </div>
+          </div>
+
+          <div className="content px-1 md:px-4 py-20 md:py-10 bg-white ">
+            <h2 className="font-bold text-xl">
+              Services Under Software Development I Render
+            </h2>
+            <br />
+            <p className=" text-lg">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum
+              aut distinctio enim tempore beatae obcaecati ut. Molestias, est
+              sint. Cupiditate numquam alias velit reiciendis molestias.
+              Expedita et totam consequatur consectetur! Lorem ipsum dolor sit,
+              amet consectetur adipisicing elit. Ipsum aut distinctio enim
+              tempore beatae obcaecati ut. Molestias, est sint. Cupiditate
+              numquam alias velit reiciendis molestias. Expedita et totam
+              consequatur consectetur! <br />
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum
+              aut distinctio enim tempore beatae obcaecati ut. Molestias, est
+              sint. Cupiditate numquam alias velit reiciendis molestias.
+              Expedita et totam consequatur consectetur! Lorem ipsum dolor sit,
+              amet consectetur adipisicing elit. Ipsum aut distinctio enim
+              tempore beatae obcaecati ut. Molestias, est sint. Cupiditate
+              numquam alias velit reiciendis molestias. Expedita et totam
+              consequatur consectetur!
+              <br />
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum
+              aut distinctio enim tempore beatae obcaecati ut. Molestias, est
+              sint. Cupiditate numquam alias velit reiciendis molestias.
+              Expedita et totam consequatur consectetur! Lorem ipsum dolor sit,
+              amet consectetur adipisicing elit. Ipsum aut distinctio enim
+              tempore beatae obcaecati ut. Molestias, est sint. Cupiditate
+              numquam alias velit reiciendis molestias. Expedita et totam
+              consequatur consectetur!
+              <br />
+            </p>
+          </div>
+        </div>
+      )}
+
+      {/* Networking Service card */}
+      {showCardNetworking && (
+        <div className="software-overlay min-h-screen lg:px-10 z-[100] bg-gray-100 flex justify-center left-0 items-center fixed top-0">
+          <div className="">
+            <div
+              className="absolute right-7 top-4"
+              onClick={() => {
+                onShowCardNetworking();
+              }}
+            >
+              <p className="text-white font-bold text-xl md:left-20 cursor-pointer px-3 py-1 flex items-center bg-red-300 rounded-full">
+                x
+              </p>
+            </div>
+          </div>
+
+          <div className="content px-1 md:px-4 py-20 md:py-10 bg-white">
+            <h2 className="font-bold text-xl">
+              Services Under Computer Networking I Render
+            </h2>
+            <br />
+            <p className=" text-lg">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum
+              aut distinctio enim tempore beatae obcaecati ut. Molestias, est
+              sint. Cupiditate numquam alias velit reiciendis molestias.
+              Expedita et totam consequatur consectetur! Lorem ipsum dolor sit,
+              amet consectetur adipisicing elit. Ipsum aut distinctio enim
+              tempore beatae obcaecati ut. Molestias, est sint. Cupiditate
+              numquam alias velit reiciendis molestias. Expedita et totam
+              consequatur consectetur! <br />
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum
+              aut distinctio enim tempore beatae obcaecati ut. Molestias, est
+              sint. Cupiditate numquam alias velit reiciendis molestias.
+              Expedita et totam consequatur consectetur! Lorem ipsum dolor sit,
+              amet consectetur adipisicing elit. Ipsum aut distinctio enim
+              tempore beatae obcaecati ut. Molestias, est sint. Cupiditate
+              numquam alias velit reiciendis molestias. Expedita et totam
+              consequatur consectetur!
+              <br />
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum
+              aut distinctio enim tempore beatae obcaecati ut. Molestias, est
+              sint. Cupiditate numquam alias velit reiciendis molestias.
+              Expedita et totam consequatur consectetur! Lorem ipsum dolor sit,
+              amet consectetur adipisicing elit. Ipsum aut distinctio enim
+              tempore beatae obcaecati ut. Molestias, est sint. Cupiditate
+              numquam alias velit reiciendis molestias. Expedita et totam
+              consequatur consectetur!
+              <br />
+            </p>
+          </div>
+        </div>
+      )}
+
+      {/* Hardware & Software Service card */}
+      {showCardHardSoftware && (
+        <div className="software-overlay min-h-screen lg:px-10 z-[100] bg-gray-100 flex justify-center left-0 items-center fixed top-0">
+          <div className="">
+            <div
+              className="absolute right-7 top-4"
+              onClick={() => {
+                onShowCardHardSoftWare();
+              }}
+            >
+              <p className="text-white font-bold text-xl md:left-20 cursor-pointer px-3 py-1 flex items-center bg-red-300 rounded-full">
+                x
+              </p>
+            </div>
+          </div>
+
+          <div className="content px-1 md:px-4 py-20 md:py-10 bg-white">
+            <h2 className="font-bold text-xl">
+              Services Under Computer Hardware & Software I Render
+            </h2>
+            <br />
+            <p className=" text-lg">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum
+              aut distinctio enim tempore beatae obcaecati ut. Molestias, est
+              sint. Cupiditate numquam alias velit reiciendis molestias.
+              Expedita et totam consequatur consectetur! Lorem ipsum dolor sit,
+              amet consectetur adipisicing elit. Ipsum aut distinctio enim
+              tempore beatae obcaecati ut. Molestias, est sint. Cupiditate
+              numquam alias velit reiciendis molestias. Expedita et totam
+              consequatur consectetur! <br />
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum
+              aut distinctio enim tempore beatae obcaecati ut. Molestias, est
+              sint. Cupiditate numquam alias velit reiciendis molestias.
+              Expedita et totam consequatur consectetur! Lorem ipsum dolor sit,
+              amet consectetur adipisicing elit. Ipsum aut distinctio enim
+              tempore beatae obcaecati ut. Molestias, est sint. Cupiditate
+              numquam alias velit reiciendis molestias. Expedita et totam
+              consequatur consectetur!
+              <br />
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum
+              aut distinctio enim tempore beatae obcaecati ut. Molestias, est
+              sint. Cupiditate numquam alias velit reiciendis molestias.
+              Expedita et totam consequatur consectetur! Lorem ipsum dolor sit,
+              amet consectetur adipisicing elit. Ipsum aut distinctio enim
+              tempore beatae obcaecati ut. Molestias, est sint. Cupiditate
+              numquam alias velit reiciendis molestias. Expedita et totam
+              consequatur consectetur!
+              <br />
+            </p>
+          </div>
+        </div>
+      )}
+
+      {/* Security Service card */}
+      {showCardSecurity && (
+        <div className="software-overlay min-h-screen lg:px-10 z-[100] bg-gray-100 flex justify-center left-0 items-center fixed top-0">
+          <div className="">
+            <div
+              className="absolute right-7 top-4"
+              onClick={() => {
+                onShowCardSecurity();
+              }}
+            >
+              <p className="text-white font-bold text-xl md:left-20 cursor-pointer px-3 py-1 flex items-center bg-red-300 rounded-full">
+                x
+              </p>
+            </div>
+          </div>
+
+          <div className="content px-1 md:px-4 py-20 md:py-10 bg-white">
+            <h2 className="font-bold text-xl">
+              Services Under Computer & Network Security I Render
+            </h2>
+            <br />
+            <p className=" text-lg">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum
+              aut distinctio enim tempore beatae obcaecati ut. Molestias, est
+              sint. Cupiditate numquam alias velit reiciendis molestias.
+              Expedita et totam consequatur consectetur! Lorem ipsum dolor sit,
+              amet consectetur adipisicing elit. Ipsum aut distinctio enim
+              tempore beatae obcaecati ut. Molestias, est sint. Cupiditate
+              numquam alias velit reiciendis molestias. Expedita et totam
+              consequatur consectetur! <br />
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum
+              aut distinctio enim tempore beatae obcaecati ut. Molestias, est
+              sint. Cupiditate numquam alias velit reiciendis molestias.
+              Expedita et totam consequatur consectetur! Lorem ipsum dolor sit,
+              amet consectetur adipisicing elit. Ipsum aut distinctio enim
+              tempore beatae obcaecati ut. Molestias, est sint. Cupiditate
+              numquam alias velit reiciendis molestias. Expedita et totam
+              consequatur consectetur!
+              <br />
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum
+              aut distinctio enim tempore beatae obcaecati ut. Molestias, est
+              sint. Cupiditate numquam alias velit reiciendis molestias.
+              Expedita et totam consequatur consectetur! Lorem ipsum dolor sit,
+              amet consectetur adipisicing elit. Ipsum aut distinctio enim
+              tempore beatae obcaecati ut. Molestias, est sint. Cupiditate
+              numquam alias velit reiciendis molestias. Expedita et totam
+              consequatur consectetur!
+              <br />
+            </p>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
@@ -618,19 +873,18 @@ function Service() {
 //Portfolio page
 function Portfolio() {
   return (
-    <div
-      className=" pt-20 lg:px-20 bg-white 2xl:w-[80%] m-auto"
-      id="portfolio"
-    >
+    <div className=" pt-20 lg:px-20 bg-white 2xl:w-[80%] m-auto" id="portfolio">
       <div className="heading flex flex-col justify-center items-center hover:scale-105 cursor-pointer">
-        <span className="text-3xl font-bold  text-blue-900 opacity-80">Portfolio</span>
+        <span className="text-3xl font-bold  text-blue-900 opacity-80">
+          Portfolio
+        </span>
         <span className="text-lg font-semibold text-gray-500">
           Most recent works
         </span>
       </div>
 
       <div className="pt-10 ">
-        <PorfolioItems/>
+        <PorfolioItems />
       </div>
     </div>
   );
