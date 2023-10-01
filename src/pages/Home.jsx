@@ -5,6 +5,7 @@ import Profile from "../assets/Profile.png";
 import Picture from "../assets/Picture.png";
 import { FaFileDownload } from "react-icons/fa";
 import AnchorLink from "react-anchor-link-smooth-scroll";
+
 import {
   MdOutlineEmail,
   MdMenu,
@@ -30,6 +31,7 @@ import {
 import { useState } from "react";
 import Resume from "../assets/resume.pdf";
 import SkillSet from "../components/SkillSet";
+import PorfolioItems from "../components/PorfolioItems";
 
 //Navigation bar
 function NavigationBar() {
@@ -558,7 +560,7 @@ function Service() {
       id="services"
     >
       <div className="heading flex flex-col justify-center items-center hover:scale-105 cursor-pointer">
-        <span className="text-3xl font-bold">Services</span>
+        <span className="text-3xl font-bold  text-blue-900 opacity-80">Services</span>
         <span className="text-lg font-semibold text-gray-500">
           What I offer
         </span>
@@ -617,14 +619,18 @@ function Service() {
 function Portfolio() {
   return (
     <div
-      className="min-h-screen pt-20 lg:px-20 bg-white 2xl:w-[80%] m-auto"
+      className=" pt-20 lg:px-20 bg-white 2xl:w-[80%] m-auto"
       id="portfolio"
     >
       <div className="heading flex flex-col justify-center items-center hover:scale-105 cursor-pointer">
-        <span className="text-3xl font-bold">Portfolio</span>
+        <span className="text-3xl font-bold  text-blue-900 opacity-80">Portfolio</span>
         <span className="text-lg font-semibold text-gray-500">
           Most recent works
         </span>
+      </div>
+
+      <div className="pt-10 ">
+        <PorfolioItems/>
       </div>
     </div>
   );
@@ -756,7 +762,7 @@ function Contact() {
             <input
               type="submit"
               value="Send Message"
-              className="text-lg bg-blue-600 py-3 px-10 text-white rounded-md"
+              className="text-lg bg-yellow-600 py-3 px-10 text-white rounded-md"
             />
           </div>
         </form>
