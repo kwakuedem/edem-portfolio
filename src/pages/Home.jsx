@@ -3,6 +3,7 @@ import emailjs from "@emailjs/browser";
 
 import Profile from "../assets/Profile.png";
 import Picture from "../assets/Picture.png";
+
 import { FaFileDownload } from "react-icons/fa";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 

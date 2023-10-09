@@ -29,7 +29,7 @@ function PorfolioItems() {
           640: { slidesPerView: 1 },
           768: { slidesPerView: 2 },
           1024: { slidesPerView: 2 },
-          1536: { slidesPerView: 3 },
+          1536:{slidesPerView: 3}
         }}
         autoplay={500}
         navigation
