@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
+import { Fade,Slide } from "react-awesome-reveal";
 
 import Profile from "../assets/Profile.png";
 import Picture from "../assets/Picture.png";
@@ -178,7 +179,7 @@ function NavigationBar() {
 function About() {
   return (
     <div
-      className="min-h-screen pb-10 pt-20 md:pt-0 lg:pt-20 lg:px-20 bg-white 2xl:w-[80%] m-auto"
+      className="min-h-screen pb-10 pt-20 md:pt-0 lg:pt-20 lg:px-20  2xl:w-[80%] m-auto"
       id="about "
     >
       <div className="heading flex flex-col justify-center items-center hover:translate-x-2">
@@ -210,21 +211,27 @@ function About() {
           </div>
 
           <div className="flex flex-col gap-6 lg:gap-0 lg:flex-row lg:space-x-16 pt-10">
+            <Fade direction="left" duration={2000}>
             <div className="flex flex-col py-10 lg:py-0 lg:justify-center ring-2 w-[90%] rounded-md m-auto lg:ring-0 items-center hover:translate-x-2 cursor-pointer">
               <span className="text-2xl font-bold">05+</span>
               <span>Years</span>
               <span>experience</span>
             </div>
+            </Fade>
+            <Fade direction="up" duration={2000}>
             <div className="flex flex-col py-10 lg:py-0 lg:justify-center ring-2 w-[90%] rounded-md m-auto lg:ring-0 items-center hover:translate-x-2 cursor-pointer">
               <span className="text-2xl font-bold">10+</span>
               <span>Completed</span>
               <span>projects</span>
             </div>
+            </Fade>
+            <Fade direction="right" duration={2000}>
             <div className="flex flex-col py-10 lg:py-0 lg:justify-center ring-2 w-[90%] rounded-md m-auto lg:ring-0 items-center hover:translate-x-2 cursor-pointer">
               <span className="text-2xl font-bold">02+</span>
               <span>Companies</span>
               <span>worked</span>
             </div>
+            </Fade>
           </div>
 
           <a
@@ -260,7 +267,7 @@ function Skill() {
 
   return (
     <div
-      className="pt-20 pb-20 lg:px-20 bg-white 2xl:w-[80%] m-auto"
+      className="pt-20 pb-20 lg:px-20 2xl:w-[80%] m-auto"
       id="skill"
     >
       <div className="heading flex flex-col justify-center items-center hover:scale-105 hover:translate-x-2 cursor-pointer">
@@ -416,6 +423,7 @@ function Qualification() {
             </h3>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 lg:gap-y-10 justify-center item-center pt-10 md:px-8">
+            <Slide direction="left" duration={2000}>
             <div className="education-section pt-5 flex flex-col w-[90%] h-52 shadow-xl  m-auto lg:w-full lg:m-0 ring-1 ring-yellow-600 rounded-md px-10">
               <span className="font-bold text-gray-600">
                 B'Tech <br />
@@ -430,6 +438,8 @@ function Qualification() {
                 <p className="font-semibold text-gray-500">2022 - present</p>
               </span>
             </div>
+            </Slide>
+            <Slide direction="right" duration={2000}>
             <div className="education-section py-5 flex flex-col ring-1 ring-yellow-600 rounded-md px-10 w-[90%] h-52 shadow-xl m-auto lg:w-full lg:m-0">
               <span className="font-bold text-gray-600">
                 HND <br />
@@ -444,6 +454,8 @@ function Qualification() {
                 <p className="font-semibold text-gray-500">2019 - 2022</p>
               </span>
             </div>
+            </Slide>
+            <Slide direction="left" duration={2000}>
             <div className="education-section py-5 flex flex-col ring-1 ring-yellow-600 rounded-md px-10 w-[90%] h-52 shadow-xl m-auto lg:w-full lg:m-0">
               <span className="font-bold text-gray-600">
                 Google
@@ -458,6 +470,8 @@ function Qualification() {
                 </p>
               </span>
             </div>
+            </Slide>
+            <Slide direction="right" duration={2000}>
             <div className="education-section py-5 flex flex-col ring-1 ring-yellow-600 rounded-md px-10 w-[90%] h-52 shadow-xl m-auto lg:w-full lg:m-0">
               <span className="font-bold text-gray-600">
                 Google
@@ -472,7 +486,8 @@ function Qualification() {
                 </p>
               </span>
             </div>
-
+            </Slide>
+            <Slide direction="left" duration={2000}>
             <div className="education-section py-5 flex flex-col ring-1 ring-yellow-600 rounded-md px-10 w-[90%] h-52 shadow-xl m-auto lg:w-full lg:m-0">
               <span className="font-bold text-gray-600">
                 Diploma
@@ -487,10 +502,12 @@ function Qualification() {
                 <FaCalendar className="text-lg text-gray-500" />{" "}
                 <p className="font-semibold text-gray-500">
                   June, 2021 - December, 2023
+                  
                 </p>
               </span>
             </div>
-
+            </Slide>
+            <Slide direction="right" duration={2000}>
             <div className="education-section py-5 flex flex-col ring-1 ring-yellow-600 rounded-md px-10 w-[90%] h-52 shadow-xl m-auto lg:w-full lg:m-0">
               <span className="font-bold text-gray-600">
                 WASSCE
@@ -505,9 +522,12 @@ function Qualification() {
                   August,2013,June, 2016
                 </p>
               </span>
+              
             </div>
+            </Slide>
           </div>
-        </div>
+          </div>
+       
         <div className="work-section">
           <div className="text flex gap-4 pt-16 item-center px-5 md:px-10 lg:px-0">
             <FaFile className="text-2xl text-blue-900 opacity-80 md:ml-4" />
@@ -517,7 +537,8 @@ function Qualification() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 lg:gap-y-10 justify-center item-center pt-6 md:pt-10">
-            <div className="education-section pt-5 flex flex-col ring-1 ring-yellow-600 rounded-md p-10 w-[90%] m-auto h-52 shadow-xl">
+          <Fade direction="left" duration={2000}>
+            <div className=" pt-5 flex flex-col ring-1 ring-yellow-600 rounded-md p-10 w-[90%] m-auto h-52 shadow-xl">
               <span className="font-bold text-gray-600">
                 IT Support Specialist (National Service)
               </span>
@@ -531,8 +552,10 @@ function Qualification() {
                 </p>
               </span>
             </div>
+            </Fade>
 
-            <div className="education-section pt-5 flex flex-col ring-1 ring-yellow-600 rounded-md p-10 w-[90%] m-auto h-52 shadow-xl">
+            <Fade direction="right" duration={2000}>
+            <div className=" pt-5 flex flex-col ring-1 ring-yellow-600 rounded-md p-10 w-[90%] m-auto h-52 shadow-xl">
               <span className="font-bold text-gray-600">
                 IT Support Specialist (Intenship)
               </span>
@@ -546,6 +569,7 @@ function Qualification() {
                 </p>
               </span>
             </div>
+            </Fade>
           </div>
         </div>
       </div>
@@ -578,7 +602,7 @@ function Service() {
 
   return (
     <div
-      className="min-h-screen 2xl:w-[80%] m-auto pb-20 pt-20 lg:px-20 bg-white relative"
+      className="min-h-screen 2xl:w-[80%] m-auto pb-20 pt-20 lg:px-20  relative"
       id="services"
     >
       <div className="heading flex flex-col justify-center items-center hover:scale-105 cursor-pointer">
@@ -591,6 +615,7 @@ function Service() {
       </div>
 
       <div className="sevice-wrapper pt-20 px-4 lg:px-10 grid md:grid-cols-2 gap-5 gap-y-5 lg:grid-cols-3">
+        <Slide direction="left" duration={2000}>
         <div className="software-wrapper flex flex-col gap-5 ring-1 ring-yellow-600 shadow-lg shadow-blue-800 justify-bottom items-bottom py-10 px-3 rounded-md">
           <FaLaptopCode className="text-4xl mt-10  text-yellow-600" />
           <p className="p-y text-semibold text-lg text-gray-700">
@@ -606,7 +631,10 @@ function Service() {
             <FaArrowRight />
           </div>
         </div>
+        </Slide>
+        
 
+        <Slide direction="right" duration={2000}>
         <div className="network-wrapper flex flex-col gap-5 ring-1 ring-yellow-600 shadow-lg shadow-blue-800 justify-bottom items-bottom py-10 px-3 rounded-md">
           <FaNetworkWired className="text-4xl mt-10  text-yellow-600" />
           <p className="p-y text-semibold text-lg text-gray-700">
@@ -618,11 +646,14 @@ function Service() {
             }}
             className="flex flex-row gap-4 items-center ring-1 ring-blue-900 w-[50%] md:w-[40%] lg:w-[60%] hover:bg-blue-800 hover:text-white hover:ring-2 hover:ring-yellow-600 rounded-md py-2 px-3"
           >
+        
             <span className="cursor-pointer text-lg">View More</span>
             <FaArrowRight />
           </div>
         </div>
+        </Slide>
 
+        <Slide direction="left" duration={2000}>
         <div className="hardware-wrapper flex flex-col gap-5 ring-1 ring-yellow-600 shadow-lg shadow-blue-800 justify-bottom items-bottom py-10 px-3 rounded-md">
           <MdOutlineHardware className="text-4xl mt-10  text-yellow-600" />
           <p className="p-y text-semibold text-lg text-gray-700">
@@ -638,7 +669,9 @@ function Service() {
             <FaArrowRight />
           </div>
         </div>
+        </Slide>
 
+        <Slide direction="right" duration={2000}>
         <div className="security-wrapper flex flex-col gap-5 ring-1 ring-yellow-600 shadow-lg shadow-blue-800 justify-bottom items-bottom py-10 px-3 rounded-md">
           <MdOutlineSecurity className="text-4xl mt-10  text-yellow-600" />
           <p className="p-y text-semibold text-lg text-gray-700">
@@ -654,8 +687,9 @@ function Service() {
             <FaArrowRight />
           </div>
         </div>
+        </Slide>
       </div>
-
+      
       {/* Software Development Service card */}
       {showCardSoftware && (
         <div className="software-overlay min-h-screen lg:px-10 z-[100] bg-gray-100 flex justify-center left-0 items-center fixed  top-0">
@@ -874,7 +908,7 @@ function Service() {
 //Portfolio page
 function Portfolio() {
   return (
-    <div className=" pt-20 lg:px-20 bg-white 2xl:w-[80%] m-auto" id="portfolio">
+    <div className=" pt-20 lg:px-20  2xl:w-[80%] m-auto" id="portfolio">
       <div className="heading flex flex-col justify-center items-center hover:scale-105 cursor-pointer">
         <span className="text-3xl font-bold  text-blue-900 opacity-80">
           Portfolio
@@ -921,7 +955,7 @@ function Contact() {
   };
 
   return (
-    <div className="pt-20 lg:px-20 bg-white 2xl:w-[80%] m-auto" id="contact">
+    <div className="pt-20 lg:px-20 2xl:w-[80%] m-auto" id="contact">
       <div className="heading flex flex-col justify-center items-center hover:scale-105 cursor-pointer">
         <span className="text-3xl font-bold text-blue-800 opacity-70">
           Contact Me
@@ -1031,7 +1065,7 @@ function Home() {
   return (
     <>
       <div
-        className=" min-h-screen pt-10 pb-10 lg:pt-32 px-2 bg-white 2xl:w-[80%] m-auto"
+        className=" min-h-screen pt-10 pb-10 lg:pt-32 px-2 2xl:w-[80%] m-auto"
         id="home"
       >
         <div className="flex flex-col lg:flex-row gap-7 lg:py-3 px-6 lg:px-20 ">
@@ -1066,13 +1100,13 @@ function Home() {
             <div className="intro-text-wrapper flex flex-col md:flex-row">
               <div className="flex flex-col flex-1">
                 <div className="name flex md:pl-3 lg:pl-0 flex-col pb-4 hover:scale-105 cursor-pointer">
-                  <span className="text-lg lg:text-3xl font-bold pb-4 leading-3 lg:leading-6 lg:tracking-wide">
+                  <span className=" opacity-80 dark:text white text-xl lg:text-3xl font-bold pb-4 leading-3 lg:leading-6 lg:tracking-wide">
                     Hi, I am
                   </span>
-                  <span className="text-lg lg:text-3xl font-bold pb-4 leading-3 lg:leading-6 lg:tracking-wide">
+                  <span className=" opacity-80 text-xl lg:text-3xl font-bold pb-4 leading-3 lg:leading-6 lg:tracking-wide">
                     Edem Kwaku
                   </span>
-                  <span className="text-lg lg:text-3xl font-bold pb-4 leading-3 lg:leading-6 lg:tracking-wide">
+                  <span className=" opacity-80 text-xl lg:text-3xl font-bold pb-4 leading-3 lg:leading-6 lg:tracking-wide">
                     Avorley
                   </span>
                 </div>

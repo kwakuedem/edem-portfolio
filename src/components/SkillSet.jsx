@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { FaSortDown } from 'react-icons/fa';
+import { Fade } from "react-awesome-reveal";
 
 function SkillSet({ heading, children }) {
     const [showSkills, setShowSkills] = useState(false);
