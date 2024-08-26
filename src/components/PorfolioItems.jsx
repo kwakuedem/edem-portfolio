@@ -8,8 +8,10 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 
+import Picture from "../assets/Picture.png";
+import Profile from "../assets/Profile.png";
 import Project from "../assets/Project.png";
-import Projectpic from "../assets/Projectpic";
+import Projectpic from "../assets/Projectpic.png";
 
 const slides = [
   { image: "../assets/Picture.png" },
