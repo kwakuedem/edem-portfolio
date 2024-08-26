@@ -8,9 +8,8 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 
-import Picture from "../assets/Picture.png";
-import Profile from "../assets/Profile.png";
 import Project from "../assets/Project.png";
+import Project2 from "../assets/Project2.png";
 
 const slides = [
   { image: "../assets/Picture.png" },
@@ -47,7 +46,7 @@ function PorfolioItems() {
           </SwiperSlide>
           <SwiperSlide>
             <div className="flex justify-center pb-16">
-              <img src={Project} />
+              <img src={Project2} />
             </div>
           </SwiperSlide>
           <SwiperSlide>
@@ -57,7 +56,7 @@ function PorfolioItems() {
           </SwiperSlide>
           <SwiperSlide>
             <div className="flex justify-center pb-16">
-              <img src={Project} />
+              <img src={Project2} />
             </div>
           </SwiperSlide>
           ...
