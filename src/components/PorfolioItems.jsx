@@ -10,6 +10,7 @@ import "swiper/css/scrollbar";
 
 import Picture from "../assets/Picture.png";
 import Profile from "../assets/Profile.png";
+import Project from "../assets/Project.png";
 
 const slides = [
   { image: "../assets/Picture.png" },
@@ -29,7 +30,7 @@ function PorfolioItems() {
           640: { slidesPerView: 1 },
           768: { slidesPerView: 2 },
           1024: { slidesPerView: 2 },
-          1536:{slidesPerView: 3}
+          1536: { slidesPerView: 3 },
         }}
         autoplay={500}
         navigation
@@ -41,22 +42,22 @@ function PorfolioItems() {
         <div className="pb-10">
           <SwiperSlide>
             <div className="flex justify-center pb-16">
-              <img src={Profile} />
+              <img src={Project} />
             </div>
           </SwiperSlide>
           <SwiperSlide>
             <div className="flex justify-center pb-16">
-              <img src={Picture} />
+              <img src={Project} />
             </div>
           </SwiperSlide>
           <SwiperSlide>
             <div className="flex justify-center pb-16">
-              <img src={Profile} />
+              <img src={Project} />
             </div>
           </SwiperSlide>
           <SwiperSlide>
             <div className="flex justify-center pb-16">
-              <img src={Picture} />
+              <img src={Project} />
             </div>
           </SwiperSlide>
           ...

@@ -4,6 +4,7 @@ import { Fade, Slide } from "react-awesome-reveal";
 
 import Profile from "../assets/Profile.png";
 import Picture from "../assets/Picture.png";
+import Project from "../assets/Project.png";
 
 import { FaFileDownload } from "react-icons/fa";
 import AnchorLink from "react-anchor-link-smooth-scroll";
@@ -266,10 +267,7 @@ function Skill() {
   }
 
   return (
-    <div
-      className="pt-20 pb-20 lg:px-20 2xl:w-[80%] m-auto"
-      id="skill"
-    >
+    <div className="pt-20 pb-20 lg:px-20 2xl:w-[80%] m-auto" id="skill">
       <div className="heading flex flex-col justify-center items-center hover:scale-105 hover:translate-x-2 cursor-pointer">
         <span className="text-3xl font-bold text-blue-900 opacity-80">
           Skills
@@ -462,7 +460,9 @@ function Qualification() {
                   <br />
                   Cybersecurity
                 </span>
-                <span className="text-gray-500 pt-3 font-semibold">Cousera</span>
+                <span className="text-gray-500 pt-3 font-semibold">
+                  Cousera
+                </span>
                 <span className="flex flex-row gap-3 pt-4 text-semibold">
                   <FaCalendar className="text-lg text-gray-500" />
                   <p className="font-semibold text-gray-500">
@@ -478,7 +478,9 @@ function Qualification() {
                   <br />
                   IT Support
                 </span>
-                <span className="text-gray-500 pt-3 font-semibold">Cousera</span>
+                <span className="text-gray-500 pt-3 font-semibold">
+                  Cousera
+                </span>
                 <span className="flex flex-row gap-3 pt-4 text-semibold">
                   <FaCalendar className="text-lg text-gray-500" />
                   <p className="font-semibold text-gray-500">
@@ -502,7 +504,6 @@ function Qualification() {
                   <FaCalendar className="text-lg text-gray-500" />{" "}
                   <p className="font-semibold text-gray-500">
                     June, 2021 - December, 2023
-
                   </p>
                 </span>
               </div>
@@ -522,7 +523,6 @@ function Qualification() {
                     August,2013,June, 2016
                   </p>
                 </span>
-
               </div>
             </Slide>
           </div>
@@ -633,7 +633,6 @@ function Service() {
           </div>
         </Slide>
 
-
         <Slide direction="right" duration={2000}>
           <div className="network-wrapper flex flex-col gap-5 ring-1 ring-yellow-600 shadow-lg shadow-blue-800 justify-bottom items-bottom py-10 px-3 rounded-md">
             <FaNetworkWired className="text-4xl mt-10  text-yellow-600" />
@@ -646,7 +645,6 @@ function Service() {
               }}
               className="flex flex-row gap-4 items-center ring-1 ring-blue-900 w-[50%] md:w-[40%] lg:w-[60%] hover:bg-blue-800 hover:text-white hover:ring-2 hover:ring-yellow-600 rounded-md py-2 px-3"
             >
-
               <span className="cursor-pointer text-lg">View More</span>
               <FaArrowRight />
             </div>
