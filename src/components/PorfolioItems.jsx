@@ -12,6 +12,7 @@ import Picture from "../assets/Picture.png";
 import Profile from "../assets/Profile.png";
 import Project from "../assets/Project.png";
 import Projectpic from "../assets/Projectpic.png";
+import Dashboard from "../assets/Dashboard.png";
 
 const slides = [
   { image: "../assets/Picture.png" },
@@ -48,17 +49,17 @@ function PorfolioItems() {
           </SwiperSlide>
           <SwiperSlide>
             <div className="flex justify-center pb-16">
+              <img src={Dashboard} />
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="flex justify-center pb-16">
               <img src={Projectpic} />
             </div>
           </SwiperSlide>
           <SwiperSlide>
             <div className="flex justify-center pb-16">
               <img src={Project} />
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="flex justify-center pb-16">
-              <img src={Projectpic} />
             </div>
           </SwiperSlide>
           ...
