@@ -181,7 +181,7 @@ function About() {
   return (
     <div
       className="bg-white min-h-screen pb-10 pt-20 md:pt-0 lg:pt-20 lg:px-20  2xl:w-[80%] m-auto"
-      id="about "
+      id="about"
     >
       <div className="heading flex flex-col justify-center items-center hover:translate-x-2">
         <span className="text-3xl font-bold text-blue-900 opacity-80">
@@ -946,7 +946,7 @@ function Service() {
 //Portfolio page
 function Portfolio() {
   return (
-    <div className=" pt-20 lg:px-20  2xl:w-[80%] m-auto" id="portfolio">
+    <div className="bg-white pt-20 lg:px-20  2xl:w-[80%] m-auto" id="portfolio">
       <div className="heading flex flex-col justify-center items-center hover:scale-105 cursor-pointer">
         <span className="text-3xl font-bold  text-blue-900 opacity-80">
           Portfolio
@@ -1127,7 +1127,7 @@ function Home() {
               <FaTwitter className="text-2xl text-yellow-600" />
             </a>
             <a
-              href="https://www.linkedin.com/in/avorley-edem-kwaku-b1ab48232/"
+              href="https://www.linkedin.com/in/edem-kwaku-avorley-b1ab48232"
               className="hover:translate-y-2"
             >
               <FaLinkedin className="text-2xl text-yellow-600" />
@@ -1175,9 +1175,9 @@ function Home() {
             </div>
             <AnchorLink
               href="#about"
-              className="mt-12 md:mt-14  lg:mt-20 m-auto w-[70%] md:w-[40%] lg:w-[20%] gap-2 bg-yellow-600 flex justify-center items-center rounded-md ring-2 ring-blue-800 hover:-translate-y-3 hover:text-yellow-600 hover:bg-white hover:ring-yellow-600"
+              className="mt-12 md:mt-14  lg:mt-20 m-auto w-[70%] md:w-[40%] lg:w-[15%] gap-2 bg-yellow-600 flex justify-center items-center rounded-md ring-2 ring-blue-800 hover:text-yellow-600 hover:bg-white hover:ring-yellow-600"
             >
-              <button className="py-2 lg:py-4 text-lg font-bold ">
+              <button className="py-2 lg:py-2 text-lg font-bold ">
                 About Me
               </button>
               <FaArrowRight />
@@ -1198,7 +1198,7 @@ function Footer() {
           <div className="pb-4 md:flex md:flex-col md:justify-center  md:pt-3 md:gap-4">
             <AnchorLink href="#home">
               <p className="text-xl text-blue-900 font-bold opacity-80">
-                EdTech
+                Edem
               </p>
             </AnchorLink>
           </div>
