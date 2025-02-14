@@ -421,7 +421,7 @@ function Qualification() {
             </h3>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 lg:gap-y-10 justify-center item-center pt-10 md:px-8">
-            <a href="http://" target="_blank" rel="noopener noreferrer">
+            <a href="https://drive.google.com/file/d/1XZUCT3RM0KyVZIGRB3r3bH4J4httrNjj/view?usp=sharing" target="_blank" rel="noopener noreferrer">
             <Slide direction="left" duration={2000}>
               <div className="education-section pt-5 flex flex-col w-[90%] h-52 shadow-xl  m-auto lg:w-full lg:m-0 ring-1 ring-yellow-600 rounded-md px-10">
                 <span className="font-bold text-gray-600">
