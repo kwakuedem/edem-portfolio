@@ -60,7 +60,7 @@ function NavigationBar() {
             <div className="brand pb-3 md:pb-0 flex  justify-center">
               <AnchorLink href="#home">
                 <span className="font-bold text-2xl cursor-pointer text-white pt-4">
-                  EdTech
+                  Edem
                 </span>
               </AnchorLink>
             </div>
@@ -160,7 +160,7 @@ function NavigationBar() {
       <div className="bg-white px-2 lg:px-20  sticky py-4 z-10 w-full top-0 flex justify-between ring-2 ring-gray-300 2xl:w-[80%] m-auto">
         <div className="brand pl-5  flex justify-center">
           <span className="font-bold text-2xl cursor-pointer text-yellow-600 ">
-            EdTech
+            Edem
           </span>
         </div>
         <div
@@ -180,7 +180,7 @@ function NavigationBar() {
 function About() {
   return (
     <div
-      className="min-h-screen pb-10 pt-20 md:pt-0 lg:pt-20 lg:px-20  2xl:w-[80%] m-auto"
+      className="bg-white min-h-screen pb-10 pt-20 md:pt-0 lg:pt-20 lg:px-20  2xl:w-[80%] m-auto"
       id="about "
     >
       <div className="heading flex flex-col justify-center items-center hover:translate-x-2">
@@ -195,13 +195,13 @@ function About() {
       <div className="content flex flex-col lg:flex-row pt-10 lg:pt-20 lg:px-10">
         <div className="flex justify-center item-center">
           <div className="image-card w-full lg:w-[350px] flex lg:flex-1 justify-center items-center lg:hover:scale-110">
-            <img src={Picture} className="w-[90%] lg:w-[350px] rounded-md" />
+            <img src={Picture} className="w-[90%] md:w-[60%] lg:w-[350px] rounded-md" />
           </div>
         </div>
 
         <div className="text-section flex-1 justify-center pt-6 md:pt-0">
           <div className="hover:scale-105 cursor-pointer w-[90%] m-auto md:m-0 md:w-full md:pt-6 lg:pt-0 md:px-16 lg:px-8">
-            <p className="text-lg">
+            <p className="text-lg text-gray-500">
               I have knowledge in Web development, Computer networking, Computer
               Security, Linux and Windows Server Administration, and Computer
               Hardware.With extensive knowledge and years of experience, working
@@ -214,23 +214,23 @@ function About() {
           <div className="flex flex-col gap-6 lg:gap-0 lg:flex-row lg:space-x-16 pt-10 lg:px-56">
             <Fade direction="left" duration={2000}>
               <div className="flex flex-col py-10 lg:py-0 lg:justify-center ring-2 w-[90%] rounded-md m-auto lg:ring-0 items-center hover:translate-x-2 cursor-pointer">
-                <span className="text-2xl font-bold">05+</span>
-                <span>Years</span>
-                <span>experience</span>
+                <span className="text-gray-500 text-2xl font-bold">05+</span>
+                <span className="text-gray-500 font-semibold">Years</span>
+                <span className="text-gray-500 font-semibold">experience</span>
               </div>
             </Fade>
             <Fade direction="up" duration={2000}>
               <div className="flex flex-col py-10 lg:py-0 lg:justify-center ring-2 w-[90%] rounded-md m-auto lg:ring-0 items-center hover:translate-x-2 cursor-pointer">
-                <span className="text-2xl font-bold">10+</span>
-                <span>Completed</span>
-                <span>projects</span>
+                <span className="text-gray-500 text-2xl font-bold">10+</span>
+                <span className="text-gray-500 font-semibold">Completed</span>
+                <span className="text-gray-500 font-semibold">projects</span>
               </div>
             </Fade>
             <Fade direction="right" duration={2000}>
               <div className="flex flex-col py-10 lg:py-0 lg:justify-center ring-2 w-[90%] rounded-md m-auto lg:ring-0 items-center hover:translate-x-2 cursor-pointer">
-                <span className="text-2xl font-bold">02+</span>
-                <span>Companies</span>
-                <span>worked</span>
+                <span className="text-gray-500 text-2xl font-bold">02+</span>
+                <span className="text-gray-500 font-semibold">Companies</span>
+                <span className="text-gray-500 font-semibold">worked</span>
               </div>
             </Fade>
           </div>
@@ -267,7 +267,7 @@ function Skill() {
   }
 
   return (
-    <div className="pt-20 pb-20 lg:px-20 2xl:w-[80%] m-auto" id="skill">
+    <div className="bg-white pt-20 pb-20 lg:px-20 2xl:w-[80%] m-auto" id="skill">
       <div className="heading flex flex-col justify-center items-center hover:scale-105 hover:translate-x-2 cursor-pointer">
         <span className="text-3xl font-bold text-blue-900 opacity-80">
           Skills
@@ -301,11 +301,11 @@ function Skill() {
               <div className="ml-5">
                 <SkillSet heading={"Frontend Developer"}>
                   <ul>
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>JavaScript</li>
-                    <li>React</li>
-                    <li>Tailwind Css</li>
+                    <li className="text-gray-500">HTML</li>
+                    <li className="text-gray-500">CSS</li>
+                    <li className="text-gray-500">JavaScript</li>
+                    <li className="text-gray-500">React</li>
+                    <li className="text-gray-500">Tailwind Css</li>
                   </ul>
                 </SkillSet>
               </div>
@@ -313,11 +313,11 @@ function Skill() {
               <div className="ml-5">
                 <SkillSet heading={"Backend Developer"}>
                   <ul>
-                    <li>Python</li>
-                    <li>Php</li>
-                    <li>Rust</li>
-                    <li>Laravel</li>
-                    <li>Django</li>
+                    <li className="text-gray-600">Python</li>
+                    <li className="text-gray-600">Php</li>
+                    <li className="text-gray-600">Rust</li>
+                    <li className="text-gray-600">Laravel</li>
+                    <li className="text-gray-600">Django</li>
                   </ul>
                 </SkillSet>
               </div>
@@ -347,11 +347,11 @@ function Skill() {
             <>
               <div className="ml-5 prose list-outside">
                 <ul>
-                  <li>Office Networking</li>
-                  <li>LAN</li>
-                  <li>Wireless Networking</li>
-                  <li>Switching</li>
-                  <li>Routing</li>
+                  <li className="text-gray-600">Office Networking</li>
+                  <li className="text-gray-600">LAN</li>
+                  <li className="text-gray-600">Wireless Networking</li>
+                  <li className="text-gray-600">Switching</li>
+                  <li className="text-gray-600">Routing</li>
                 </ul>
               </div>
             </>
@@ -380,12 +380,12 @@ function Skill() {
             <>
               <div className="ml-5 prose list-outside">
                 <ul>
-                  <li>SIEM Tool(Splunk Technology)</li>
-                  <li>Python</li>
-                  <li>Detection and Responds</li>
-                  <li>Assets, Threats and Vulneralbility</li>
-                  <li>Manage Security Risks</li>
-                  <li>Linux and SQL</li>
+                  <li className="text-gray-600">SIEM Tool(Splunk Technology)</li>
+                  <li className="text-gray-600">Python</li>
+                  <li className="text-gray-600">Detection and Responds</li>
+                  <li className="text-gray-600">Assets, Threats and Vulneralbility</li>
+                  <li className="text-gray-600">Manage Security Risks</li>
+                  <li className="text-gray-600">Linux and SQL</li>
                 </ul>
               </div>
             </>
@@ -400,7 +400,7 @@ function Skill() {
 function Qualification() {
   return (
     <div
-      className="min-h-screen pb-10 pt-10 lg:px-20 2xl:w-[80%] m-auto"
+      className="bg-white min-h-screen pb-10 pt-10 lg:px-20 2xl:w-[80%] m-auto"
       id="skill"
     >
       <div className="heading flex flex-col justify-center items-center hover:scale-105 cursor-pointer">
@@ -421,6 +421,7 @@ function Qualification() {
             </h3>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 lg:gap-y-10 justify-center item-center pt-10 md:px-8">
+            <a href="http://" target="_blank" rel="noopener noreferrer">
             <Slide direction="left" duration={2000}>
               <div className="education-section pt-5 flex flex-col w-[90%] h-52 shadow-xl  m-auto lg:w-full lg:m-0 ring-1 ring-yellow-600 rounded-md px-10">
                 <span className="font-bold text-gray-600">
@@ -433,10 +434,11 @@ function Qualification() {
                 </span>
                 <span className="flex flex-row gap-3 pt-4 text-semibold">
                   <FaCalendar className="text-lg text-gray-500" />{" "}
-                  <p className="font-semibold text-gray-500">2022 - present</p>
+                  <p className="font-semibold text-gray-500">2022 - 2024</p>
                 </span>
               </div>
             </Slide>
+            </a>
             <Slide direction="right" duration={2000}>
               <div className="education-section py-5 flex flex-col ring-1 ring-yellow-600 rounded-md px-10 w-[90%] h-52 shadow-xl m-auto lg:w-full lg:m-0">
                 <span className="font-bold text-gray-600">
@@ -602,7 +604,7 @@ function Service() {
 
   return (
     <div
-      className="min-h-screen 2xl:w-[80%] m-auto pb-20 pt-20 lg:px-20  relative"
+      className="bg-white min-h-screen 2xl:w-[80%] m-auto pb-20 pt-20 lg:px-20  relative"
       id="services"
     >
       <div className="heading flex flex-col justify-center items-center hover:scale-105 cursor-pointer">
@@ -625,9 +627,9 @@ function Service() {
               onClick={() => {
                 onShowCardSoftware();
               }}
-              className="flex flex-row gap-4 items-center ring-1 ring-blue-900 w-[50%] md:w-[40%] lg:w-[60%]  hover:bg-blue-800 hover:text-white hover:ring-2 hover:ring-yellow-600 rounded-md py-2 px-3"
+              className="bg-yellow-600 flex flex-row gap-2 items-center ring-1 ring-blue-900 w-[50%] md:w-[40%] lg:w-[40%]  hover:bg-blue-800 hover:text-white hover:ring-2 hover:ring-yellow-600 rounded-md py-2 px-3"
             >
-              <span className="cursor-pointer text-lg">View More</span>
+              <span className="cursor-pointerg">View More</span>
               <FaArrowRight />
             </div>
           </div>
@@ -643,9 +645,9 @@ function Service() {
               onClick={() => {
                 onShowCardNetworking();
               }}
-              className="flex flex-row gap-4 items-center ring-1 ring-blue-900 w-[50%] md:w-[40%] lg:w-[60%] hover:bg-blue-800 hover:text-white hover:ring-2 hover:ring-yellow-600 rounded-md py-2 px-3"
+              className=" bg-yellow-600 flex flex-row gap-2 items-center ring-1 ring-blue-900 w-[50%] md:w-[40%] lg:w-[40%] hover:bg-blue-800 hover:text-white hover:ring-2 hover:ring-yellow-600 rounded-md py-2 px-3"
             >
-              <span className="cursor-pointer text-lg">View More</span>
+              <span className="cursor-pointer ">View More</span>
               <FaArrowRight />
             </div>
           </div>
@@ -661,9 +663,9 @@ function Service() {
               onClick={() => {
                 onShowCardHardSoftWare();
               }}
-              className="flex flex-row gap-4 items-center ring-1 ring-blue-900 w-[50%] md:w-[40%] lg:w-[60%] hover:bg-blue-800 hover:text-white hover:ring-2 hover:ring-yellow-600 rounded-md py-2 px-3"
+              className=" bg-yellow-600 flex flex-row gap-2 items-center ring-1 ring-blue-900 w-[50%] md:w-[40%] lg:w-[40%] hover:bg-blue-800 hover:text-white hover:ring-2 hover:ring-yellow-600 rounded-md py-2 px-3"
             >
-              <span className="cursor-pointer text-lg">View More</span>
+              <span className="cursor-pointer ">View More</span>
               <FaArrowRight />
             </div>
           </div>
@@ -679,9 +681,9 @@ function Service() {
               onClick={() => {
                 onShowCardSecurity();
               }}
-              className="flex flex-row gap-4 items-center ring-1 ring-blue-900 w-[50%] md:w-[40%] lg:w-[60%] hover:bg-blue-800 hover:text-white hover:ring-2 hover:ring-yellow-600 rounded-md py-2 px-3"
+              className="bg-yellow-600 flex flex-row gap-2 items-center ring-1 ring-blue-900 w-[50%] md:w-[40%] lg:w-[40%] hover:bg-blue-800 hover:text-white hover:ring-2 hover:ring-yellow-600 rounded-md py-2 px-3"
             >
-              <span className="cursor-pointer text-lg">View More</span>
+              <span className="cursor-pointerg">View More</span>
               <FaArrowRight />
             </div>
           </div>
@@ -849,26 +851,29 @@ function Service() {
 
       {/* Security Service card */}
       {showCardSecurity && (
-        <div className="software-overlay min-h-screen lg:px-10 z-[100] bg-gray-100 flex justify-center left-0 items-center fixed top-0">
-          <div className="">
+        <div className="software-overlay min-h-screen lg:px-10 z-[100] bg-transparent flex justify-center left-0 items-center fixed top-0">
+          {/* <div className="">
             <div
               className="absolute right-7 top-4"
-              onClick={() => {
-                onShowCardSecurity();
-              }}
+              
             >
-              <p className="text-white font-bold text-xl md:left-20 cursor-pointer px-3 py-1 flex items-center bg-red-300 rounded-full">
+             
+            </div>
+          </div> */}
+
+          <div className="content px-1 md:px-4 py-20 md:py-10 bg-white lg:w-[70%] rounded-md shadow-md">
+             <div className="flex justify-end">
+             <p onClick={() => {
+                onShowCardSecurity();
+              }} className="text-white font-bold text-2xl md:left-20 cursor-pointer px-4 py-4 flex items-center justify-center bg-red-300 rounded-full w-3 h-3 right-0">
                 x
               </p>
-            </div>
-          </div>
-
-          <div className="content px-1 md:px-4 py-20 md:py-10 bg-white">
-            <h2 className="font-bold text-xl">
+             </div>
+            <h2 className="font-bold text-xl text-gray-500">
               Services Under Computer & Network Security I Render
             </h2>
             <br />
-            <p className=" text-lg">
+            <p className=" text-lg text-gray-500">
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum
               aut distinctio enim tempore beatae obcaecati ut. Molestias, est
               sint. Cupiditate numquam alias velit reiciendis molestias.
@@ -1063,7 +1068,7 @@ function Home() {
   return (
     <>
       <div
-        className=" min-h-screen pt-10 pb-10 lg:pt-32 px-2 2xl:w-[80%] m-auto"
+        className="bg-white min-h-screen pt-10 pb-10 lg:pt-32 px-2 2xl:w-[80%] m-auto"
         id="home"
       >
         <div className="flex flex-col lg:flex-row gap-7 lg:py-3 px-6 lg:px-20 ">
@@ -1098,13 +1103,13 @@ function Home() {
             <div className="intro-text-wrapper flex flex-col md:flex-row">
               <div className="flex flex-col flex-1">
                 <div className="name flex md:pl-3 lg:pl-0 flex-col pb-4 hover:scale-105 cursor-pointer">
-                  <span className=" opacity-80 dark:text white text-xl lg:text-2xl font-bold pb-4 leading-3 lg:leading-6 lg:tracking-wide">
+                  <span className=" opacity-80 dark:text-gray-600 text-xl lg:text-2xl font-bold pb-4 leading-3 lg:leading-6 lg:tracking-wide">
                     Hi, I am
                   </span>
-                  <span className=" opacity-80 text-xl lg:text-2xl font-bold pb-4 leading-3 lg:leading-6 lg:tracking-wide">
+                  <span className=" opacity-80 text-xl dark:text-gray-600 lg:text-2xl font-bold pb-4 leading-3 lg:leading-6 lg:tracking-wide">
                     Edem Kwaku
                   </span>
-                  <span className=" opacity-80 text-xl lg:text-2xl font-bold pb-4 leading-3 lg:leading-6 lg:tracking-wide">
+                  <span className=" opacity-80 text-xl dark:text-gray-600 lg:text-2xl font-bold pb-4 leading-3 lg:leading-6 lg:tracking-wide">
                     Avorley
                   </span>
                 </div>
