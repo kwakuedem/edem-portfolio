@@ -439,6 +439,8 @@ function Qualification() {
               </div>
             </Slide>
             </a>
+
+            <a href="https://drive.google.com/file/d/10-tE2GW27-lh_pLYOrkZ3ECy5AYo6FvS/view?usp=sharing" target="_blank" rel="noopener noreferrer">
             <Slide direction="right" duration={2000}>
               <div className="education-section py-5 flex flex-col ring-1 ring-yellow-600 rounded-md px-10 w-[90%] h-52 shadow-xl m-auto lg:w-full lg:m-0">
                 <span className="font-bold text-gray-600">
@@ -455,6 +457,9 @@ function Qualification() {
                 </span>
               </div>
             </Slide>
+            </a>
+            
+            <a href="https://drive.google.com/file/d/1-ugLAytljLccMSManCXhSqD1ViIZW95y/view?usp=sharing" target="_blank" rel="noopener noreferrer">
             <Slide direction="left" duration={2000}>
               <div className="education-section py-5 flex flex-col ring-1 ring-yellow-600 rounded-md px-10 w-[90%] h-52 shadow-xl m-auto lg:w-full lg:m-0">
                 <span className="font-bold text-gray-600">
@@ -473,6 +478,29 @@ function Qualification() {
                 </span>
               </div>
             </Slide>
+            </a>
+
+            <a href="https://drive.google.com/file/d/1-t4Bjzr6udvrQn7f3pOLwJer_Hk-2MsW/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+            <Slide direction="left" duration={2000}>
+              <div className="education-section py-5 flex flex-col ring-1 ring-yellow-600 rounded-md px-10 w-[90%] h-52 shadow-xl m-auto lg:w-full lg:m-0">
+                <span className="font-bold text-gray-600">
+                  ISC2 
+                  <br />
+                  Certified in Cybersecurity
+                </span>
+                <span className="text-gray-500 pt-3 font-semibold">
+                  ISC2
+                </span>
+                <span className="flex flex-row gap-3 pt-4 text-semibold">
+                  <FaCalendar className="text-lg text-gray-500" />
+                  <p className="font-semibold text-gray-500">
+                    November 1, 2024
+                  </p>
+                </span>
+              </div>
+            </Slide>
+            </a>
+            
             <Slide direction="right" duration={2000}>
               <div className="education-section py-5 flex flex-col ring-1 ring-yellow-600 rounded-md px-10 w-[90%] h-52 shadow-xl m-auto lg:w-full lg:m-0">
                 <span className="font-bold text-gray-600">
@@ -491,6 +519,8 @@ function Qualification() {
                 </span>
               </div>
             </Slide>
+
+            <a href="https://drive.google.com/file/d/1-wa8lRri4-7V8tFNeYhJR8A72SDjzisD/view?usp=sharing" target="_blank" rel="noopener noreferrer">
             <Slide direction="left" duration={2000}>
               <div className="education-section py-5 flex flex-col ring-1 ring-yellow-600 rounded-md px-10 w-[90%] h-52 shadow-xl m-auto lg:w-full lg:m-0">
                 <span className="font-bold text-gray-600">
@@ -510,6 +540,9 @@ function Qualification() {
                 </span>
               </div>
             </Slide>
+            </a>
+            
+            <a href="https://drive.google.com/file/d/1-uuXBgtK0Wr7feOCh8yLb0u4zp-B8NGD/view?usp=sharing" target="_blank" rel="noopener noreferrer">
             <Slide direction="right" duration={2000}>
               <div className="education-section py-5 flex flex-col ring-1 ring-yellow-600 rounded-md px-10 w-[90%] h-52 shadow-xl m-auto lg:w-full lg:m-0">
                 <span className="font-bold text-gray-600">
@@ -527,6 +560,8 @@ function Qualification() {
                 </span>
               </div>
             </Slide>
+            </a>
+            
           </div>
         </div>
 
