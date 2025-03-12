@@ -1107,7 +1107,14 @@ function Home() {
         id="home"
       >
         <div className="flex flex-col lg:flex-row gap-7 lg:py-3 px-6 lg:px-20 ">
-          <div className="md:px-3 flex lg:flex-col gap-8 items-center mt-0 lg:mt-16">
+          <div className="flex lg:hidden profile visible pr-4 justify-center pt-6 items-center flex-1 hover:scale-110">
+            <img
+              src={Profile}
+              alt=""
+              className="w-[100px] md:300px "
+            />
+          </div>
+          <div className="md:px-3 flex lg:flex-col gap-8 items-center justify-center mt-0 lg:mt-16">
             <a
               href="https://web.facebook.com/edem.kwaku.581"
               className="hover:translate-y-2"
@@ -1137,13 +1144,7 @@ function Home() {
           <div className="flex flex-col md:px-0">
             <div className="intro-text-wrapper flex flex-col md:flex-row">
               <div className="flex flex-col flex-1">
-                <div className="flex lg:hidden pb-10 profile visible pr-4 justify-center pt-6 items-center flex-1 hover:scale-110">
-                  <img
-                    src={Profile}
-                    alt=""
-                    className="w-[100px] md:300px "
-                  />
-                </div>
+                
                 <div className="name flex md:pl-3 lg:pl-0 lg:flex-col lg:pb-4 hover:scale-105 cursor-pointer gap-2 md:gap-0">
                   <span className=" opacity-80 dark:text-gray-600 lg:text-2xl font-bold pb-4 leading-3 lg:leading-6 lg:tracking-wide">
                     Hi, I am
