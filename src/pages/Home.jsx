@@ -653,8 +653,8 @@ function Service() {
 
       <div className="sevice-wrapper pt-20 px-4 lg:px-10 grid md:grid-cols-2 gap-5 gap-y-5 lg:grid-cols-3">
         <Slide direction="left" duration={2000}>
-          <div className="software-wrapper flex flex-col gap-5 ring-1 ring-yellow-600 shadow-lg shadow-blue-800 justify-bottom items-bottom py-10 px-3 rounded-md">
-            <FaLaptopCode className="text-4xl mt-10  text-yellow-600" />
+          <div className="software-wrapper flex flex-col gap-5 ring-1 ring-yellow-600 shadow-lg shadow-blue-800 justify-bottom items-bottom py-5 md:py-10 px-3 rounded-md">
+            <FaLaptopCode className="text-4xl md:mt-10  text-yellow-600" />
             <p className="p-y text-semibold text-lg text-gray-700">
               Software Development
             </p>
@@ -671,8 +671,8 @@ function Service() {
         </Slide>
 
         <Slide direction="right" duration={2000}>
-          <div className="network-wrapper flex flex-col gap-5 ring-1 ring-yellow-600 shadow-lg shadow-blue-800 justify-bottom items-bottom py-10 px-3 rounded-md">
-            <FaNetworkWired className="text-4xl mt-10  text-yellow-600" />
+          <div className="network-wrapper flex flex-col gap-5 ring-1 py-5 ring-yellow-600 shadow-lg shadow-blue-800 justify-bottom items-bottom lg:py-10 px-3 rounded-md">
+            <FaNetworkWired className="text-4xl md:mt-10  text-yellow-600" />
             <p className="p-y text-semibold text-lg text-gray-700">
               Computer Networking
             </p>
@@ -689,8 +689,8 @@ function Service() {
         </Slide>
 
         <Slide direction="left" duration={2000}>
-          <div className="hardware-wrapper flex flex-col gap-5 ring-1 ring-yellow-600 shadow-lg shadow-blue-800 justify-bottom items-bottom py-10 px-3 rounded-md">
-            <MdOutlineHardware className="text-4xl mt-10  text-yellow-600" />
+          <div className="hardware-wrapper flex flex-col gap-5 ring-1 py-5 ring-yellow-600 shadow-lg shadow-blue-800 justify-bottom items-bottom lg:py-10 px-3 rounded-md">
+            <MdOutlineHardware className="text-4xl md:mt-10  text-yellow-600" />
             <p className="p-y text-semibold text-lg text-gray-700">
               Computer Hardware and Software
             </p>
@@ -707,8 +707,8 @@ function Service() {
         </Slide>
 
         <Slide direction="right" duration={2000}>
-          <div className="security-wrapper flex flex-col gap-5 ring-1 ring-yellow-600 shadow-lg shadow-blue-800 justify-bottom items-bottom py-10 px-3 rounded-md">
-            <MdOutlineSecurity className="text-4xl mt-10  text-yellow-600" />
+          <div className="security-wrapper flex flex-col gap-5 ring-1 py-5 ring-yellow-600 shadow-lg shadow-blue-800 justify-bottom items-bottom lg:py-10 px-3 rounded-md">
+            <MdOutlineSecurity className="text-4xl md:mt-10  text-yellow-600" />
             <p className="p-y text-semibold text-lg text-gray-700">
               Computer Security
             </p>
