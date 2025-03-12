@@ -1137,22 +1137,29 @@ function Home() {
           <div className="flex flex-col md:px-0">
             <div className="intro-text-wrapper flex flex-col md:flex-row">
               <div className="flex flex-col flex-1">
-                <div className="name flex md:pl-3 lg:pl-0 flex-col pb-4 hover:scale-105 cursor-pointer">
-                  <span className=" opacity-80 dark:text-gray-600 text-xl lg:text-2xl font-bold pb-4 leading-3 lg:leading-6 lg:tracking-wide">
+                <div className="flex lg:hidden pb-10 profile visible pr-4 justify-center pt-6 items-center flex-1 hover:scale-110">
+                  <img
+                    src={Profile}
+                    alt=""
+                    className="w-[100px] md:300px "
+                  />
+                </div>
+                <div className="name flex md:pl-3 lg:pl-0 lg:flex-col lg:pb-4 hover:scale-105 cursor-pointer gap-2 md:gap-0">
+                  <span className=" opacity-80 dark:text-gray-600 lg:text-2xl font-bold pb-4 leading-3 lg:leading-6 lg:tracking-wide">
                     Hi, I am
                   </span>
-                  <span className=" opacity-80 text-xl dark:text-gray-600 lg:text-2xl font-bold pb-4 leading-3 lg:leading-6 lg:tracking-wide">
+                  <span className=" opacity-80 dark:text-gray-600 lg:text-2xl font-bold pb-4 leading-3 lg:leading-6 lg:tracking-wide">
                     Edem Kwaku
                   </span>
-                  <span className=" opacity-80 text-xl dark:text-gray-600 lg:text-2xl font-bold pb-4 leading-3 lg:leading-6 lg:tracking-wide">
+                  <span className=" opacity-80 dark:text-gray-600 lg:text-2xl font-bold pb-4 leading-3 lg:leading-6 lg:tracking-wide">
                     Avorley
                   </span>
                 </div>
 
-                <span className="text-gray-500 text-lg font-semibold pb-3 hover:scale-105 cursor-pointer md:px-4">
-                  IT Professional
+                <span className="text-gray-500 font-normal pb-3 hover:scale-105 cursor-pointer md:px-4">
+                  <i>I am an IT Professional,</i>
                 </span>
-                <span className="text-gray-500 text-lg hover:scale-105 cursor-pointer md:px-4">
+                <span className="text-gray-500 md:text-lg hover:scale-105 cursor-pointer md:px-4">
                   Attentive, focused and highly motivated IT professional
                   seeking to utilize his skills for the enhancement of the next
                   team he joins. Committed to driving continuous improvements
@@ -1165,7 +1172,7 @@ function Home() {
                 </span>
               </div>
 
-              <div className="profile visible pr-4 lg:pr-0 flex justify-center pt-6 lg:pt-0 items-center flex-1 hover:scale-110">
+              <div className="hidden lg:flex profile visible pr-4 lg:pr-0 justify-center pt-6 lg:pt-0 items-center flex-1 hover:scale-110">
                 <img
                   src={Profile}
                   alt=""
@@ -1175,7 +1182,7 @@ function Home() {
             </div>
             <AnchorLink
               href="#about"
-              className="mt-12 md:mt-14  lg:mt-20 m-auto w-[70%] md:w-[40%] lg:w-[15%] gap-2 bg-yellow-600 flex justify-center items-center rounded-md ring-2 ring-blue-800 hover:text-yellow-600 hover:bg-white hover:ring-yellow-600"
+              className="mt-12 md:mt-14  lg:mt-20 m-auto w-[50%] md:w-[40%] lg:w-[15%] gap-2 bg-yellow-600 flex justify-center items-center rounded-md ring-2 ring-blue-800 hover:text-yellow-600 hover:bg-white hover:ring-yellow-600"
             >
               <button className="py-2 lg:py-2 text-lg font-bold ">
                 About Me
