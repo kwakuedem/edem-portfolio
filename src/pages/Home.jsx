@@ -43,116 +43,99 @@ function NavigationBar() {
   function onShowMenu() {
     setShowMenu(!showMenu);
   }
+
+
+
   function Menu() {
     return (
-      <div className="fixed m-auto top-0 w-full  z-[200] h-full bg-white">
-        <div className="bg-white relative transition duration-1000 z-10 w-full top-0 h-full ">
-          <div
-            className="nav-wrapper py-5 px-4 flex flex-col relative"
-            onClick={() => onShowMenu()}
-          >
-            <div className="absolute right-7 ">
-              <p className="text-white font-bold text-xl  md md:left-20 cursor-pointer px-3 py-1 flex items-center bg-red-300 rounded-full">
-                x
-              </p>
+      
+      <div className="w-full h-full  z-20 fixed top-0">
+        <div className=' absolute inset-0 bg-gray-100 opacity-70' onClick={() => onShowMenu()}/>
+        <div className=" absolute w-[60%] bg-yellow-300 flex py-10 flex-col h-full text-white items-center">
+           <div className="flex h-20 w-20 items-center justify-center">
+              <img src="src/assets/Picture.png" className='rounded-full w-24 h-20' alt=""  />
             </div>
-
-            <div className="brand pb-3 md:pb-0 flex  justify-center">
-              <AnchorLink href="#home">
-                <span className="font-bold text-2xl cursor-pointer text-white pt-4">
-                  Edem
-                </span>
+          <div className="bg-yellow-300 w-full h-full pt-4">
+          <div className='nav-menus py-3 flex flex-col w-full gap-4'>
+              <div className='flex items-center gap-4 px-3'>
+                  <img src="src/assets/home.png" className='w-6 h-6' alt=""  />
+                  <AnchorLink href="#home">
+                   <span className="font-medium text-lg cursor-pointer text-blue-600 pt-4">
+                     Home
+                  </span>
               </AnchorLink>
-            </div>
-            <div className="nav-menus flex justify-center pt-4 lg:pt-32 flex-col md:flex-row">
-              <ul className="flex flex-col gap-3 md:gap-5 px-4 pb-6 lg:pb-0">
-                <p className="text-white font-bold text-xl text underline">
-                  Menu
-                </p>
-                <li>
-                  <AnchorLink href="#home" className="font-semibold text-white">
-                    Home
-                  </AnchorLink>
-                </li>
-                <li>
-                  <AnchorLink
-                    href="#skill"
-                    className="font-semibold text-white"
-                  >
-                    Skill
-                  </AnchorLink>
-                </li>
-                <li>
-                  <AnchorLink
-                    href="#services"
-                    className="font-semibold text-white"
-                  >
-                    Services
-                  </AnchorLink>
-                </li>
-                <li>
-                  <AnchorLink
-                    href="#portfolio"
-                    className="font-semibold text-white"
-                  >
-                    Portfolio
-                  </AnchorLink>
-                </li>
-                <li>
-                  <AnchorLink
-                    href="#contact"
-                    className="font-semibold text-white"
-                  >
-                    Contact Me
-                  </AnchorLink>
-                </li>
-              </ul>
-              <hr className="" />
-              <div className="follow px-4 lg:px-0 pt-6 lg:pt-0 lg:ml-6 flex flex-col lg:flex-row gap-8">
-                <div>
-                  <p className="text-white font-bold text-xl pb-5">Follow</p>
-                  <div className=" social-links flex gap-x-2 lg:gap-x-4">
-                    <a
-                      href="https://web.facebook.com/edem.kwaku.581"
-                      className="hover:translate-y-2"
-                    >
-                      <FaFacebook className="text-2xl text-gray-400" />
-                    </a>
-                    <a
-                      href="https://github.com/kwakuedem"
-                      className="hover:translate-y-2"
-                    >
-                      <FaGithub className="text-2xl text-gray-400" />
-                    </a>
-                    <a
-                      href="https://twitter.com/edemkwaku4"
-                      className="hover:translate-y-2"
-                    >
-                      <FaTwitter className="text-2xl text-gray-400" />
-                    </a>
-                    <a
-                      href="https://www.linkedin.com/in/avorley-edem-kwaku-b1ab48232/"
-                      className="hover:translate-y-2"
-                    >
-                      <FaLinkedin className="text-2xl text-gray-400" />
-                    </a>
-                  </div>
-                </div>
-
-                <div className="contact pb-6 lg:pb-0">
-                  <div className="flex flex-col">
-                    <span className=" font-bold text-white text-xl pb-4">
-                      Call or What'sApp Me
-                    </span>
-                    <span className="text-gray-400">+233 540 908 248</span>
-                    <span className="text-gray-400">+233 200 786 190</span>
-                  </div>
-                </div>
               </div>
+             
+              <div className='flex items-center gap-4 px-3'>
+                  <img src="src/assets/skill.png" className='w-6 h-6' alt=""  />
+                  <AnchorLink href="#skill">
+                   <span className="font-medium text-lg cursor-pointer text-blue-600 pt-4">
+                     Skills
+                  </span>
+              </AnchorLink>
+              </div>
+
+               <div className='flex items-center gap-4 px-3'>
+                  <img src="src/assets/service.png" className='w-6 h-6' alt=""  />
+                  <AnchorLink href="#services">
+                   <span className="font-medium text-lg cursor-pointer text-blue-600 pt-4">
+                     Services
+                  </span>
+              </AnchorLink>
+              </div>
+              <div className='flex items-center gap-4 px-3'>
+                  <img src="src/assets/portfolio.png" className='w-6 h-6' alt=""  />
+                  <AnchorLink href="#portfolio">
+                   <span className="font-medium text-lg cursor-pointer text-blue-600 pt-4">
+                     Portfolio
+                  </span>
+              </AnchorLink>
+              </div>
+              <div className='flex items-center gap-4 px-3'>
+                  <img src="src/assets/contact.png" className='w-6 h-6' alt=""  />
+                  <AnchorLink href="#contact">
+                   <span className="font-medium text-lg cursor-pointer text-blue-600 pt-4">
+                     Contact Me
+                  </span>
+              </AnchorLink>
+              </div>
+          </div>
+          <hr className='text-green-800 w-full mt-4'/>
+          
+          <div className="px-4 py-3">
+            <p className="text-white font-medium text-xl py-2">Social media</p>
+            <div className=" social-links flex gap-x-2 lg:gap-x-4 py-3">
+              <a
+                  href="https://web.facebook.com/edem.kwaku.581"
+                  className="hover:translate-y-2"
+                >
+                  <FaFacebook className="text-2xl text-gray-400" />
+              </a>
+              <a
+                href="https://github.com/kwakuedem"
+                className="hover:translate-y-2"
+              >
+                <FaGithub className="text-2xl text-gray-400" />
+              </a>
+              <a
+                href="https://twitter.com/edemkwaku4"
+                className="hover:translate-y-2"
+              >
+                <FaTwitter className="text-2xl text-gray-400" />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/avorley-edem-kwaku-b1ab48232/"
+                className="hover:translate-y-2"
+              >
+                <FaLinkedin className="text-2xl text-gray-400" />
+            </a>
             </div>
           </div>
-        </div>
+         
       </div>
+      <hr className='text-green-800 w-full'/>   
+  </div>
+   </div>
     );
   }
   return (
@@ -946,7 +929,7 @@ function Service() {
 //Portfolio page
 function Portfolio() {
   return (
-    <div className="bg-white pt-20 lg:px-20  2xl:w-[80%] m-auto" id="portfolio">
+    <div className="bg-white pt-20 px-8 lg:px-20  2xl:w-[80%] m-auto" id="portfolio">
       <div className="heading flex flex-col justify-center items-center hover:scale-105 cursor-pointer">
         <span className="text-xl md:text-3xl font-bold  text-blue-900 opacity-80">
           Portfolio
@@ -956,7 +939,7 @@ function Portfolio() {
         </span>
       </div>
 
-      <div className="pt-10 ">
+      <div className="pt-10">
         <PorfolioItems />
       </div>
     </div>

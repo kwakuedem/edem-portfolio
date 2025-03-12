@@ -35,7 +35,7 @@ function PorfolioItems() {
           1024: { slidesPerView: 2 },
           1536: { slidesPerView: 3 },
         }}
-        autoplay={500}
+        autoplay={true}
         navigation
         pagination={{ clickable: true }}
         scrollbar={{ draggable: true }}

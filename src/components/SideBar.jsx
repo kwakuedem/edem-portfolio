@@ -3,7 +3,7 @@ import AnchorLink from "react-anchor-link-smooth-scroll";
 
 function SideBar() {
   return (
-    <div className="absolute top-0 w-full h-full bg-gray-300 z-50">
+    <div className="absolute top-0 w-full h-full bg-red-300! z-50">
       <div className="bg-yellow-600 h-full w-[40%] p-5 z-50">
         <div className="py-6">
           <span className="font-bold text-lg cursor-pointer text-blue-900 md:text-gray-900">
