@@ -180,7 +180,7 @@ function NavigationBar() {
 function About() {
   return (
     <div
-      className="bg-white min-h-screen pb-10 pt-20 md:pt-0 lg:pt-20 lg:px-20  2xl:w-[80%] m-auto"
+      className="bg-white min-h-screen pb-10 pt-8 md:pt-0 lg:pt-20 lg:px-20  2xl:w-[80%] m-auto"
       id="about"
     >
       <div className="heading flex flex-col justify-center items-center hover:translate-x-2">
@@ -201,7 +201,7 @@ function About() {
 
         <div className="text-section flex-1 justify-center pt-6 md:pt-0">
           <div className="hover:scale-105 cursor-pointer w-[90%] m-auto md:m-0 md:w-full md:pt-6 lg:pt-0 md:px-16 lg:px-8">
-            <p className="text-lg text-gray-500">
+            <p className=" md:text-lg text-gray-500">
               I have knowledge in Web development, Computer networking, Computer
               Security, Linux and Windows Server Administration, and Computer
               Hardware.With extensive knowledge and years of experience, working
@@ -267,7 +267,7 @@ function Skill() {
   }
 
   return (
-    <div className="bg-white pt-20 pb-20 lg:px-20 2xl:w-[80%] m-auto" id="skill">
+    <div className="bg-white pt-8 pb-20 lg:px-20 2xl:w-[80%] m-auto" id="skill">
       <div className="heading flex flex-col justify-center items-center hover:scale-105 hover:translate-x-2 cursor-pointer">
         <span className="text-3xl font-bold text-blue-900 opacity-80">
           Skills
@@ -279,7 +279,7 @@ function Skill() {
 
       <div className="flex mx-5 md:px-10 lg:px-0 gap-8 lg:gap-0 flex-col md:flex-row lg:justify-around pt-10">
         <div className="skill-section space-x-10">
-          <div className="software-dev  flex lg:flex-none md:justify-center">
+          <div className="software-dev  flex lg:flex-none justify-center">
             <FaLaptopCode className="text-xl text-yellow-600 mb-3" />
             <button
               onClick={() => onShowSkillDeveloper()}
@@ -290,7 +290,7 @@ function Skill() {
               ) : (
                 <FaSortDown className="text-xl text-yellow-600" />
               )}
-              <h3 className="text-xl font-semibold text-gray-600">
+              <h3 className="md:text-xl font-semibold text-gray-600">
                 Software Developer
               </h3>
             </button>
@@ -326,7 +326,7 @@ function Skill() {
         </div>
 
         <div className="skill-section space-x-10">
-          <div className="software-dev flex lg:flex-none md:justify-center ">
+          <div className="software-dev flex lg:flex-none justify-center ">
             <FaNetworkWired className="text-xl text-yellow-600 mb-3" />
             <button
               onClick={() => onShowSkillNetworking()}
@@ -337,7 +337,7 @@ function Skill() {
               ) : (
                 <FaSortDown className="text-xl text-yellow-600" />
               )}
-              <h3 className="text-xl font-semibold text-gray-600">
+              <h3 className="md:text-xl font-semibold text-gray-600">
                 Network Engineer
               </h3>
             </button>
@@ -359,7 +359,7 @@ function Skill() {
         </div>
 
         <div className="skill-section space-x-10">
-          <div className="software-dev  flex lg:flex-none md:justify-center ">
+          <div className="software-dev  flex lg:flex-none justify-center ">
             <MdOutlineSecurity className="text-xl text-yellow-600 mb-3" />
             <button
               onClick={() => onShowSkillSecurity()}
@@ -370,7 +370,7 @@ function Skill() {
               ) : (
                 <FaSortDown className="text-xl text-yellow-600" />
               )}
-              <h3 className="text-xl font-semibold text-gray-600">
+              <h3 className="md:text-xl font-semibold text-gray-600">
                 Cyber Security Analist
               </h3>
             </button>
@@ -400,14 +400,14 @@ function Skill() {
 function Qualification() {
   return (
     <div
-      className="bg-white min-h-screen pb-10 pt-10 lg:px-20 2xl:w-[80%] m-auto"
+      className="bg-white min-h-screen pb-10 pt-1 lg:px-20 2xl:w-[80%] m-auto"
       id="skill"
     >
       <div className="heading flex flex-col justify-center items-center hover:scale-105 cursor-pointer">
-        <span className="text-3xl font-bold text-blue-900 opacity-80">
+        <span className="text-lg md:text-3xl font-bold text-blue-900 opacity-80">
           Qualification
         </span>
-        <span className="text-lg font-semibold text-gray-500">
+        <span className="text-md md:text-lg font-semibold text-gray-500">
           My Personal Journey
         </span>
       </div>
@@ -639,11 +639,11 @@ function Service() {
 
   return (
     <div
-      className="bg-white min-h-screen 2xl:w-[80%] m-auto pb-20 pt-20 lg:px-20  relative"
+      className="bg-white min-h-screen 2xl:w-[80%] m-auto pb-20 pt-8 md:pt-20 lg:px-20  relative"
       id="services"
     >
       <div className="heading flex flex-col justify-center items-center hover:scale-105 cursor-pointer">
-        <span className="text-3xl font-bold  text-blue-900 opacity-80">
+        <span className="text-2xl md:text-3xl font-bold  text-blue-900 opacity-80">
           Services
         </span>
         <span className="text-lg font-semibold text-gray-500">
@@ -651,7 +651,7 @@ function Service() {
         </span>
       </div>
 
-      <div className="sevice-wrapper pt-20 px-4 lg:px-10 grid md:grid-cols-2 gap-5 gap-y-5 lg:grid-cols-3">
+      <div className="sevice-wrapper pt-8 md:pt-20 px-4 lg:px-10 grid md:grid-cols-2 gap-5 gap-y-5 lg:grid-cols-3">
         <Slide direction="left" duration={2000}>
           <div className="software-wrapper flex flex-col gap-5 ring-1 ring-yellow-600 shadow-lg shadow-blue-800 justify-bottom items-bottom py-5 md:py-10 px-3 rounded-md">
             <FaLaptopCode className="text-4xl md:mt-10  text-yellow-600" />
@@ -948,7 +948,7 @@ function Portfolio() {
   return (
     <div className="bg-white pt-20 lg:px-20  2xl:w-[80%] m-auto" id="portfolio">
       <div className="heading flex flex-col justify-center items-center hover:scale-105 cursor-pointer">
-        <span className="text-3xl font-bold  text-blue-900 opacity-80">
+        <span className="text-2xl md:text-3xl font-bold  text-blue-900 opacity-80">
           Portfolio
         </span>
         <span className="text-lg font-semibold text-gray-500">
@@ -995,7 +995,7 @@ function Contact() {
   return (
     <div className="pt-20 lg:px-20 2xl:w-[80%] m-auto" id="contact">
       <div className="heading flex flex-col justify-center items-center hover:scale-105 cursor-pointer">
-        <span className="text-3xl font-bold text-blue-800 opacity-70">
+        <span className="text-2xl md:text-3xl font-bold text-blue-800 opacity-70">
           Contact Me
         </span>
         <span className="text-lg font-semibold text-gray-500">
@@ -1005,7 +1005,7 @@ function Contact() {
 
       <div className="flex flex-col md:flex-row px-4 md:px-10 ">
         <div className=" flex flex-col flex-1">
-          <div className="flex flex-row gap-4 pt-8">
+          <div className="flex items-center md:items-start flex-row gap-4 pt-8">
             <FiPhone className=" text-3xl text-yellow-600 mt-5" />
             <div className="flex flex-col">
               <span className=" font-bold text-xl opacity-70">Call Me</span>
@@ -1015,7 +1015,7 @@ function Contact() {
             </div>
           </div>
 
-          <div className="flex flex-row gap-4 pt-6">
+          <div className="flex flex-row gap-4 pt-6 items-center md:items-start">
             <MdOutlineEmail className="rotate-0 text-3xl text-yellow-600 mt-5" />
             <div className="flex flex-col">
               <span className=" font-bold text-xl opacity-70">Email</span>
@@ -1024,7 +1024,7 @@ function Contact() {
             </div>
           </div>
 
-          <div className="flex flex-row gap-4 pt-6">
+          <div className="flex flex-row gap-4 pt-6 items-center md:items-start">
             <MdOutlineLocationOn className="rotate-0 text-3xl text-yellow-600 mt-5" />
             <div className="flex flex-col">
               <span className=" font-bold text-xl opacity-70">Location</span>
@@ -1089,7 +1089,7 @@ function Contact() {
             <input
               type="submit"
               value="Send Message"
-              className="text-lg bg-yellow-600 py-3 px-10 text-blue-900 font-bold rounded-md"
+              className="text-lg bg-yellow-600 py-1 md:py-3 px-4 md:px-10 text-white font-bold rounded-md"
             />
           </div>
         </form>
