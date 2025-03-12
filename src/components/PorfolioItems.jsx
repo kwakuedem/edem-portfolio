@@ -13,6 +13,7 @@ import Profile from "../assets/Profile.png";
 import Project from "../assets/Project.png";
 import Projectpic from "../assets/Projectpic.png";
 import Dashboard from "../assets/Dashboard.png";
+import Smartgro from "../assets/Smartgro.png";
 
 const slides = [
   { image: "../assets/Picture.png" },
@@ -42,6 +43,11 @@ function PorfolioItems() {
         onSlideChange={() => console.log("slide change")}
       >
         <div className="pb-10">
+        <SwiperSlide>
+            <div className="flex justify-center pb-16">
+              <img src={Smartgro} />
+            </div>
+          </SwiperSlide>
           <SwiperSlide>
             <div className="flex justify-center pb-16">
               <img src={Project} />

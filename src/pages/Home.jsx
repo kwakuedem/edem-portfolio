@@ -45,8 +45,8 @@ function NavigationBar() {
   }
   function Menu() {
     return (
-      <div className="fixed m-auto top-0 w-full  z-[200] h-full ">
-        <div className="bg-black relative transition duration-1000 z-10 w-full top-0 h-full ">
+      <div className="fixed m-auto top-0 w-full  z-[200] h-full bg-white">
+        <div className="bg-white relative transition duration-1000 z-10 w-full top-0 h-full ">
           <div
             className="nav-wrapper py-5 px-4 flex flex-col relative"
             onClick={() => onShowMenu()}
