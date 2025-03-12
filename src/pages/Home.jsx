@@ -58,7 +58,7 @@ function NavigationBar() {
           <div className="bg-yellow-300 w-full h-full pt-4">
           <div className='nav-menus py-3 flex flex-col w-full gap-4'>
               <div className='flex items-center gap-4 px-3'>
-                  <img src="src/assets/home.png" className='w-6 h-6' alt=""  />
+                  
                   <AnchorLink href="#home">
                    <span className="font-medium text-lg cursor-pointer text-blue-600 pt-4">
                      Home
@@ -140,14 +140,51 @@ function NavigationBar() {
   }
   return (
     <>
-      <div className="bg-white px-2 lg:px-20  sticky py-4 z-10 w-full top-0 flex justify-between ring-2 ring-gray-300 2xl:w-[80%] m-auto">
+      <div className="bg-white  px-2 lg:px-20 sticky py-4 z-10 w-full top-0 flex items-center justify-between ring-2 ring-gray-300 xl:w-[80%] m-auto">
+        
         <div className="brand pl-5  flex justify-center">
           <span className="font-bold text-2xl cursor-pointer text-yellow-600 ">
             Edem
           </span>
         </div>
+
+        <div className='nav-menus hidden  py-3 lg:flex w-full items-center gap-2'>
+              
+          <AnchorLink href="#home">
+            <span className="font-medium text-lg cursor-pointer text-blue-600 pt-4">
+              Home
+            </span>
+          </AnchorLink>
+         
+          <AnchorLink href="#skill">
+            <span className="font-medium text-lg cursor-pointer text-blue-600 pt-4">
+              Skills
+            </span>
+          </AnchorLink>
+          
+          <AnchorLink href="#services">
+            <span className="font-medium text-lg cursor-pointer text-blue-600 pt-4">
+              Services
+          </span>
+          </AnchorLink>
+        
+          <AnchorLink href="#portfolio">
+            <span className="font-medium text-lg cursor-pointer text-blue-600 pt-4">
+              Portfolio
+          </span>
+          </AnchorLink>
+
+             
+          <AnchorLink href="#contact">
+            <span className="font-medium text-lg cursor-pointer text-blue-600 pt-4">
+              Contact Me
+            </span>
+          </AnchorLink>
+             
+        </div>
+
         <div
-          className="px-3 mr-5 bg-yellow-500 py-1 cursor-pointer shadow-lg shadow-gray-300 rounded-md"
+          className="px-3 mr-5 bg-yellow-500 flex lg:hidden  py-1 cursor-pointer shadow-lg shadow-gray-300 rounded-md"
           onClick={() => onShowMenu()}
         >
           <MdMenu className="text-blue-800 text-2xl font-bold" />
@@ -1086,7 +1123,7 @@ function Home() {
   return (
     <>
       <div
-        className="bg-white min-h-screen pt-10 pb-10 lg:pt-32 px-2 2xl:w-[80%] m-auto"
+        className="bg-white md:min-h-screen pt-10 pb-10 lg:pt-32 px-2 2xl:w-[80%] m-auto"
         id="home"
       >
         <div className="flex flex-col lg:flex-row gap-7 lg:py-3 px-6 lg:px-20 ">
