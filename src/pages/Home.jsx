@@ -180,7 +180,7 @@ function NavigationBar() {
 function About() {
   return (
     <div
-      className="bg-white min-h-screen pb-10 pt-8 md:pt-0 lg:pt-20 lg:px-20  2xl:w-[80%] m-auto"
+      className="bg-white min-h-screen pb-10 pt-3 md:pt-0 lg:pt-20 lg:px-20  2xl:w-[80%] m-auto"
       id="about"
     >
       <div className="heading flex flex-col justify-center items-center hover:translate-x-2">
