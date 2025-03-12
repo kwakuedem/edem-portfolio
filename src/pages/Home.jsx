@@ -184,7 +184,7 @@ function About() {
       id="about"
     >
       <div className="heading flex flex-col justify-center items-center hover:translate-x-2">
-        <span className="text-3xl font-bold text-blue-900 opacity-80">
+        <span className="text-xl md:text-3xl font-bold text-blue-900 opacity-80">
           About Me
         </span>
         <span className="text-lg font-semibold text-gray-500">
@@ -239,7 +239,7 @@ function About() {
             href={Resume}
             className="flex justify-center items-center lg:justify-none"
           >
-            <div className="bg-yellow-600 text-blue-800 py-4 px-5 mt-10 rounded-lg lg:w-[50%] flex flex-row justify-center space-x-3 ring-2 ring-blue-800 hover:scale-105 hover:translate-x-1 hover:bg-white hover:text-yellow-600 hover:ring-2 hover:ring-yellow-600">
+            <div className="bg-yellow-600 text-blue-800 py-2 px-2 md:py-4 md:px-5 mt-10 rounded-lg lg:w-[50%] flex flex-row justify-center space-x-3 ring-2 ring-blue-800 hover:scale-105 hover:translate-x-1 hover:bg-white hover:text-yellow-600 hover:ring-2 hover:ring-yellow-600">
               <button className="font-bold">Download CV</button>
               <FaFileDownload className="text-lg font-bold" />
             </div>
@@ -269,7 +269,7 @@ function Skill() {
   return (
     <div className="bg-white pt-8 pb-20 lg:px-20 2xl:w-[80%] m-auto" id="skill">
       <div className="heading flex flex-col justify-center items-center hover:scale-105 hover:translate-x-2 cursor-pointer">
-        <span className="text-3xl font-bold text-blue-900 opacity-80">
+        <span className="text-xl md:text-3xl font-bold text-blue-900 opacity-80">
           Skills
         </span>
         <span className="text-lg font-semibold text-gray-500">
@@ -404,7 +404,7 @@ function Qualification() {
       id="skill"
     >
       <div className="heading flex flex-col justify-center items-center hover:scale-105 cursor-pointer">
-        <span className="text-lg md:text-3xl font-bold text-blue-900 opacity-80">
+        <span className="text-xl md:text-3xl font-bold text-blue-900 opacity-80">
           Qualification
         </span>
         <span className="text-md md:text-lg font-semibold text-gray-500">
@@ -416,7 +416,7 @@ function Qualification() {
         <div className="education">
           <div className="text px-5 md:px-10  lg:px-0 flex gap-4 item-center">
             <FaHardHat className="text-2xl text-blue-900 opacity-80 md:ml-8" />
-            <h3 className="text-xl   text-blue-900 opacity-80 font-bold">
+            <h3 className="text-lg md:text-xl text-blue-900 opacity-80 font-bold">
               Education
             </h3>
           </div>
@@ -643,7 +643,7 @@ function Service() {
       id="services"
     >
       <div className="heading flex flex-col justify-center items-center hover:scale-105 cursor-pointer">
-        <span className="text-2xl md:text-3xl font-bold  text-blue-900 opacity-80">
+        <span className="text-xl md:text-3xl font-bold  text-blue-900 opacity-80">
           Services
         </span>
         <span className="text-lg font-semibold text-gray-500">
@@ -948,7 +948,7 @@ function Portfolio() {
   return (
     <div className="bg-white pt-20 lg:px-20  2xl:w-[80%] m-auto" id="portfolio">
       <div className="heading flex flex-col justify-center items-center hover:scale-105 cursor-pointer">
-        <span className="text-2xl md:text-3xl font-bold  text-blue-900 opacity-80">
+        <span className="text-xl md:text-3xl font-bold  text-blue-900 opacity-80">
           Portfolio
         </span>
         <span className="text-lg font-semibold text-gray-500">
@@ -995,7 +995,7 @@ function Contact() {
   return (
     <div className="pt-20 lg:px-20 2xl:w-[80%] m-auto" id="contact">
       <div className="heading flex flex-col justify-center items-center hover:scale-105 cursor-pointer">
-        <span className="text-2xl md:text-3xl font-bold text-blue-800 opacity-70">
+        <span className="text-xl md:text-3xl font-bold text-blue-800 opacity-70">
           Contact Me
         </span>
         <span className="text-lg font-semibold text-gray-500">
