@@ -36,7 +36,7 @@ function PorfolioItems() {
           1536: { slidesPerView: 3 },
         }}
         autoplay={true}
-        navigation
+        // navigation
         pagination={{ clickable: true }}
         scrollbar={{ draggable: true }}
         onSwiper={(swiper) => swiper.slideNext()}
