@@ -4,7 +4,12 @@ import { Fade, Slide } from "react-awesome-reveal";
 
 import Profile from "../assets/Profile.png";
 import Picture from "../assets/Picture.png";
-import Project from "../assets/Project.png";
+import PortfolioIcon from "../assets/PortfolioIcon.png";
+import HomeIcon from "../assets/HomeIcon.png";
+import ServiceIcon from "../assets/ServiceIcon.png";
+import SkillIcon from "../assets/SkillIcon.png";
+import ContactIcon from "../assets/ContactIcon.png";
+
 
 import { FaFileDownload } from "react-icons/fa";
 import AnchorLink from "react-anchor-link-smooth-scroll";
@@ -51,14 +56,14 @@ function NavigationBar() {
       
       <div className="w-full h-full  z-20 fixed top-0">
         <div className=' absolute inset-0 bg-gray-100 opacity-70' onClick={() => onShowMenu()}/>
-        <div className=" absolute w-[60%] bg-yellow-300 flex py-10 flex-col h-full text-white items-center">
+        <div className='absolute transition duration-300 ease-in-out w-[60%] bg-yellow-300 flex py-10 flex-col h-full text-white items-center'>
            <div className="flex h-20 w-20 items-center justify-center">
               <img src="src/assets/Picture.png" className='rounded-full w-24 h-20' alt=""  />
             </div>
           <div className="bg-yellow-300 w-full h-full pt-4">
           <div className='nav-menus py-3 flex flex-col w-full gap-4'>
               <div className='flex items-center gap-4 px-3'>
-                  
+              <img src={HomeIcon} className='w-6 h-6' alt=""  />
                   <AnchorLink href="#home">
                    <span className="font-medium text-lg cursor-pointer text-blue-600 pt-4">
                      Home
@@ -67,7 +72,7 @@ function NavigationBar() {
               </div>
              
               <div className='flex items-center gap-4 px-3'>
-                  <img src="src/assets/skill.png" className='w-6 h-6' alt=""  />
+                  <img src={SkillIcon} className='w-6 h-6' alt=""  />
                   <AnchorLink href="#skill">
                    <span className="font-medium text-lg cursor-pointer text-blue-600 pt-4">
                      Skills
@@ -76,7 +81,7 @@ function NavigationBar() {
               </div>
 
                <div className='flex items-center gap-4 px-3'>
-                  <img src="src/assets/service.png" className='w-6 h-6' alt=""  />
+                  <img src={ServiceIcon} className='w-6 h-6' alt=""  />
                   <AnchorLink href="#services">
                    <span className="font-medium text-lg cursor-pointer text-blue-600 pt-4">
                      Services
@@ -84,7 +89,7 @@ function NavigationBar() {
               </AnchorLink>
               </div>
               <div className='flex items-center gap-4 px-3'>
-                  <img src="src/assets/portfolio.png" className='w-6 h-6' alt=""  />
+                  <img src={PortfolioIcon} className='w-6 h-6' alt=""  />
                   <AnchorLink href="#portfolio">
                    <span className="font-medium text-lg cursor-pointer text-blue-600 pt-4">
                      Portfolio
@@ -92,7 +97,7 @@ function NavigationBar() {
               </AnchorLink>
               </div>
               <div className='flex items-center gap-4 px-3'>
-                  <img src="src/assets/contact.png" className='w-6 h-6' alt=""  />
+                  <img src={ContactIcon} className='w-6 h-6' alt=""  />
                   <AnchorLink href="#contact">
                    <span className="font-medium text-lg cursor-pointer text-blue-600 pt-4">
                      Contact Me
@@ -103,37 +108,45 @@ function NavigationBar() {
           <hr className='text-green-800 w-full mt-4'/>
           
           <div className="px-4 py-3">
-            <p className="text-white font-medium text-xl py-2">Social media</p>
-            <div className=" social-links flex gap-x-2 lg:gap-x-4 py-3">
+            <p className="text-blue-600 font-medium text-xl py-2">Follow Me</p>
+            <div className=" social-links flex gap-x-6 lg:gap-x-4 py-3">
               <a
                   href="https://web.facebook.com/edem.kwaku.581"
-                  className="hover:translate-y-2"
+                  target="_blank" rel="noopener noreferrer"
+                   className="hover:translate-y-2"
                 >
-                  <FaFacebook className="text-2xl text-gray-400" />
+                  <FaFacebook className="text-2xl text-blue-600" />
               </a>
+           
               <a
                 href="https://github.com/kwakuedem"
-                className="hover:translate-y-2"
+                target="_blank" rel="noopener noreferrer"
+                className=" hover:translate-y-2"
               >
-                <FaGithub className="text-2xl text-gray-400" />
+                <FaGithub className="text-2xl text-blue-600" />
               </a>
               <a
                 href="https://twitter.com/edemkwaku4"
-                className="hover:translate-y-2"
+                 target="_blank" rel="noopener noreferrer"
+                className ="hover:translate-y-2"
               >
-                <FaTwitter className="text-2xl text-gray-400" />
+                <FaTwitter className="text-2xl text-blue-600" />
               </a>
               <a
-                href="https://www.linkedin.com/in/avorley-edem-kwaku-b1ab48232/"
+                href="https://www.linkedin.com/in/edem-kwaku-avorley-b1ab48232" 
+                 target="_blank" rel="noopener noreferrer"
                 className="hover:translate-y-2"
               >
-                <FaLinkedin className="text-2xl text-gray-400" />
+                <FaLinkedin className="text-2xl text-blue-600" />
             </a>
             </div>
           </div>
          
       </div>
       <hr className='text-green-800 w-full'/>   
+      <footer className="bg-blue-600 w-full py-5 flex items-center justify-center">
+        <p>Developed with <span className="text-red-600 text-2xl p-3">&hearts;</span> By Edem</p>
+      </footer>
   </div>
    </div>
     );
@@ -213,14 +226,17 @@ function About() {
       </div>
 
       <div className="content flex flex-col lg:flex-row pt-10 lg:pt-20 lg:px-10">
+      <Fade direction="down" duration={2000}>
         <div className="flex justify-center item-center">
           <div className="image-card w-full lg:w-[350px] flex lg:flex-1 justify-center items-center lg:hover:scale-110">
             <img src={Picture} className="w-[90%] md:w-[60%] lg:w-[350px] rounded-md" />
           </div>
         </div>
+        </Fade>
 
         <div className="text-section flex-1 justify-center pt-6 md:pt-0">
           <div className="hover:scale-105 cursor-pointer w-[90%] m-auto md:m-0 md:w-full md:pt-6 lg:pt-0 md:px-16 lg:px-8">
+          <Fade direction="right" duration={2000}>
             <p className=" md:text-lg text-gray-500">
               I have knowledge in Web development, Computer networking, Computer
               Security, Linux and Windows Server Administration, and Computer
@@ -229,9 +245,10 @@ function About() {
               linux and windows server administration and computer Hardware, I
               ensure on delivering quality work.
             </p>
+            </Fade>
           </div>
 
-          <div className="flex flex-col gap-6 lg:gap-0 lg:flex-row lg:space-x-16 pt-10 lg:px-56">
+          <div className="grid grid-cols-3 px-8 gap-6 lg:gap-0 lg:flex-row lg:space-x-16 pt-10 lg:px-56">
             <Fade direction="left" duration={2000}>
               <div className="flex flex-col py-10 lg:py-0 lg:justify-center ring-2 w-[90%] rounded-md m-auto lg:ring-0 items-center hover:translate-x-2 cursor-pointer">
                 <span className="text-gray-500 text-2xl font-bold">05+</span>
@@ -255,6 +272,7 @@ function About() {
             </Fade>
           </div>
 
+          <Fade direction="up" duration={2000}>
           <a
             href={Resume}
             className="flex justify-center items-center lg:justify-none"
@@ -264,6 +282,7 @@ function About() {
               <FaFileDownload className="text-lg font-bold" />
             </div>
           </a>
+          </Fade>
         </div>
       </div>
     </div>
@@ -299,6 +318,7 @@ function Skill() {
 
       <div className="flex mx-5 md:px-10 lg:px-0 gap-8 lg:gap-0 flex-col md:flex-row lg:justify-around pt-10">
         <div className="skill-section space-x-10">
+        <Fade direction="up" duration={2000}>
           <div className="software-dev  flex lg:flex-none justify-center">
             <FaLaptopCode className="text-xl text-yellow-600 mb-3" />
             <button
@@ -315,6 +335,7 @@ function Skill() {
               </h3>
             </button>
           </div>
+          </Fade>
 
           {showSkillDeveloper && (
             <>
@@ -346,6 +367,7 @@ function Skill() {
         </div>
 
         <div className="skill-section space-x-10">
+        <Fade direction="up" duration={2000}>
           <div className="software-dev flex lg:flex-none justify-center ">
             <FaNetworkWired className="text-xl text-yellow-600 mb-3" />
             <button
@@ -362,6 +384,7 @@ function Skill() {
               </h3>
             </button>
           </div>
+          </Fade>
 
           {showSkillNetworking && (
             <>
@@ -379,6 +402,7 @@ function Skill() {
         </div>
 
         <div className="skill-section space-x-10">
+        <Fade direction="up" duration={2000}>
           <div className="software-dev  flex lg:flex-none justify-center ">
             <MdOutlineSecurity className="text-xl text-yellow-600 mb-3" />
             <button
@@ -395,6 +419,7 @@ function Skill() {
               </h3>
             </button>
           </div>
+          </Fade>
 
           {showSkillSecurity && (
             <>
@@ -440,10 +465,10 @@ function Qualification() {
               Education
             </h3>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 lg:gap-y-10 justify-center item-center pt-10 md:px-8">
+          <div className="grid px-3 grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-3 lg:gap-y-10 justify-center item-center pt-10 md:px-8">
             <a href="https://drive.google.com/file/d/1XZUCT3RM0KyVZIGRB3r3bH4J4httrNjj/view?usp=sharing" target="_blank" rel="noopener noreferrer">
             <Slide direction="left" duration={2000}>
-              <div className="education-section pt-5 flex flex-col w-[90%] h-52 shadow-xl  m-auto lg:w-full lg:m-0 ring-1 ring-yellow-600 rounded-md px-10">
+              <div className="education-section pt-5 flex flex-col w-[90%] h-60 shadow-xl  m-auto lg:w-full lg:m-0 ring-1 ring-yellow-600 rounded-md px-10">
                 <span className="font-bold text-gray-600">
                   B'Tech <br />
                   Information & <br />
@@ -462,7 +487,7 @@ function Qualification() {
 
             <a href="https://drive.google.com/file/d/10-tE2GW27-lh_pLYOrkZ3ECy5AYo6FvS/view?usp=sharing" target="_blank" rel="noopener noreferrer">
             <Slide direction="right" duration={2000}>
-              <div className="education-section py-5 flex flex-col ring-1 ring-yellow-600 rounded-md px-10 w-[90%] h-52 shadow-xl m-auto lg:w-full lg:m-0">
+              <div className="education-section py-5 flex flex-col ring-1 ring-yellow-600 rounded-md px-10 w-[90%] h-60 shadow-xl m-auto lg:w-full lg:m-0">
                 <span className="font-bold text-gray-600">
                   HND <br />
                   Information & <br />
@@ -481,7 +506,7 @@ function Qualification() {
             
             <a href="https://drive.google.com/file/d/1-ugLAytljLccMSManCXhSqD1ViIZW95y/view?usp=sharing" target="_blank" rel="noopener noreferrer">
             <Slide direction="left" duration={2000}>
-              <div className="education-section py-5 flex flex-col ring-1 ring-yellow-600 rounded-md px-10 w-[90%] h-52 shadow-xl m-auto lg:w-full lg:m-0">
+              <div className="education-section py-5 flex flex-col ring-1 ring-yellow-600 rounded-md px-10 w-[90%] h-60 shadow-xl m-auto lg:w-full lg:m-0">
                 <span className="font-bold text-gray-600">
                   Google
                   <br />
@@ -502,7 +527,7 @@ function Qualification() {
 
             <a href="https://drive.google.com/file/d/1-t4Bjzr6udvrQn7f3pOLwJer_Hk-2MsW/view?usp=sharing" target="_blank" rel="noopener noreferrer">
             <Slide direction="left" duration={2000}>
-              <div className="education-section py-5 flex flex-col ring-1 ring-yellow-600 rounded-md px-10 w-[90%] h-52 shadow-xl m-auto lg:w-full lg:m-0">
+              <div className="education-section py-5 flex flex-col ring-1 ring-yellow-600 rounded-md px-10 w-[90%] h-60 shadow-xl m-auto lg:w-full lg:m-0">
                 <span className="font-bold text-gray-600">
                   ISC2 
                   <br />
@@ -522,7 +547,7 @@ function Qualification() {
             </a>
             
             <Slide direction="right" duration={2000}>
-              <div className="education-section py-5 flex flex-col ring-1 ring-yellow-600 rounded-md px-10 w-[90%] h-52 shadow-xl m-auto lg:w-full lg:m-0">
+              <div className="education-section py-5 flex flex-col ring-1 ring-yellow-600 rounded-md px-10 w-[90%] h-60 shadow-xl m-auto lg:w-full lg:m-0">
                 <span className="font-bold text-gray-600">
                   Google
                   <br />
@@ -542,7 +567,7 @@ function Qualification() {
 
             <a href="https://drive.google.com/file/d/1-wa8lRri4-7V8tFNeYhJR8A72SDjzisD/view?usp=sharing" target="_blank" rel="noopener noreferrer">
             <Slide direction="left" duration={2000}>
-              <div className="education-section py-5 flex flex-col ring-1 ring-yellow-600 rounded-md px-10 w-[90%] h-52 shadow-xl m-auto lg:w-full lg:m-0">
+              <div className="education-section py-5 flex flex-col ring-1 ring-yellow-600 rounded-md px-10 w-[90%] h-60 shadow-xl m-auto lg:w-full lg:m-0">
                 <span className="font-bold text-gray-600">
                   Diploma
                   <br />
@@ -555,7 +580,7 @@ function Qualification() {
                 <span className="flex flex-row gap-3 pt-4 text-semibold">
                   <FaCalendar className="text-lg text-gray-500" />{" "}
                   <p className="font-semibold text-gray-500">
-                    June, 2021 - December, 2023
+                    December, 2023
                   </p>
                 </span>
               </div>
@@ -564,7 +589,7 @@ function Qualification() {
             
             <a href="https://drive.google.com/file/d/1-uuXBgtK0Wr7feOCh8yLb0u4zp-B8NGD/view?usp=sharing" target="_blank" rel="noopener noreferrer">
             <Slide direction="right" duration={2000}>
-              <div className="education-section py-5 flex flex-col ring-1 ring-yellow-600 rounded-md px-10 w-[90%] h-52 shadow-xl m-auto lg:w-full lg:m-0">
+              <div className="education-section py-5 flex flex-col ring-1 ring-yellow-600 rounded-md px-10 w-[90%] h-60 shadow-xl m-auto lg:w-full lg:m-0">
                 <span className="font-bold text-gray-600">
                   WASSCE
                   <br />
@@ -593,9 +618,9 @@ function Qualification() {
             </h3>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 lg:gap-y-10 justify-center item-center pt-6 md:pt-10">
+          <div className="grid grid-cols-2 px-3 md:grid-cols-2 lg:grid-cols-3 gap-3 lg:gap-y-10 justify-center item-center pt-6 md:pt-10">
             <Fade direction="left" duration={2000}>
-              <div className=" pt-5 flex flex-col ring-1 ring-yellow-600 rounded-md p-10 w-[90%] m-auto h-52 shadow-xl">
+              <div className=" pt-5 flex flex-col ring-1 ring-yellow-600 rounded-md p-10 w-[90%] m-auto h-74 md:h-60 shadow-xl">
                 <span className="font-bold text-gray-600">
                   IT Support Specialist (National Service)
                 </span>
@@ -612,7 +637,7 @@ function Qualification() {
             </Fade>
 
             <Fade direction="right" duration={2000}>
-              <div className=" pt-5 flex flex-col ring-1 ring-yellow-600 rounded-md p-10 w-[90%] m-auto h-52 shadow-xl">
+              <div className=" pt-5 flex flex-col ring-1 ring-yellow-600 rounded-md p-10 w-[90%] m-auto h-74 md:h-60 shadow-xl">
                 <span className="font-bold text-gray-600">
                   IT Support Specialist (Intenship)
                 </span>
@@ -671,9 +696,9 @@ function Service() {
         </span>
       </div>
 
-      <div className="sevice-wrapper pt-8 md:pt-20 px-4 lg:px-10 grid md:grid-cols-2 gap-5 gap-y-5 lg:grid-cols-3">
+      <div className="sevice-wrapper grid grid-cols-2 pt-8 md:pt-20 px-6 lg:px-10 md:grid-cols-2 gap-5 gap-y-5 lg:grid-cols-3">
         <Slide direction="left" duration={2000}>
-          <div className="software-wrapper flex flex-col gap-5 ring-1 ring-yellow-600 shadow-lg shadow-blue-800 justify-bottom items-bottom py-5 md:py-10 px-3 rounded-md">
+          <div className="software-wrapper flex flex-col gap-5 ring-1 h-56 lg:h-auto ring-yellow-600 shadow-lg shadow-blue-800 justify-bottom items-bottom py-5 md:py-10 px-3 rounded-md">
             <FaLaptopCode className="text-4xl md:mt-10  text-yellow-600" />
             <p className="p-y text-semibold text-lg text-gray-700">
               Software Development
@@ -682,7 +707,7 @@ function Service() {
               onClick={() => {
                 onShowCardSoftware();
               }}
-              className="bg-yellow-600 flex flex-row gap-2 items-center ring-1 ring-blue-900 w-[50%] md:w-[40%] lg:w-[40%]  hover:bg-blue-800 hover:text-white hover:ring-2 hover:ring-yellow-600 rounded-md py-2 px-3"
+              className="bg-yellow-600 flex flex-row gap-2 items-center ring-1 ring-blue-900 w-[75%] md:w-[40%] lg:w-[40%]  hover:bg-blue-800 hover:text-white hover:ring-2 hover:ring-yellow-600 rounded-md py-2 px-3"
             >
               <span className="cursor-pointerg">View More</span>
               <FaArrowRight />
@@ -691,7 +716,7 @@ function Service() {
         </Slide>
 
         <Slide direction="right" duration={2000}>
-          <div className="network-wrapper flex flex-col gap-5 ring-1 py-5 ring-yellow-600 shadow-lg shadow-blue-800 justify-bottom items-bottom lg:py-10 px-3 rounded-md">
+          <div className="network-wrapper flex flex-col gap-5 ring-1 py-5 h-56 lg:h-auto ring-yellow-600 shadow-lg shadow-blue-800 justify-bottom items-bottom lg:py-10 px-3 rounded-md">
             <FaNetworkWired className="text-4xl md:mt-10  text-yellow-600" />
             <p className="p-y text-semibold text-lg text-gray-700">
               Computer Networking
@@ -700,7 +725,7 @@ function Service() {
               onClick={() => {
                 onShowCardNetworking();
               }}
-              className=" bg-yellow-600 flex flex-row gap-2 items-center ring-1 ring-blue-900 w-[50%] md:w-[40%] lg:w-[40%] hover:bg-blue-800 hover:text-white hover:ring-2 hover:ring-yellow-600 rounded-md py-2 px-3"
+              className=" bg-yellow-600 flex flex-row gap-2 items-center ring-1 ring-blue-900 w-[75%] md:w-[40%] lg:w-[40%] hover:bg-blue-800 hover:text-white hover:ring-2 hover:ring-yellow-600 rounded-md py-2 px-3"
             >
               <span className="cursor-pointer ">View More</span>
               <FaArrowRight />
@@ -709,7 +734,7 @@ function Service() {
         </Slide>
 
         <Slide direction="left" duration={2000}>
-          <div className="hardware-wrapper flex flex-col gap-5 ring-1 py-5 ring-yellow-600 shadow-lg shadow-blue-800 justify-bottom items-bottom lg:py-10 px-3 rounded-md">
+          <div className="hardware-wrapper flex flex-col gap-5 ring-1 py-5 h-56 lg:h-auto ring-yellow-600 shadow-lg shadow-blue-800 justify-bottom items-bottom lg:py-10 px-3 rounded-md">
             <MdOutlineHardware className="text-4xl md:mt-10  text-yellow-600" />
             <p className="p-y text-semibold text-lg text-gray-700">
               Computer Hardware and Software
@@ -718,7 +743,7 @@ function Service() {
               onClick={() => {
                 onShowCardHardSoftWare();
               }}
-              className=" bg-yellow-600 flex flex-row gap-2 items-center ring-1 ring-blue-900 w-[50%] md:w-[40%] lg:w-[40%] hover:bg-blue-800 hover:text-white hover:ring-2 hover:ring-yellow-600 rounded-md py-2 px-3"
+              className=" bg-yellow-600 flex flex-row gap-2 items-center ring-1 ring-blue-900 w-[75%] md:w-[40%] lg:w-[40%] hover:bg-blue-800 hover:text-white hover:ring-2 hover:ring-yellow-600 rounded-md py-2 px-3"
             >
               <span className="cursor-pointer ">View More</span>
               <FaArrowRight />
@@ -727,7 +752,7 @@ function Service() {
         </Slide>
 
         <Slide direction="right" duration={2000}>
-          <div className="security-wrapper flex flex-col gap-5 ring-1 py-5 ring-yellow-600 shadow-lg shadow-blue-800 justify-bottom items-bottom lg:py-10 px-3 rounded-md">
+          <div className="security-wrapper flex flex-col gap-5 ring-1 py-5 h-56 lg:h-auto ring-yellow-600 shadow-lg shadow-blue-800 justify-bottom items-bottom lg:py-10 px-3 rounded-md">
             <MdOutlineSecurity className="text-4xl md:mt-10  text-yellow-600" />
             <p className="p-y text-semibold text-lg text-gray-700">
               Computer Security
@@ -736,7 +761,7 @@ function Service() {
               onClick={() => {
                 onShowCardSecurity();
               }}
-              className="bg-yellow-600 flex flex-row gap-2 items-center ring-1 ring-blue-900 w-[50%] md:w-[40%] lg:w-[40%] hover:bg-blue-800 hover:text-white hover:ring-2 hover:ring-yellow-600 rounded-md py-2 px-3"
+              className="bg-yellow-600 flex flex-row gap-2 items-center ring-1 ring-blue-900 w-[75%] md:w-[40%] lg:w-[40%] hover:bg-blue-800 hover:text-white hover:ring-2 hover:ring-yellow-600 rounded-md py-2 px-3"
             >
               <span className="cursor-pointerg">View More</span>
               <FaArrowRight />
@@ -1126,7 +1151,9 @@ function Home() {
         className="bg-white md:min-h-screen pt-10 pb-10 lg:pt-32 px-2 2xl:w-[80%] m-auto"
         id="home"
       >
+        
         <div className="flex flex-col lg:flex-row gap-7 lg:py-3 px-6 lg:px-20 ">
+        <Fade direction="down" duration={2000}>
           <div className="flex lg:hidden profile visible pr-4 justify-center pt-6 items-center flex-1 hover:scale-110">
             <img
               src={Profile}
@@ -1134,6 +1161,7 @@ function Home() {
               className="w-[100px] md:300px "
             />
           </div>
+          </Fade>
           <div className="md:px-3 flex lg:flex-col gap-8 items-center justify-center mt-0 lg:mt-16">
             <a
               href="https://web.facebook.com/edem.kwaku.581"
@@ -1180,6 +1208,7 @@ function Home() {
                 <span className="text-gray-500 font-normal pb-3 hover:scale-105 cursor-pointer md:px-4">
                   <i>I am an IT Professional,</i>
                 </span>
+                <Fade direction="left" duration={2000}>
                 <span className="text-gray-500 md:text-lg hover:scale-105 cursor-pointer md:px-4">
                   Attentive, focused and highly motivated IT professional
                   seeking to utilize his skills for the enhancement of the next
@@ -1191,8 +1220,10 @@ function Home() {
                   organization to achieve its goals.
                   <br />
                 </span>
+                </Fade>
               </div>
 
+              <Fade direction="down" duration={2000}>
               <div className="hidden lg:flex profile visible pr-4 lg:pr-0 justify-center pt-6 lg:pt-0 items-center flex-1 hover:scale-110">
                 <img
                   src={Profile}
@@ -1200,7 +1231,9 @@ function Home() {
                   className="w-[250px] md:300px lg:w-[400px] xl:w-[350px] lg:ml-14"
                 />
               </div>
+              </Fade>
             </div>
+            <Fade direction="up" duration={2000}>
             <AnchorLink
               href="#about"
               className="mt-12 md:mt-14  lg:mt-20 m-auto w-[50%] md:w-[40%] lg:w-[15%] gap-2 bg-yellow-600 flex justify-center items-center rounded-md ring-2 ring-blue-800 hover:text-yellow-600 hover:bg-white hover:ring-yellow-600"
@@ -1210,6 +1243,7 @@ function Home() {
               </button>
               <FaArrowRight />
             </AnchorLink>
+            </Fade>
           </div>
         </div>
       </div>
@@ -1260,33 +1294,38 @@ function Footer() {
           <div className="social-link-wrapper py-1 md:py-3  md:px-3 flex flex-row gap-4 items-center  ">
             <a
               href="https://web.facebook.com/edem.kwaku.581"
+               target="_blank" rel="noopener noreferrer"
               className="hover:translate-y-2"
             >
               <FaFacebook className="text-2xl text-blue-900" />
             </a>
             <a
               href="https://github.com/kwakuedem"
+               target="_blank" rel="noopener noreferrer"
               className="hover:translate-y-2"
             >
               <FaGithub className="text-2xl text-blue-900" />
             </a>
             <a
               href="https://twitter.com/edemkwaku4"
+               target="_blank" rel="noopener noreferrer"
               className="hover:translate-y-2"
             >
               <FaTwitter className="text-2xl text-blue-900" />
             </a>
             <a
-              href="https://www.linkedin.com/in/avorley-edem-kwaku-b1ab48232/"
+              href="https://www.linkedin.com/in/edem-kwaku-avorley-b1ab48232/
+"
+               target="_blank" rel="noopener noreferrer"
               className="hover:translate-y-2"
             >
               <FaLinkedin className="text-2xl text-blue-900" />
             </a>
           </div>
           <div className="flex flex-row pt-3 md:pt-0 pb-4 md:pb-0 md:flex-col md:justify-center md:items-center">
-            <span>
+            <span className="text-white">
               Developed with
-              <span className="text-3xl text-red-600 px-2 md:px-0">
+              <span className="text-3xl text-red-600 px-2 md:px-2">
                 &hearts;
               </span>
               By Edem
