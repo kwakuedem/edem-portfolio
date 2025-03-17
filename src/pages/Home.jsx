@@ -248,23 +248,23 @@ function About() {
             </Fade>
           </div>
 
-          <div className="grid grid-cols-3 px-8 gap-6 lg:gap-0 lg:flex-row lg:space-x-16 pt-10 lg:px-56">
+          <div className="grid grid-cols-3 px-8 gap-4 lg:gap-0 lg:flex-row lg:space-x-16 pt-10 lg:px-56">
             <Fade direction="left" duration={2000}>
-              <div className="flex flex-col py-10 lg:py-0 lg:justify-center ring-2 w-[90%] rounded-md m-auto lg:ring-0 items-center hover:translate-x-2 cursor-pointer">
+              <div className="flex flex-col py-10 lg:py-0 lg:justify-center ring-2 w-[90%] px-2 rounded-md m-auto lg:ring-0 items-center hover:translate-x-2 cursor-pointer">
                 <span className="text-gray-500 text-2xl font-bold">05+</span>
                 <span className="text-gray-500 font-semibold">Years</span>
                 <span className="text-gray-500 font-semibold">experience</span>
               </div>
             </Fade>
             <Fade direction="up" duration={2000}>
-              <div className="flex flex-col py-10 lg:py-0 lg:justify-center ring-2 w-[90%] rounded-md m-auto lg:ring-0 items-center hover:translate-x-2 cursor-pointer">
+              <div className="flex flex-col py-10 lg:py-0 lg:justify-center ring-2 w-[90%] px-2 rounded-md m-auto lg:ring-0 items-center hover:translate-x-2 cursor-pointer">
                 <span className="text-gray-500 text-2xl font-bold">10+</span>
                 <span className="text-gray-500 font-semibold">Completed</span>
                 <span className="text-gray-500 font-semibold">projects</span>
               </div>
             </Fade>
             <Fade direction="right" duration={2000}>
-              <div className="flex flex-col py-10 lg:py-0 lg:justify-center ring-2 w-[90%] rounded-md m-auto lg:ring-0 items-center hover:translate-x-2 cursor-pointer">
+              <div className="flex flex-col py-10 lg:py-0 lg:justify-center ring-2 w-[90%] px-2 rounded-md m-auto lg:ring-0 items-center hover:translate-x-2 cursor-pointer">
                 <span className="text-gray-500 text-2xl font-bold">02+</span>
                 <span className="text-gray-500 font-semibold">Companies</span>
                 <span className="text-gray-500 font-semibold">worked</span>
@@ -599,8 +599,8 @@ function Qualification() {
                 </span>
                 <span className="flex flex-row gap-3 pt-4 text-semibold">
                   <FaCalendar className="text-lg text-gray-500" />{" "}
-                  <p className="font-semibold text-gray-500">
-                    August,2013,June, 2016
+                  <p className="flex flex-col md:flex-row font-semibold text-gray-500">
+                    August,2013- <span>June, 2016</span> 
                   </p>
                 </span>
               </div>
@@ -707,7 +707,7 @@ function Service() {
               onClick={() => {
                 onShowCardSoftware();
               }}
-              className="bg-yellow-600 flex flex-row gap-2 items-center ring-1 ring-blue-900 w-[85%] md:w-[40%] lg:w-[40%]  hover:bg-blue-800 hover:text-white hover:ring-2 hover:ring-yellow-600 rounded-md py-2 px-3"
+              className="bg-yellow-600 flex flex-row gap-2 items-center justify-center ring-1 ring-blue-900 w-full md:w-[40%] lg:w-[40%]  hover:bg-blue-800 hover:text-white hover:ring-2 hover:ring-yellow-600 rounded-md py-2 px-3"
             >
               <span className="cursor-pointerg">View More</span>
               <FaArrowRight />
@@ -725,7 +725,7 @@ function Service() {
               onClick={() => {
                 onShowCardNetworking();
               }}
-              className=" bg-yellow-600 flex flex-row gap-2 items-center ring-1 ring-blue-900 w-[85%] md:w-[40%] lg:w-[40%] hover:bg-blue-800 hover:text-white hover:ring-2 hover:ring-yellow-600 rounded-md py-2 px-3"
+              className=" bg-yellow-600 flex flex-row gap-2 items-center justify-center ring-1 ring-blue-900 w-full md:w-[40%] lg:w-[40%] hover:bg-blue-800 hover:text-white hover:ring-2 hover:ring-yellow-600 rounded-md py-2 px-3"
             >
               <span className="cursor-pointer ">View More</span>
               <FaArrowRight />
@@ -743,7 +743,7 @@ function Service() {
               onClick={() => {
                 onShowCardHardSoftWare();
               }}
-              className=" bg-yellow-600 flex flex-row gap-2 items-center ring-1 ring-blue-900 w-[85%] md:w-[40%] lg:w-[40%] hover:bg-blue-800 hover:text-white hover:ring-2 hover:ring-yellow-600 rounded-md py-2 px-3"
+              className=" bg-yellow-600 flex flex-row gap-2 items-center justify-center ring-1 ring-blue-900 w-full md:w-[40%] lg:w-[40%] hover:bg-blue-800 hover:text-white hover:ring-2 hover:ring-yellow-600 rounded-md py-2 px-3"
             >
               <span className="cursor-pointer ">View More</span>
               <FaArrowRight />
@@ -761,7 +761,7 @@ function Service() {
               onClick={() => {
                 onShowCardSecurity();
               }}
-              className="bg-yellow-600 flex flex-row gap-2 items-center ring-1 ring-blue-900 w-[85%] md:w-[40%] lg:w-[40%] hover:bg-blue-800 hover:text-white hover:ring-2 hover:ring-yellow-600 rounded-md py-2 px-3"
+              className="bg-yellow-600 flex flex-row gap-2 items-center justify-center ring-1 ring-blue-900 w-full md:w-[40%] lg:w-[40%] hover:bg-blue-800 hover:text-white hover:ring-2 hover:ring-yellow-600 rounded-md py-2 px-3"
             >
               <span className="cursor-pointerg">View More</span>
               <FaArrowRight />
