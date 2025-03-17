@@ -468,7 +468,7 @@ function Qualification() {
           <div className="grid px-3 grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-3 lg:gap-y-10 justify-center item-center pt-10 md:px-8">
             <a href="https://drive.google.com/file/d/1XZUCT3RM0KyVZIGRB3r3bH4J4httrNjj/view?usp=sharing" target="_blank" rel="noopener noreferrer">
             <Slide direction="left" duration={2000}>
-              <div className="education-section pt-5 flex flex-col w-[90%] h-60 shadow-xl  m-auto lg:w-full lg:m-0 ring-1 ring-yellow-600 rounded-md px-10">
+              <div className="education-section pt-5 flex flex-col w-[90%] h-64 shadow-xl  m-auto lg:w-full lg:m-0 ring-1 ring-yellow-600 rounded-md px-6">
                 <span className="font-bold text-gray-600">
                   B'Tech <br />
                   Information & <br />
@@ -487,7 +487,7 @@ function Qualification() {
 
             <a href="https://drive.google.com/file/d/10-tE2GW27-lh_pLYOrkZ3ECy5AYo6FvS/view?usp=sharing" target="_blank" rel="noopener noreferrer">
             <Slide direction="right" duration={2000}>
-              <div className="education-section py-5 flex flex-col ring-1 ring-yellow-600 rounded-md px-10 w-[90%] h-60 shadow-xl m-auto lg:w-full lg:m-0">
+              <div className="education-section py-5 flex flex-col ring-1 ring-yellow-600 rounded-md px-6 w-[90%] h-64 shadow-xl m-auto lg:w-full lg:m-0">
                 <span className="font-bold text-gray-600">
                   HND <br />
                   Information & <br />
@@ -506,7 +506,7 @@ function Qualification() {
             
             <a href="https://drive.google.com/file/d/1-ugLAytljLccMSManCXhSqD1ViIZW95y/view?usp=sharing" target="_blank" rel="noopener noreferrer">
             <Slide direction="left" duration={2000}>
-              <div className="education-section py-5 flex flex-col ring-1 ring-yellow-600 rounded-md px-10 w-[90%] h-60 shadow-xl m-auto lg:w-full lg:m-0">
+              <div className="education-section py-5 flex flex-col ring-1 ring-yellow-600 rounded-md px-6 w-[90%] h-64 shadow-xl m-auto lg:w-full lg:m-0">
                 <span className="font-bold text-gray-600">
                   Google
                   <br />
@@ -527,7 +527,7 @@ function Qualification() {
 
             <a href="https://drive.google.com/file/d/1-t4Bjzr6udvrQn7f3pOLwJer_Hk-2MsW/view?usp=sharing" target="_blank" rel="noopener noreferrer">
             <Slide direction="left" duration={2000}>
-              <div className="education-section py-5 flex flex-col ring-1 ring-yellow-600 rounded-md px-10 w-[90%] h-60 shadow-xl m-auto lg:w-full lg:m-0">
+              <div className="education-section py-5 flex flex-col ring-1 ring-yellow-600 rounded-md px-6 w-[90%] h-64 shadow-xl m-auto lg:w-full lg:m-0">
                 <span className="font-bold text-gray-600">
                   ISC2 
                   <br />
@@ -547,7 +547,7 @@ function Qualification() {
             </a>
             
             <Slide direction="right" duration={2000}>
-              <div className="education-section py-5 flex flex-col ring-1 ring-yellow-600 rounded-md px-10 w-[90%] h-60 shadow-xl m-auto lg:w-full lg:m-0">
+              <div className="education-section py-5 flex flex-col ring-1 ring-yellow-600 rounded-md px-6 w-[90%] h-64 shadow-xl m-auto lg:w-full lg:m-0">
                 <span className="font-bold text-gray-600">
                   Google
                   <br />
@@ -567,7 +567,7 @@ function Qualification() {
 
             <a href="https://drive.google.com/file/d/1-wa8lRri4-7V8tFNeYhJR8A72SDjzisD/view?usp=sharing" target="_blank" rel="noopener noreferrer">
             <Slide direction="left" duration={2000}>
-              <div className="education-section py-5 flex flex-col ring-1 ring-yellow-600 rounded-md px-10 w-[90%] h-60 shadow-xl m-auto lg:w-full lg:m-0">
+              <div className="education-section py-5 flex flex-col ring-1 ring-yellow-600 rounded-md px-6 w-[90%] h-64 shadow-xl m-auto lg:w-full lg:m-0">
                 <span className="font-bold text-gray-600">
                   Diploma
                   <br />
@@ -589,7 +589,7 @@ function Qualification() {
             
             <a href="https://drive.google.com/file/d/1-uuXBgtK0Wr7feOCh8yLb0u4zp-B8NGD/view?usp=sharing" target="_blank" rel="noopener noreferrer">
             <Slide direction="right" duration={2000}>
-              <div className="education-section py-5 flex flex-col ring-1 ring-yellow-600 rounded-md px-10 w-[90%] h-60 shadow-xl m-auto lg:w-full lg:m-0">
+              <div className="education-section py-5 flex flex-col ring-1 ring-yellow-600 rounded-md px-6 w-[90%] h-64 shadow-xl m-auto lg:w-full lg:m-0">
                 <span className="font-bold text-gray-600">
                   WASSCE
                   <br />
@@ -620,7 +620,7 @@ function Qualification() {
 
           <div className="grid grid-cols-2 px-3 md:grid-cols-2 lg:grid-cols-3 gap-3 lg:gap-y-10 justify-center item-center pt-6 md:pt-10">
             <Fade direction="left" duration={2000}>
-              <div className=" pt-5 flex flex-col ring-1 ring-yellow-600 rounded-md p-10 w-[90%] m-auto h-74 md:h-60 shadow-xl">
+              <div className=" pt-5 flex flex-col ring-1 ring-yellow-600 rounded-md px-6 py-6 md:p-10 w-[90%] m-auto h-74 md:h-60 shadow-xl">
                 <span className="font-bold text-gray-600">
                   IT Support Specialist (National Service)
                 </span>
@@ -637,7 +637,7 @@ function Qualification() {
             </Fade>
 
             <Fade direction="right" duration={2000}>
-              <div className=" pt-5 flex flex-col ring-1 ring-yellow-600 rounded-md p-10 w-[90%] m-auto h-74 md:h-60 shadow-xl">
+              <div className=" pt-5 flex flex-col ring-1 ring-yellow-600 rounded-md px-6 py-6 md:p-10 w-[90%] m-auto h-74 md:h-60 shadow-xl">
                 <span className="font-bold text-gray-600">
                   IT Support Specialist (Intenship)
                 </span>
@@ -684,7 +684,7 @@ function Service() {
 
   return (
     <div
-      className="bg-white min-h-screen 2xl:w-[80%] m-auto pb-20 pt-8 md:pt-20 lg:px-20  relative"
+      className="bg-white md:min-h-screen 2xl:w-[80%] m-auto pb-20 pt-8 md:pt-20 lg:px-20  relative"
       id="services"
     >
       <div className="heading flex flex-col justify-center items-center hover:scale-105 cursor-pointer">
@@ -707,7 +707,7 @@ function Service() {
               onClick={() => {
                 onShowCardSoftware();
               }}
-              className="bg-yellow-600 flex flex-row gap-2 items-center ring-1 ring-blue-900 w-[75%] md:w-[40%] lg:w-[40%]  hover:bg-blue-800 hover:text-white hover:ring-2 hover:ring-yellow-600 rounded-md py-2 px-3"
+              className="bg-yellow-600 flex flex-row gap-2 items-center ring-1 ring-blue-900 w-[85%] md:w-[40%] lg:w-[40%]  hover:bg-blue-800 hover:text-white hover:ring-2 hover:ring-yellow-600 rounded-md py-2 px-3"
             >
               <span className="cursor-pointerg">View More</span>
               <FaArrowRight />
@@ -725,7 +725,7 @@ function Service() {
               onClick={() => {
                 onShowCardNetworking();
               }}
-              className=" bg-yellow-600 flex flex-row gap-2 items-center ring-1 ring-blue-900 w-[75%] md:w-[40%] lg:w-[40%] hover:bg-blue-800 hover:text-white hover:ring-2 hover:ring-yellow-600 rounded-md py-2 px-3"
+              className=" bg-yellow-600 flex flex-row gap-2 items-center ring-1 ring-blue-900 w-[85%] md:w-[40%] lg:w-[40%] hover:bg-blue-800 hover:text-white hover:ring-2 hover:ring-yellow-600 rounded-md py-2 px-3"
             >
               <span className="cursor-pointer ">View More</span>
               <FaArrowRight />
@@ -743,7 +743,7 @@ function Service() {
               onClick={() => {
                 onShowCardHardSoftWare();
               }}
-              className=" bg-yellow-600 flex flex-row gap-2 items-center ring-1 ring-blue-900 w-[75%] md:w-[40%] lg:w-[40%] hover:bg-blue-800 hover:text-white hover:ring-2 hover:ring-yellow-600 rounded-md py-2 px-3"
+              className=" bg-yellow-600 flex flex-row gap-2 items-center ring-1 ring-blue-900 w-[85%] md:w-[40%] lg:w-[40%] hover:bg-blue-800 hover:text-white hover:ring-2 hover:ring-yellow-600 rounded-md py-2 px-3"
             >
               <span className="cursor-pointer ">View More</span>
               <FaArrowRight />
@@ -761,7 +761,7 @@ function Service() {
               onClick={() => {
                 onShowCardSecurity();
               }}
-              className="bg-yellow-600 flex flex-row gap-2 items-center ring-1 ring-blue-900 w-[75%] md:w-[40%] lg:w-[40%] hover:bg-blue-800 hover:text-white hover:ring-2 hover:ring-yellow-600 rounded-md py-2 px-3"
+              className="bg-yellow-600 flex flex-row gap-2 items-center ring-1 ring-blue-900 w-[85%] md:w-[40%] lg:w-[40%] hover:bg-blue-800 hover:text-white hover:ring-2 hover:ring-yellow-600 rounded-md py-2 px-3"
             >
               <span className="cursor-pointerg">View More</span>
               <FaArrowRight />
@@ -991,7 +991,7 @@ function Service() {
 //Portfolio page
 function Portfolio() {
   return (
-    <div className="bg-white pt-20 px-8 lg:px-20  2xl:w-[80%] m-auto" id="portfolio">
+    <div className="bg-white pt-5 px-8 lg:px-20  2xl:w-[80%] m-auto" id="portfolio">
       <div className="heading flex flex-col justify-center items-center hover:scale-105 cursor-pointer">
         <span className="text-xl md:text-3xl font-bold  text-blue-900 opacity-80">
           Portfolio
@@ -1056,7 +1056,6 @@ function Contact() {
               <span className=" font-bold text-xl opacity-70">Call Me</span>
               <span className="text-gray-400">+233 540 908 248</span>
               <span className="text-gray-400">+233 256 344 845</span>
-              <span className="text-gray-400">+233 200 786 190</span>
             </div>
           </div>
 
@@ -1073,8 +1072,8 @@ function Contact() {
             <MdOutlineLocationOn className="rotate-0 text-3xl text-yellow-600 mt-5" />
             <div className="flex flex-col">
               <span className=" font-bold text-xl opacity-70">Location</span>
-              <span className="text-gray-400">edemkwakuavorley@gmail.com</span>
-              <span className="text-gray-400">edenkwaku85@gmail.com</span>
+              <span className="text-gray-400">Kabakaba Hill, Ho</span>
+              <span className="text-gray-400">Volta Region</span>
             </div>
           </div>
         </div>
