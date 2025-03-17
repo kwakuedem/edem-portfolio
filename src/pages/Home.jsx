@@ -624,8 +624,11 @@ function Qualification() {
                 <span className="font-bold text-gray-600">
                   IT Support Specialist (National Service)
                 </span>
-                <span className="text-gray-500 pt-3 font-semibold">
+                <span className="text-gray-500 pt-3 font-semibold hidden md:flex">
                   Electricity Company of Ghana
+                </span>
+                <span className="text-gray-500 pt-3 font-semibold flex md:hidden">
+                  ECG
                 </span>
                 <span className="flex flex-row gap-3 pt-4 text-semibold">
                   <FaCalendar className="text-lg text-gray-500" />{" "}
@@ -641,8 +644,11 @@ function Qualification() {
                 <span className="font-bold text-gray-600">
                   IT Support Specialist (Intenship)
                 </span>
-                <span className="text-gray-500 pt-3 font-semibold">
+                <span className="text-gray-500 pt-3 font-semibold hidden md:flex">
                   Electricity Company of Ghana
+                </span>
+                <span className="text-gray-500 pt-3 font-semibold flex md:hidden">
+                  ECG
                 </span>
                 <span className="flex flex-row gap-3 pt-4 text-semibold">
                   <FaCalendar className="text-lg text-gray-500" />{" "}
