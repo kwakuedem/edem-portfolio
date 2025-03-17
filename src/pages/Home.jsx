@@ -58,7 +58,7 @@ function NavigationBar() {
         <div className=' absolute inset-0 bg-gray-100 opacity-70' onClick={() => onShowMenu()}/>
         <div className='absolute transition duration-300 ease-in-out w-[60%] bg-yellow-300 flex py-10 flex-col h-full text-white items-center'>
            <div className="flex h-20 w-20 items-center justify-center">
-              <img src="src/assets/Picture.png" className='rounded-full w-24 h-20' alt=""  />
+              <img src={Picture} className='rounded-full w-24 h-20' alt=""  />
             </div>
           <div className="bg-yellow-300 w-full h-full pt-4">
           <div className='nav-menus py-3 flex flex-col w-full gap-4'>
