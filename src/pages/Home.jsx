@@ -632,9 +632,13 @@ function Qualification() {
                 </span>
                 <span className="flex flex-row gap-3 pt-4 text-semibold">
                   <FaCalendar className="text-lg text-gray-500" />{" "}
-                  <p className="font-semibold text-gray-500">
-                    November 2022 - October 2023
+                  <p className="font-semibold text-gray-500 hidden md:flex">
+                    November,2022 - October, 2023
                   </p>
+                  <p className="font-semibold text-gray-500 flex md:hidden">
+                    Nov,2022 - October, 2023
+                  </p>
+
                 </span>
               </div>
             </Fade>
