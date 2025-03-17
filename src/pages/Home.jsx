@@ -248,26 +248,26 @@ function About() {
             </Fade>
           </div>
 
-          <div className="grid grid-cols-3 px-8 gap-4 lg:gap-0 lg:flex-row lg:space-x-16 pt-10 lg:px-56">
+          <div className="grid grid-cols-3 px-8 gap-2 lg:gap-0 lg:flex-row lg:space-x-16 pt-10 lg:px-56">
             <Fade direction="left" duration={2000}>
-              <div className="flex flex-col py-10 lg:py-0 lg:justify-center ring-2 w-[90%] px-2 rounded-md m-auto lg:ring-0 items-center hover:translate-x-2 cursor-pointer">
+              <div className="flex flex-col py-6 shadow lg:py-0 lg:justify-center ring-2 w-[90%] px-2 rounded-md m-auto lg:ring-0 items-center hover:translate-x-2 cursor-pointer">
                 <span className="text-gray-500 text-2xl font-bold">05+</span>
-                <span className="text-gray-500 font-semibold">Years</span>
-                <span className="text-gray-500 font-semibold">experience</span>
+                <span className="text-gray-500 font-nornal">Years</span>
+                <span className="text-gray-500 font-nornal">experience</span>
               </div>
             </Fade>
             <Fade direction="up" duration={2000}>
-              <div className="flex flex-col py-10 lg:py-0 lg:justify-center ring-2 w-[90%] px-2 rounded-md m-auto lg:ring-0 items-center hover:translate-x-2 cursor-pointer">
+              <div className="flex flex-col py-6 shadow lg:py-0 lg:justify-center ring-2 w-[90%] px-2 rounded-md m-auto lg:ring-0 items-center hover:translate-x-2 cursor-pointer">
                 <span className="text-gray-500 text-2xl font-bold">10+</span>
-                <span className="text-gray-500 font-semibold">Completed</span>
-                <span className="text-gray-500 font-semibold">projects</span>
+                <span className="text-gray-500 font-nornal">Completed</span>
+                <span className="text-gray-500 font-nornal">projects</span>
               </div>
             </Fade>
             <Fade direction="right" duration={2000}>
-              <div className="flex flex-col py-10 lg:py-0 lg:justify-center ring-2 w-[90%] px-2 rounded-md m-auto lg:ring-0 items-center hover:translate-x-2 cursor-pointer">
+              <div className="flex flex-col py-6 shadow lg:py-0 lg:justify-center ring-2 w-[90%] px-2 rounded-md m-auto lg:ring-0 items-center hover:translate-x-2 cursor-pointer">
                 <span className="text-gray-500 text-2xl font-bold">02+</span>
-                <span className="text-gray-500 font-semibold">Companies</span>
-                <span className="text-gray-500 font-semibold">worked</span>
+                <span className="text-gray-500 font-nornal">Companies</span>
+                <span className="text-gray-500 font-nornal">worked</span>
               </div>
             </Fade>
           </div>
