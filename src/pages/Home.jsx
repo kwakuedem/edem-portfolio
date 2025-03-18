@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import emailjs from "@emailjs/browser";
+import emailjs from "emailjs-com";
 import { Fade, Slide } from "react-awesome-reveal";
 
 import Profile from "../assets/Profile.png";
@@ -1154,10 +1154,10 @@ function Contact() {
 
     emailjs
       .sendForm(
-        "service_79wqo8m",
-        "template_50l1l64",
-        "#myForm",
-        "kB-zDe4i9kpoF0Ec2"
+        "service_r3qb7nt",    // Replace with your EmailJS Service ID
+        "template_em856np",   // Replace with your EmailJS Template ID
+        form.current,
+        "AZ9OSfXNIWeP00qHN"
       )
       .then(
         (response) => {
@@ -1165,8 +1165,10 @@ function Contact() {
         },
         (error) => {
           alert("Oooops! Something went wrong", error);
+          console.error(error.text);
         }
       );
+      e.target.reset();
   };
 
   return (
@@ -1253,7 +1255,7 @@ function Contact() {
               cols={30}
               rows={4}
               type="text"
-              name="user_message"
+              name="message"
               value={message}
               onChange={(e) => setMessage(e.target.value)}
               placeholder="Message"
