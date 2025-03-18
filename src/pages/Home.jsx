@@ -463,13 +463,13 @@ function Skill() {
 
           {showSkillDeveloper && (
             <>
-              <div className="ml-5">
+              <div className="ml-5 pb-2">
                 <SkillSet heading={"Frontend Developer"}>
                   <div className="px-10">
                     <li className="text-gray-500">HTML</li>
                     <li className="text-gray-500">CSS</li>
                     <li className="text-gray-500">JavaScript</li>
-                    <p className="pt-2">Frameworks</p>
+                    <p className="pt-2 text-black">Frameworks</p>
                     <li className="text-gray-500">React</li>
                     <li className="text-gray-500">Tailwind-CSS(Framework)</li>
                   </div>
@@ -479,15 +479,15 @@ function Skill() {
               <div className="ml-5">
                 <SkillSet heading={"Backend Developer"}>
                   <div className="px-10">
-                  <p className="pt-2">Programming Languages</p>
+                  <p className="pt-2 text-black">Programming Languages</p>
                     <li className="text-gray-600">Python</li>
                     <li className="text-gray-600">Php</li>
-                    <p className="pt-2">Frameworks</p>
+                    <p className="pt-2 text-black">Frameworks</p>
                     <li className="text-gray-600">Laravel</li>
                     <li className="text-gray-600">Django</li>
                   </div>
                   <div className="px-10 pt-2">
-                    <p>Databases</p>
+                    <p className="text-black">Databases</p>
                     <li className="text-gray-600">MySql</li>
                     <li className="text-gray-600">PostgresSQL</li>
                   </div>
@@ -563,7 +563,7 @@ function Skill() {
                   <li className="text-gray-600">Manage Security Risks</li>
                   <li className="text-gray-600">Linux and SQL</li>
                   <li className="text-gray-600">Ethical Hacking</li>
-                  <p className="pt-2">Tool</p>
+                  <p className="pt-2 text-black">Tool</p>
                   <li className="text-gray-600">Kali Linux</li>
                   <li className="text-gray-600">Metaploit</li>
                   <li className="text-gray-600">Wireshark</li>
@@ -1154,8 +1154,8 @@ function Contact() {
 
     emailjs
       .sendForm(
-        "service_r3qb7nt",    // Replace with your EmailJS Service ID
-        "template_em856np",   // Replace with your EmailJS Template ID
+        "service_r3qb7nt",    
+        "template_em856np",   
         form.current,
         "AZ9OSfXNIWeP00qHN"
       )
