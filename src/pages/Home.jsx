@@ -455,7 +455,7 @@ function Skill() {
                 <FaSortDown className="text-xl text-yellow-500" />
               )}
               <h3 className="md:text-xl font-semibold text-gray-600">
-                Software Developer
+                Software Development
               </h3>
             </button>
           </div>
@@ -511,7 +511,7 @@ function Skill() {
                 <FaSortDown className="text-xl text-yellow-500" />
               )}
               <h3 className="md:text-xl font-semibold text-gray-600">
-                Network Engineer
+                Network Admin & Eng
               </h3>
             </button>
           </div>
@@ -546,7 +546,7 @@ function Skill() {
                 <FaSortDown className="text-xl text-yellow-500" />
               )}
               <h3 className="md:text-xl font-semibold text-gray-600">
-                Cyber Security Analist
+                Cyber Security
               </h3>
             </button>
           </div>
@@ -559,9 +559,15 @@ function Skill() {
                   <li className="text-gray-600">SIEM Tool(Splunk Technology)</li>
                   <li className="text-gray-600">Python</li>
                   <li className="text-gray-600">Detection and Responds</li>
-                  <li className="text-gray-600">Assets, Threats and Vdivneralbility</li>
+                  <li className="text-gray-600">Assets, Threats and Vulneralbility</li>
                   <li className="text-gray-600">Manage Security Risks</li>
                   <li className="text-gray-600">Linux and SQL</li>
+                  <li className="text-gray-600">Ethical Hacking</li>
+                  <p className="pt-2">Tool</p>
+                  <li className="text-gray-600">Kali Linux</li>
+                  <li className="text-gray-600">Metaploit</li>
+                  <li className="text-gray-600">Wireshark</li>
+                  <li className="text-gray-600">Others</li>
                 </div>
               </div>
             </>
@@ -1285,7 +1291,7 @@ function Home() {
               <img
                 src={Profile}
                 alt=""
-                className="w-[100px] md:300px  lg:w-[400px] xl:w-[350px]"
+                className="w-[100px] md:w-[200px]  lg:w-[400px] xl:w-[350px]"
               />
             </div>
           </Fade>
