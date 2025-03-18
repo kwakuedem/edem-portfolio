@@ -256,46 +256,46 @@ function About() {
                 systems, and applications function, leading me to specialize in multiple areas of IT.
               </p>
 
-              <div className="md:hidden">
+              <div className="md:hidden bg-white">
               {showMore && (
           <>
             <div className="cursor-pointer">
-              <h3 className=" font-bold text-lg pt-3 pb-2">Education & Certifications</h3>
-              <p>I hold a Bachelor of Technology in ICT and an HND in ICT from Ho Technical University, 
+              <h3 className=" font-bold text-lg text-gray-500 pt-3 pb-2">Education & Certifications</h3>
+              <p className="text-gray-500">I hold a Bachelor of Technology in ICT and an HND in ICT from Ho Technical University, 
                 as well as a Diploma in Network Administration & Engineering from GCOM Academy. 
                 I’ve also earned globally recognized certifications, including:
               </p>
               <p className="flex flex-col py-2 pl-2">
-                <li>ISC² Certified in Cybersecurity (CC)</li>
-                <li>Google Cybersecurity Certificate</li>
-                <li>Google IT Support Specialist Certificate</li>
+                <li className="text-gray-500">ISC² Certified in Cybersecurity (CC)</li>
+                <li className="text-gray-500">Google Cybersecurity Certificate</li>
+                <li className="text-gray-500">Google IT Support Specialist Certificate</li>
               </p>
             </div>
 
             <div className="cursor-pointer">
-              <h3 className=" font-bold text-lg pt-3 pb-2">Technical Expertise</h3>
-              <p>I have hands-on experience in:</p>
+              <h3 className=" font-bold text-lg text-gray-500 pt-3 pb-2">Technical Expertise</h3>
+              <p className="text-gray-500">I have hands-on experience in:</p>
               <p className="flex flex-col py-2 pl-2">
-                <li className="">Cybersecurity & Network Administration</li>
-                <li className="">IT Support & Troubleshooting</li>
-                <li className="">System Administration (Linux & Windows Servers)</li>
-                <li className="">Web Development (Laravel, React, Inertia.js)</li>
-                <li className="">Computer Hardware & Software Installation</li>
-                <li className="">Ethical Hacking</li>
+                <li className="text-gray-500">Cybersecurity & Network Administration</li>
+                <li className="text-gray-500">IT Support & Troubleshooting</li>
+                <li className="text-gray-500">System Administration (Linux & Windows Servers)</li>
+                <li className="text-gray-500">Web Development (Laravel, React, Inertia.js)</li>
+                <li className="text-gray-500">Computer Hardware & Software Installation</li>
+                <li className="text-gray-500">Ethical Hacking</li>
               </p>
             </div>
 
             <div className="cursor-pointer">
-              <h3 className=" font-bold text-lg pt-3 pb-2">Professional Experience</h3>
-              <p>I completed my national service at the Electricity Company of Ghana, Ho Regional Office,
+              <h3 className=" font-bold text-lg text-gray-500 pt-3 pb-2">Professional Experience</h3>
+              <p className="text-gray-500">I completed my national service at the Electricity Company of Ghana, Ho Regional Office,
                 where I provided IT support, managed networks, and ensured system efficiency. Over the years, 
                 I have worked on multiple projects, helping businesses and institutions improve their IT infrastructure and security.
               </p>
             </div>
 
             <div className=" cursor-pointer">
-              <h3 className=" font-bold text-lg pt-3 pb-2">My Mission</h3>
-              <p className="flex flex-col">I am committed to helping businesses secure their digital assets, streamline IT operations, 
+              <h3 className=" font-bold text-lg text-gray-500 pt-3 pb-2">My Mission</h3>
+              <p className="flex flex-col text-gray-500">I am committed to helping businesses secure their digital assets, streamline IT operations, 
                 and adopt emerging technologies to drive efficiency. Whether it’s cybersecurity, IT support, 
                 or software development, I am always ready to take on new challenges.
                 <span className="pt-2">📩 Let’s Collaborate! If you’re looking for an IT professional to work on a project, I’d love to connect. </span>
