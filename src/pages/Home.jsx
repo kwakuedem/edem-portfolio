@@ -9,7 +9,8 @@ import HomeIcon from "../assets/HomeIcon.png";
 import ServiceIcon from "../assets/ServiceIcon.png";
 import SkillIcon from "../assets/SkillIcon.png";
 import ContactIcon from "../assets/ContactIcon.png";
-
+import Cap from "../assets/Cap.png";
+import Work from "../assets/Work.png";
 
 import { FaFileDownload } from "react-icons/fa";
 import AnchorLink from "react-anchor-link-smooth-scroll";
@@ -37,9 +38,9 @@ import {
   FaCalendar,
 } from "react-icons/fa";
 import { useState } from "react";
-import Resume from "../assets/resume.pdf";
 import SkillSet from "../components/SkillSet";
 import PorfolioItems from "../components/PorfolioItems";
+
 
 //Navigation bar
 function NavigationBar() {
@@ -153,56 +154,63 @@ function NavigationBar() {
   }
   return (
     <>
-      <div className="bg-white  px-2 lg:px-20 sticky py-4 z-10 w-full top-0 flex items-center justify-between ring-2 ring-gray-300 xl:w-[80%] m-auto">
-        
-        <div className="brand pl-5  flex justify-center">
-          <span className="font-bold text-2xl cursor-pointer text-yellow-600 ">
-            Edem
+      <div className="bg-white px-2 md:px-10 lg:px-20 sticky py-4 z-10 w-full top-0 flex items-center justify-between xl:w-[80%] m-auto">
+        {/* Brand Name */}
+        <div className="brand flex items-center">
+          <span className="font-semibold cursor-pointer shadow-sm px-2 text-yellow-500">
+            EDEM KWAKU
           </span>
         </div>
 
-        <div className='nav-menus hidden  py-3 lg:flex w-full items-center gap-2'>
-              
+        {/* Navigation Menu - Hidden on mobile, visible on larger screens */}
+        <div className="nav-menus hidden lg:flex lg:flex-1 lg:justify-end py-3 items-center gap-6">
           <AnchorLink href="#home">
-            <span className="font-medium text-lg cursor-pointer text-blue-600 pt-4">
-              Home
+            <span className="font-semibold  cursor-pointer text-blue-800">
+              HOME
             </span>
-          </AnchorLink>
-         
-          <AnchorLink href="#skill">
-            <span className="font-medium text-lg cursor-pointer text-blue-600 pt-4">
-              Skills
-            </span>
-          </AnchorLink>
-          
-          <AnchorLink href="#services">
-            <span className="font-medium text-lg cursor-pointer text-blue-600 pt-4">
-              Services
-          </span>
-          </AnchorLink>
-        
-          <AnchorLink href="#portfolio">
-            <span className="font-medium text-lg cursor-pointer text-blue-600 pt-4">
-              Portfolio
-          </span>
           </AnchorLink>
 
-             
-          <AnchorLink href="#contact">
-            <span className="font-medium text-lg cursor-pointer text-blue-600 pt-4">
-              Contact Me
+          <AnchorLink href="#about">
+            <span className="font-semibold  cursor-pointer text-blue-800">
+              ABOUT ME
             </span>
           </AnchorLink>
-             
+
+          <AnchorLink href="#skill">
+            <span className="font-semibold  cursor-pointer text-blue-800">
+              SKILLS
+            </span>
+          </AnchorLink>
+
+          <AnchorLink href="#services">
+            <span className="font-semibold  cursor-pointer text-blue-800">
+              SERVICES
+            </span>
+          </AnchorLink>
+
+          <AnchorLink href="#portfolio">
+            <span className="font-semibold  cursor-pointer text-blue-800">
+              PORTFOLIO
+            </span>
+          </AnchorLink>
+
+          <AnchorLink href="#contact">
+            <span className="font-semibold  cursor-pointer text-blue-800">
+              CONTACT ME
+            </span>
+          </AnchorLink>
         </div>
 
+        {/* Mobile Menu Icon - Hidden on large screens */}
         <div
-          className="px-3 mr-5 bg-yellow-500 flex lg:hidden  py-1 cursor-pointer shadow-lg shadow-gray-300 rounded-md"
+          className="px-3 mr-5 bg-yellow-500 flex lg:hidden py-1 cursor-pointer shadow-lg shadow-gray-300 rounded-md"
           onClick={() => onShowMenu()}
         >
           <MdMenu className="text-blue-800 text-2xl font-bold" />
         </div>
       </div>
+
+
 
       {showMenu && Menu()}
     </>
@@ -211,61 +219,119 @@ function NavigationBar() {
 
 //About page
 function About() {
+  const [showMore, setShowMore] = useState(false);
   return (
     <div
-      className="bg-white min-h-screen pb-10 pt-3 md:pt-0 lg:pt-20 lg:px-20  2xl:w-[80%] m-auto"
+      className="bg-white pb-10 pt-3 md:pt-0 lg:pt-20 lg:px-20  2xl:w-[80%] m-auto"
       id="about"
     >
       <div className="heading flex flex-col justify-center items-center hover:translate-x-2">
         <span className="text-xl md:text-3xl font-bold text-blue-900 opacity-80">
           About Me
         </span>
-        <span className="text-lg font-semibold text-gray-500">
-          My Introduction
+        <span className="text-xl md:text-2xl font-bold  opacity-80 ">
+          Who I Am
         </span>
       </div>
 
-      <div className="content flex flex-col lg:flex-row pt-10 lg:pt-20 lg:px-10">
-      <Fade direction="down" duration={2000}>
-        <div className="flex justify-center item-center">
-          <div className="image-card w-full lg:w-[350px] flex lg:flex-1 justify-center items-center lg:hover:scale-110">
-            <img src={Picture} className="w-[90%] md:w-[60%] lg:w-[350px] rounded-md" />
+      
+
+      <div className="content flex flex-col md:flex-row pt-10 lg:pt-20 lg:px-10">
+        <Fade direction="right" duration={2000}>
+          <div className="flex justify-center item-center">
+            <div className="image-card w-full md:w-[350px] flex lg:flex-1 justify-center items-center lg:hover:scale-110">
+              <img src={Picture} className="w-[90%] md:w-[60%] lg:w-[350px] rounded-md" />
+            </div>
           </div>
-        </div>
         </Fade>
 
         <div className="text-section flex-1 justify-center pt-6 md:pt-0">
-          <div className="hover:scale-105 cursor-pointer w-[90%] m-auto md:m-0 md:w-full md:pt-6 lg:pt-0 md:px-16 lg:px-8">
-          <Fade direction="right" duration={2000}>
-            <p className=" md:text-lg text-gray-500">
-              I have knowledge in Web development, Computer networking, Computer
-              Security, Linux and Windows Server Administration, and Computer
-              Hardware.With extensive knowledge and years of experience, working
-              in web technologies and Ui / Ux design,networking, Cybersecurity,
-              linux and windows server administration and computer Hardware, I
-              ensure on delivering quality work.
+          <div className="cursor-pointer w-[90%] m-auto md:m-0 md:w-full lg:pt-6 md:px-10 lg:px-8">
+            <Fade direction="right" duration={2000}>
+              <p className=" md:text-lg text-gray-500">
+                I’m Edem Kwaku Avorley, an experienced Cybersecurity Specialist, 
+                Network Administrator, IT Support Engineer, and Full-Stack Developer 
+                with a passion for building secure and scalable IT solutions. M
+                y journey into technology started with a deep curiosity about how networks, 
+                systems, and applications function, leading me to specialize in multiple areas of IT.
+              </p>
+
+              <div className="md:hidden">
+              {showMore && (
+          <>
+            <div className="cursor-pointer">
+              <h3 className=" font-bold text-lg pt-3 pb-2">Education & Certifications</h3>
+              <p>I hold a Bachelor of Technology in ICT and an HND in ICT from Ho Technical University, 
+                as well as a Diploma in Network Administration & Engineering from GCOM Academy. 
+                I’ve also earned globally recognized certifications, including:
+              </p>
+              <p className="flex flex-col py-2 pl-2">
+                <li>ISC² Certified in Cybersecurity (CC)</li>
+                <li>Google Cybersecurity Certificate</li>
+                <li>Google IT Support Specialist Certificate</li>
+              </p>
+            </div>
+
+            <div className="cursor-pointer">
+              <h3 className=" font-bold text-lg pt-3 pb-2">Technical Expertise</h3>
+              <p>I have hands-on experience in:</p>
+              <p className="flex flex-col py-2 pl-2">
+                <li className="">Cybersecurity & Network Administration</li>
+                <li className="">IT Support & Troubleshooting</li>
+                <li className="">System Administration (Linux & Windows Servers)</li>
+                <li className="">Web Development (Laravel, React, Inertia.js)</li>
+                <li className="">Computer Hardware & Software Installation</li>
+                <li className="">Ethical Hacking</li>
+              </p>
+            </div>
+
+            <div className="cursor-pointer">
+              <h3 className=" font-bold text-lg pt-3 pb-2">Professional Experience</h3>
+              <p>I completed my national service at the Electricity Company of Ghana, Ho Regional Office,
+                where I provided IT support, managed networks, and ensured system efficiency. Over the years, 
+                I have worked on multiple projects, helping businesses and institutions improve their IT infrastructure and security.
+              </p>
+            </div>
+
+            <div className=" cursor-pointer">
+              <h3 className=" font-bold text-lg pt-3 pb-2">My Mission</h3>
+              <p className="flex flex-col">I am committed to helping businesses secure their digital assets, streamline IT operations, 
+                and adopt emerging technologies to drive efficiency. Whether it’s cybersecurity, IT support, 
+                or software development, I am always ready to take on new challenges.
+                <span className="pt-2">📩 Let’s Collaborate! If you’re looking for an IT professional to work on a project, I’d love to connect. </span>
             </p>
-            </Fade>
+            </div>
+          </>
+        )}
+              </div>
+            
+              <button
+                onClick={() => setShowMore(!showMore)}
+                className="mt-1  py-2 text-blue-500 hover:text-blue-600 transition-all "
+              >
+                {showMore ? "Read Less" : "Read More"}
+              </button>
+              </Fade>
           </div>
 
-          <div className="grid grid-cols-3 px-8 gap-2 lg:gap-0 lg:flex-row lg:space-x-16 pt-10 lg:px-56">
+          <div className="grid grid-cols-3 px-8 gap-2 lg:gap-0 lg:flex-row lg:space-x-16 pt-10 lg:px-36">
             <Fade direction="left" duration={2000}>
-              <div className="flex flex-col py-6 shadow lg:py-0 lg:justify-center ring-2 w-[90%] px-2 rounded-md m-auto lg:ring-0 items-center hover:translate-x-2 cursor-pointer">
+              <div className="flex flex-col py-6 shadow  md:py-2 lg:justify-center ring-2 w-[90%] px-2 rounded-md m-auto lg:ring-0 items-center hover:translate-x-2 cursor-pointer lg:px-2">
                 <span className="text-gray-500 text-xl md:text-2xl font-bold">05+</span>
                 <span className="text-gray-500 font-nornal text-sm md:text-lg">Years</span>
                 <span className="text-gray-500 font-nornal text-sm md:text-lg">experience</span>
               </div>
             </Fade>
             <Fade direction="up" duration={2000}>
-              <div className="flex flex-col py-6 shadow lg:py-0 lg:justify-center ring-2 w-[90%] px-2 rounded-md m-auto lg:ring-0 items-center hover:translate-x-2 cursor-pointer">
-                <span className="text-gray-500 text-xl md:text-2xl font-bold">10+</span>
+            <div className="flex flex-col py-6 shadow  md:py-2 lg:justify-center ring-2 w-[90%] px-2 rounded-md m-auto lg:ring-0 items-center hover:translate-x-2 cursor-pointer lg:px-2">
+              <span className="text-gray-500 text-xl md:text-2xl font-bold">10+</span>
                 <span className="text-gray-500 font-nornal text-sm md:text-lg">Completed</span>
                 <span className="text-gray-500 font-nornal text-sm md:text-lg">projects</span>
               </div>
             </Fade>
             <Fade direction="right" duration={2000}>
-              <div className="flex flex-col py-6 shadow lg:py-0 lg:justify-center ring-2 w-[90%] px-2 rounded-md m-auto lg:ring-0 items-center hover:translate-x-2 cursor-pointer">
-                <span className="text-gray-500 text-xl md:text-2xl font-bold">02+</span>
+            <div className="flex flex-col py-6 shadow  md:py-2 lg:justify-center ring-2 w-[90%] px-2 rounded-md m-auto lg:ring-0 items-center hover:translate-x-2 cursor-pointer lg:px-2">  
+              <span className="text-gray-500 text-xl md:text-2xl font-bold">02+</span>
                 <span className="text-gray-500 font-nornal text-sm md:text-lg">Companies</span>
                 <span className="text-gray-500 font-nornal text-sm md:text-lg">worked</span>
               </div>
@@ -274,10 +340,10 @@ function About() {
 
           <Fade direction="up" duration={2000}>
           <a
-            href={Resume}
+            href='https://drive.google.com/file/d/1o7t0KoMKwPWwMfgqjUJnwl_LXFriCzTK/view?usp=sharing' target="_blank"
             className="flex justify-center items-center lg:justify-none"
           >
-            <div className="bg-yellow-600 text-blue-800 py-2 px-2 md:py-4 md:px-5 mt-10 rounded-lg lg:w-[50%] flex flex-row justify-center space-x-3 ring-2 ring-blue-800 hover:scale-105 hover:translate-x-1 hover:bg-white hover:text-yellow-600 hover:ring-2 hover:ring-yellow-600">
+            <div className="bg-yellow-500 text-blue-800 py-2 px-2 md:py-4 md:px-5 mt-10 rounded-lg lg:w-[50%] flex flex-row justify-center space-x-3 ring-2 ring-yellow-500 hover:scale-105 hover:translate-x-1 hover:bg-yellow-600 hover:text-blue-800 hover:ring-2 hover:ring-yellow-500">
               <button className="font-bold">Download CV</button>
               <FaFileDownload className="text-lg font-bold" />
             </div>
@@ -285,6 +351,65 @@ function About() {
           </Fade>
         </div>
       </div>
+
+      <div className="hidden md:flex">
+        {showMore && (
+          <div className="px-10">
+            <Fade direction="right" duration={2000}>
+              <div className="cursor-pointer">
+                <h3 className=" font-bold text-lg pt-3 pb-2">Education & Certifications</h3>
+                <p>I hold a Bachelor of Technology in ICT and an HND in ICT from Ho Technical University, 
+                  as well as a Diploma in Network Administration & Engineering from GCOM Academy. 
+                  I’ve also earned globally recognized certifications, including:
+                </p>
+                <p className="flex flex-col py-2 pl-2">
+                  <li>ISC² Certified in Cybersecurity (CC)</li>
+                  <li>Google Cybersecurity Certificate</li>
+                  <li>Google IT Support Specialist Certificate</li>
+                </p>
+              </div>
+           
+              <div className="cursor-pointer">
+                <h3 className=" font-bold text-lg pt-3 pb-2">Technical Expertise</h3>
+                <p>I have hands-on experience in:</p>
+                <p className="flex flex-col py-2 pl-2">
+                  <li className="">Cybersecurity & Network Administration</li>
+                  <li className="">IT Support & Troubleshooting</li>
+                  <li className="">System Administration (Linux & Windows Servers)</li>
+                  <li className="">Web Development (Laravel, React, Inertia.js)</li>
+                  <li className="">Computer Hardware & Software Installation</li>
+                  <li className="">Ethical Hacking</li>
+                </p>
+              </div>
+           
+              <div className="cursor-pointer">
+                <h3 className=" font-bold text-lg pt-3 pb-2">Professional Experience</h3>
+                <p>I completed my national service at the Electricity Company of Ghana, Ho Regional Office,
+                  where I provided IT support, managed networks, and ensured system efficiency. Over the years, 
+                  I have worked on multiple projects, helping businesses and institutions improve their IT infrastructure and security.
+                </p>
+              </div>
+            
+              <div className=" cursor-pointer">
+                <h3 className=" font-bold text-lg pt-3 pb-2">My Mission</h3>
+                <p className="flex flex-col">I am committed to helping businesses secure their digital assets, streamline IT operations, 
+                  and adopt emerging technologies to drive efficiency. Whether it’s cybersecurity, IT support, 
+                  or software development, I am always ready to take on new challenges.
+                  <span className="pt-2">📩 Let’s Collaborate! If you’re looking for an IT professional to work on a project, I’d love to connect. </span>
+                </p>
+              </div>
+            </Fade>
+            <button
+                onClick={() => setShowMore(!showMore)}
+                className="mt-1  py-2 text-blue-500 hover:text-blue-600 transition-all "
+              >
+                {showMore ? "Read Less" : "Read More"}
+              </button>
+            
+          </div>
+        )}
+        </div>
+
     </div>
   );
 }
@@ -320,15 +445,15 @@ function Skill() {
         <div className="skill-section space-x-10">
         <Fade direction="up" duration={2000}>
           <div className="software-dev  flex lg:flex-none justify-center">
-            <FaLaptopCode className="text-xl text-yellow-600 mb-3" />
+            <FaLaptopCode className="text-xl text-yellow-500 mb-3" />
             <button
               onClick={() => onShowSkillDeveloper()}
               className="flex justify-center items-center space-x-2"
             >
               {showSkillDeveloper ? (
-                <FaSortUp className="text-xl text-yellow-600" />
+                <FaSortUp className="text-xl text-yellow-500" />
               ) : (
-                <FaSortDown className="text-xl text-yellow-600" />
+                <FaSortDown className="text-xl text-yellow-500" />
               )}
               <h3 className="md:text-xl font-semibold text-gray-600">
                 Software Developer
@@ -369,15 +494,15 @@ function Skill() {
         <div className="skill-section space-x-10">
         <Fade direction="up" duration={2000}>
           <div className="software-dev flex lg:flex-none justify-center ">
-            <FaNetworkWired className="text-xl text-yellow-600 mb-3" />
+            <FaNetworkWired className="text-xl text-yellow-500 mb-3" />
             <button
               onClick={() => onShowSkillNetworking()}
               className="flex justify-center items-center space-x-2"
             >
               {showSkillNetworking ? (
-                <FaSortUp className="text-xl text-yellow-600" />
+                <FaSortUp className="text-xl text-yellow-500" />
               ) : (
-                <FaSortDown className="text-xl text-yellow-600" />
+                <FaSortDown className="text-xl text-yellow-500" />
               )}
               <h3 className="md:text-xl font-semibold text-gray-600">
                 Network Engineer
@@ -404,15 +529,15 @@ function Skill() {
         <div className="skill-section space-x-10">
         <Fade direction="up" duration={2000}>
           <div className="software-dev  flex lg:flex-none justify-center ">
-            <MdOutlineSecurity className="text-xl text-yellow-600 mb-3" />
+            <MdOutlineSecurity className="text-xl text-yellow-500 mb-3" />
             <button
               onClick={() => onShowSkillSecurity()}
               className="flex justify-center items-center space-x-2"
             >
               {showSkillSecurity ? (
-                <FaSortUp className="text-xl text-yellow-600" />
+                <FaSortUp className="text-xl text-yellow-500" />
               ) : (
-                <FaSortDown className="text-xl text-yellow-600" />
+                <FaSortDown className="text-xl text-yellow-500" />
               )}
               <h3 className="md:text-xl font-semibold text-gray-600">
                 Cyber Security Analist
@@ -459,8 +584,9 @@ function Qualification() {
 
       <div className="sub-heading  item-center gap-40 pt-16">
         <div className="education">
-          <div className="text px-5 md:px-10  lg:px-0 flex gap-4 item-center">
-            <FaHardHat className="text-2xl text-blue-900 opacity-80 md:ml-8" />
+          <div className="text px-5 md:px-10  lg:px-8 flex gap-4 item-center">
+            <img src={Cap} alt="education-icon" className="w-6 md:w-10 pacity-80"/>
+            {/* <FaHardHat className=" text-blue-900 opacity-80 md:ml-8" /> */}
             <h3 className="text-lg md:text-xl text-blue-900 opacity-80 font-bold">
               Education
             </h3>
@@ -468,8 +594,8 @@ function Qualification() {
           <div className="grid px-3 grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-3 lg:gap-y-10 justify-center item-center pt-10 md:px-8">
             <a href="https://drive.google.com/file/d/1XZUCT3RM0KyVZIGRB3r3bH4J4httrNjj/view?usp=sharing" target="_blank" rel="noopener noreferrer">
             <Slide direction="left" duration={2000}>
-              <div className="education-section pt-5 flex flex-col w-[90%] h-64 shadow-xl  m-auto lg:w-full lg:m-0 ring-1 ring-yellow-600 rounded-md px-6">
-                <span className="font-bold text-gray-600">
+              <div className="education-section pt-5 flex flex-col w-[90%] h-64 shadow-xl  m-auto lg:w-full lg:m-0 ring-1 ring-yellow-500 rounded-md px-6">
+                <span className="text-base md:text-lg font-bold text-gray-600">
                   B'Tech <br />
                   Information & <br />
                   Communication Technology
@@ -479,7 +605,7 @@ function Qualification() {
                 </span>
                 <span className="flex flex-row gap-3 pt-4 text-semibold">
                   <FaCalendar className="text-lg text-gray-500" />{" "}
-                  <p className="font-semibold text-gray-500">2022 - 2024</p>
+                  <p className=" text-gray-500 text-sm">2022 - 2024</p>
                 </span>
               </div>
             </Slide>
@@ -487,8 +613,8 @@ function Qualification() {
 
             <a href="https://drive.google.com/file/d/10-tE2GW27-lh_pLYOrkZ3ECy5AYo6FvS/view?usp=sharing" target="_blank" rel="noopener noreferrer">
             <Slide direction="right" duration={2000}>
-              <div className="education-section py-5 flex flex-col ring-1 ring-yellow-600 rounded-md px-6 w-[90%] h-64 shadow-xl m-auto lg:w-full lg:m-0">
-                <span className="font-bold text-gray-600">
+              <div className="education-section py-5 flex flex-col ring-1 ring-yellow-500 rounded-md px-6 w-[90%] h-64 shadow-xl m-auto lg:w-full lg:m-0">
+                <span className="text-base md:text-lg font-bold text-gray-600">
                   HND <br />
                   Information & <br />
                   Communication Technology
@@ -498,7 +624,7 @@ function Qualification() {
                 </span>
                 <span className="flex flex-row gap-3 pt-4 text-semibold">
                   <FaCalendar className="text-lg text-gray-500" />
-                  <p className="font-semibold text-gray-500">2019 - 2022</p>
+                  <p className=" text-gray-500 text-sm">2019 - 2022</p>
                 </span>
               </div>
             </Slide>
@@ -506,8 +632,8 @@ function Qualification() {
             
             <a href="https://drive.google.com/file/d/1-ugLAytljLccMSManCXhSqD1ViIZW95y/view?usp=sharing" target="_blank" rel="noopener noreferrer">
             <Slide direction="left" duration={2000}>
-              <div className="education-section py-5 flex flex-col ring-1 ring-yellow-600 rounded-md px-6 w-[90%] h-64 shadow-xl m-auto lg:w-full lg:m-0">
-                <span className="font-bold text-gray-600">
+              <div className="education-section py-5 flex flex-col ring-1 ring-yellow-500 rounded-md px-6 w-[90%] h-64 shadow-xl m-auto lg:w-full lg:m-0">
+                <span className="text-base md:text-lg font-bold text-gray-600">
                   Google
                   <br />
                   Cybersecurity
@@ -517,7 +643,7 @@ function Qualification() {
                 </span>
                 <span className="flex flex-row gap-3 pt-4 text-semibold">
                   <FaCalendar className="text-lg text-gray-500" />
-                  <p className="font-semibold text-gray-500">
+                  <p className=" text-gray-500 text-sm">
                     January 2023 -July 2023
                   </p>
                 </span>
@@ -527,8 +653,8 @@ function Qualification() {
 
             <a href="https://drive.google.com/file/d/1-t4Bjzr6udvrQn7f3pOLwJer_Hk-2MsW/view?usp=sharing" target="_blank" rel="noopener noreferrer">
             <Slide direction="left" duration={2000}>
-              <div className="education-section py-5 flex flex-col ring-1 ring-yellow-600 rounded-md px-6 w-[90%] h-64 shadow-xl m-auto lg:w-full lg:m-0">
-                <span className="font-bold text-gray-600">
+              <div className="education-section py-5 flex flex-col ring-1 ring-yellow-500 rounded-md px-6 w-[90%] h-64 shadow-xl m-auto lg:w-full lg:m-0">
+                <span className="text-base md:text-lg font-bold text-gray-600">
                   ISC2 
                   <br />
                   Certified in Cybersecurity
@@ -538,7 +664,7 @@ function Qualification() {
                 </span>
                 <span className="flex flex-row gap-3 pt-4 text-semibold">
                   <FaCalendar className="text-lg text-gray-500" />
-                  <p className="font-semibold text-gray-500">
+                  <p className=" text-gray-500 text-sm">
                     November 1, 2024
                   </p>
                 </span>
@@ -547,8 +673,8 @@ function Qualification() {
             </a>
             
             <Slide direction="right" duration={2000}>
-              <div className="education-section py-5 flex flex-col ring-1 ring-yellow-600 rounded-md px-6 w-[90%] h-64 shadow-xl m-auto lg:w-full lg:m-0">
-                <span className="font-bold text-gray-600">
+              <div className="education-section py-5 flex flex-col ring-1 ring-yellow-500 rounded-md px-6 w-[90%] h-64 shadow-xl m-auto lg:w-full lg:m-0">
+                <span className="text-base md:text-lg font-bold text-gray-600">
                   Google
                   <br />
                   IT Support
@@ -558,7 +684,7 @@ function Qualification() {
                 </span>
                 <span className="flex flex-row gap-3 pt-4 text-semibold">
                   <FaCalendar className="text-lg text-gray-500" />
-                  <p className="font-semibold text-gray-500">
+                  <p className=" text-gray-500 text-sm">
                     November 2022 - May 2023
                   </p>
                 </span>
@@ -567,19 +693,19 @@ function Qualification() {
 
             <a href="https://drive.google.com/file/d/1-wa8lRri4-7V8tFNeYhJR8A72SDjzisD/view?usp=sharing" target="_blank" rel="noopener noreferrer">
             <Slide direction="left" duration={2000}>
-              <div className="education-section py-5 flex flex-col ring-1 ring-yellow-600 rounded-md px-6 w-[90%] h-64 shadow-xl m-auto lg:w-full lg:m-0">
-                <span className="font-bold text-gray-600">
+              <div className="education-section py-5 flex flex-col ring-1 ring-yellow-500 rounded-md px-6 w-[90%] h-64 shadow-xl m-auto lg:w-full lg:m-0">
+                <span className="text-base md:text-lg font-bold text-gray-600">
                   Diploma
                   <br />
                   Networking Eng & <br />
                   Administration
                 </span>
-                <span className="text-gray-500 pt-3 font-semibold">
+                <span className="text-gray-500 pt-3 font-semibold text-base md:text-lg">
                   GCOM IT ACADEMY
                 </span>
                 <span className="flex flex-row gap-3 pt-4 text-semibold">
                   <FaCalendar className="text-lg text-gray-500" />{" "}
-                  <p className="font-semibold text-gray-500">
+                  <p className=" text-gray-500 text-sm">
                     December, 2023
                   </p>
                 </span>
@@ -587,32 +713,14 @@ function Qualification() {
             </Slide>
             </a>
             
-            <a href="https://drive.google.com/file/d/1-uuXBgtK0Wr7feOCh8yLb0u4zp-B8NGD/view?usp=sharing" target="_blank" rel="noopener noreferrer">
-            <Slide direction="right" duration={2000}>
-              <div className="education-section py-5 flex flex-col ring-1 ring-yellow-600 rounded-md px-6 w-[90%] h-64 shadow-xl m-auto lg:w-full lg:m-0">
-                <span className="font-bold text-gray-600">
-                  WASSCE
-                  <br />
-                </span>
-                <span className="text-gray-500 pt-3 font-semibold">
-                  Business Senior High,Tamale
-                </span>
-                <span className="flex flex-row gap-3 pt-4 text-semibold">
-                  <FaCalendar className="text-lg text-gray-500" />{" "}
-                  <p className="flex flex-col md:flex-row font-semibold text-gray-500">
-                    August,2013- <span>June, 2016</span> 
-                  </p>
-                </span>
-              </div>
-            </Slide>
-            </a>
+          
             
           </div>
         </div>
 
         <div className="work-section">
-          <div className="text flex gap-4 pt-16 item-center px-5 md:px-10 lg:px-0">
-            <FaFile className="text-2xl text-blue-900 opacity-80 md:ml-4" />
+          <div className="text flex gap-4 pt-16 item-center px-5 md:px-10 lg:px-8">
+          <img src={Work} alt="education-icon" className="w-6 md:w-10 pacity-80"/>
             <h3 className="text-xl  text-blue-900 opacity-80 font-bold">
               Work
             </h3>
@@ -620,7 +728,7 @@ function Qualification() {
 
           <div className="grid grid-cols-2 px-3 md:grid-cols-2 lg:grid-cols-3 gap-3 lg:gap-y-10 justify-center item-center pt-6 md:pt-10">
             <Fade direction="left" duration={2000}>
-              <div className=" pt-5 flex flex-col ring-1 ring-yellow-600 rounded-md px-6 py-6 md:p-10 w-[90%] m-auto h-74 md:h-60 shadow-xl">
+              <div className=" pt-5 flex flex-col ring-1 ring-yellow-500 rounded-md px-6 py-6 md:p-10 w-[90%] m-auto h-74 md:h-60 shadow-xl">
                 <span className="font-bold text-gray-600">
                   IT Support Specialist (National Service)
                 </span>
@@ -635,7 +743,7 @@ function Qualification() {
                   <p className="font-semibold text-gray-500 hidden md:flex">
                     November,2022 - October, 2023
                   </p>
-                  <p className="font-semibold text-gray-500 flex md:hidden">
+                  <p className="font-semibold text-gray-500 text-sm flex md:hidden">
                     Nov,2022 - October, 2023
                   </p>
 
@@ -644,7 +752,7 @@ function Qualification() {
             </Fade>
 
             <Fade direction="right" duration={2000}>
-              <div className=" pt-5 flex flex-col ring-1 ring-yellow-600 rounded-md px-6 py-6 md:p-10 w-[90%] m-auto h-74 md:h-60 shadow-xl">
+              <div className=" pt-5 flex flex-col ring-1 ring-yellow-500 rounded-md px-6 py-6 md:p-10 w-[90%] m-auto h-74 md:h-60 shadow-xl">
                 <span className="font-bold text-gray-600">
                   IT Support Specialist (Intenship)
                 </span>
@@ -656,7 +764,7 @@ function Qualification() {
                 </span>
                 <span className="flex flex-row gap-3 pt-4 text-semibold">
                   <FaCalendar className="text-lg text-gray-500" />{" "}
-                  <p className="font-semibold text-gray-500">
+                  <p className="font-semibold text-gray-500 text-sm">
                     June 2021 - August 2022
                   </p>
                 </span>
@@ -708,8 +816,8 @@ function Service() {
 
       <div className="sevice-wrapper grid grid-cols-2 pt-8 md:pt-20 px-6 lg:px-10 md:grid-cols-2 gap-5 gap-y-5 lg:grid-cols-3">
         <Slide direction="left" duration={2000}>
-          <div className="software-wrapper flex flex-col gap-5 ring-1 h-56 lg:h-auto ring-yellow-600 shadow-lg shadow-blue-800 justify-bottom items-bottom py-5 md:py-10 px-3 rounded-md">
-            <FaLaptopCode className="text-4xl md:mt-10  text-yellow-600" />
+          <div className="software-wrapper flex flex-col gap-5 ring-1 h-56 lg:h-auto ring-yellow-500 shadow-lg shadow-blue-800 justify-bottom items-bottom py-5 md:py-10 px-3 rounded-md">
+            <FaLaptopCode className="text-4xl md:mt-10  text-yellow-500" />
             <p className="p-y text-semibold text-lg text-gray-700">
               Software Development
             </p>
@@ -717,17 +825,17 @@ function Service() {
               onClick={() => {
                 onShowCardSoftware();
               }}
-              className="bg-yellow-600 flex flex-row gap-2 items-center justify-center ring-1 ring-blue-900 w-full md:w-[40%] lg:w-[40%]  hover:bg-blue-800 hover:text-white hover:ring-2 hover:ring-yellow-600 rounded-md py-2 px-3"
-            >
-              <span className="cursor-pointerg">View More</span>
-              <FaArrowRight />
+              className="bg-yellow-500 block ring-1 ring-yellow-500 md:w-[40%] lg:w-[40%] hover:bg-yelow-700 hover:text-blue-800 hover:ring-2 hover:ring-yellow-500 rounded-md py-2 px-3"
+              >
+                <span className="cursor-pointer w-full flex flex-row items-center justify-center gap-2">View More <FaArrowRight /></span>
+                
             </div>
           </div>
         </Slide>
 
         <Slide direction="right" duration={2000}>
-          <div className="network-wrapper flex flex-col gap-5 ring-1 py-5 h-56 lg:h-auto ring-yellow-600 shadow-lg shadow-blue-800 justify-bottom items-bottom lg:py-10 px-3 rounded-md">
-            <FaNetworkWired className="text-4xl md:mt-10  text-yellow-600" />
+          <div className="network-wrapper flex flex-col gap-5 ring-1 py-5 h-56 lg:h-auto ring-yellow-500 shadow-lg shadow-blue-800 justify-bottom items-bottom lg:py-10 px-3 rounded-md">
+            <FaNetworkWired className="text-4xl md:mt-10  text-yellow-500" />
             <p className="p-y text-semibold text-lg text-gray-700">
               Computer Networking
             </p>
@@ -735,35 +843,37 @@ function Service() {
               onClick={() => {
                 onShowCardNetworking();
               }}
-              className=" bg-yellow-600 flex flex-row gap-2 items-center justify-center ring-1 ring-blue-900 w-full md:w-[40%] lg:w-[40%] hover:bg-blue-800 hover:text-white hover:ring-2 hover:ring-yellow-600 rounded-md py-2 px-3"
-            >
-              <span className="cursor-pointer ">View More</span>
-              <FaArrowRight />
+              className="bg-yellow-500 block ring-1 ring-yellow-500 md:w-[40%] lg:w-[40%] hover:bg-yelow-700 hover:text-blue-800 hover:ring-2 hover:ring-yellow-500 rounded-md py-2 px-3"
+              >
+                <span className="cursor-pointer w-full flex flex-row items-center justify-center gap-2">View More <FaArrowRight /></span>
+                
             </div>
           </div>
         </Slide>
 
         <Slide direction="left" duration={2000}>
-          <div className="hardware-wrapper flex flex-col gap-5 ring-1 py-5 h-56 lg:h-auto ring-yellow-600 shadow-lg shadow-blue-800 justify-bottom items-bottom lg:py-10 px-3 rounded-md">
-            <MdOutlineHardware className="text-4xl md:mt-10  text-yellow-600" />
+          <div className="hardware-wrapper flex flex-col gap-5 ring-1 py-5 h-56 lg:h-auto ring-yellow-500 shadow-lg shadow-blue-800 justify-bottom items-bottom lg:py-10 px-3 rounded-md">
+            <MdOutlineHardware className="text-4xl md:mt-10  text-yellow-500" />
             <p className="p-y text-semibold text-lg text-gray-700">
               Computer Hardware and Software
             </p>
+          
             <div
               onClick={() => {
                 onShowCardHardSoftWare();
               }}
-              className=" bg-yellow-600 flex flex-row gap-2 items-center justify-center ring-1 ring-blue-900 w-full md:w-[40%] lg:w-[40%] hover:bg-blue-800 hover:text-white hover:ring-2 hover:ring-yellow-600 rounded-md py-2 px-3"
+              className="bg-yellow-500 block ring-1 ring-yellow-500 md:w-[40%] lg:w-[40%] hover:bg-yelow-700 hover:text-blue-800 hover:ring-2 hover:ring-yellow-500 rounded-md py-2 px-3"
             >
-              <span className="cursor-pointer ">View More</span>
-              <FaArrowRight />
+              <span className="cursor-pointer w-full flex flex-row items-center justify-center gap-2">View More <FaArrowRight /></span>
+              
             </div>
+           
           </div>
         </Slide>
 
         <Slide direction="right" duration={2000}>
-          <div className="security-wrapper flex flex-col gap-5 ring-1 py-5 h-56 lg:h-auto ring-yellow-600 shadow-lg shadow-blue-800 justify-bottom items-bottom lg:py-10 px-3 rounded-md">
-            <MdOutlineSecurity className="text-4xl md:mt-10  text-yellow-600" />
+          <div className="security-wrapper flex flex-col gap-5 ring-1 py-5 h-56 lg:h-auto ring-yellow-500 shadow-lg shadow-blue-800 justify-bottom items-bottom lg:py-10 px-3 rounded-md">
+            <MdOutlineSecurity className="text-4xl md:mt-10  text-yellow-500" />
             <p className="p-y text-semibold text-lg text-gray-700">
               Computer Security
             </p>
@@ -771,10 +881,10 @@ function Service() {
               onClick={() => {
                 onShowCardSecurity();
               }}
-              className="bg-yellow-600 flex flex-row gap-2 items-center justify-center ring-1 ring-blue-900 w-full md:w-[40%] lg:w-[40%] hover:bg-blue-800 hover:text-white hover:ring-2 hover:ring-yellow-600 rounded-md py-2 px-3"
+              className="bg-yellow-500 block ring-1 ring-yellow-500 md:w-[40%] lg:w-[40%] hover:bg-yelow-700 hover:text-blue-800 hover:ring-2 hover:ring-yellow-500 rounded-md py-2 px-3"
             >
-              <span className="cursor-pointerg">View More</span>
-              <FaArrowRight />
+              <span className="cursor-pointer w-full flex flex-row items-center justify-center gap-2">View More <FaArrowRight /></span>
+              
             </div>
           </div>
         </Slide>
@@ -1061,7 +1171,7 @@ function Contact() {
       <div className="flex flex-col md:flex-row px-4 md:px-10 ">
         <div className=" flex flex-col flex-1">
           <div className="flex items-center md:items-start flex-row gap-4 pt-8">
-            <FiPhone className=" text-3xl text-yellow-600 mt-5" />
+            <FiPhone className=" text-3xl text-yellow-500 mt-5" />
             <div className="flex flex-col">
               <span className=" font-bold text-xl opacity-70">Call Me</span>
               <span className="text-gray-400">+233 540 908 248</span>
@@ -1070,7 +1180,7 @@ function Contact() {
           </div>
 
           <div className="flex flex-row gap-4 pt-6 items-center md:items-start">
-            <MdOutlineEmail className="rotate-0 text-3xl text-yellow-600 mt-5" />
+            <MdOutlineEmail className="rotate-0 text-3xl text-yellow-500 mt-5" />
             <div className="flex flex-col">
               <span className=" font-bold text-xl opacity-70">Email</span>
               <span className="text-gray-400">edemkwakuavorley@gmail.com</span>
@@ -1079,7 +1189,7 @@ function Contact() {
           </div>
 
           <div className="flex flex-row gap-4 pt-6 items-center md:items-start">
-            <MdOutlineLocationOn className="rotate-0 text-3xl text-yellow-600 mt-5" />
+            <MdOutlineLocationOn className="rotate-0 text-3xl text-yellow-500 mt-5" />
             <div className="flex flex-col">
               <span className=" font-bold text-xl opacity-70">Location</span>
               <span className="text-gray-400">Kabakaba Hill, Ho</span>
@@ -1143,7 +1253,7 @@ function Contact() {
             <input
               type="submit"
               value="Send Message"
-              className="text-lg bg-yellow-600 py-1 md:py-3 px-4 md:px-10 text-white font-bold rounded-md"
+              className="text-lg bg-yellow-500 py-1 md:py-3 px-4 md:px-10 text-white font-bold rounded-md"
             />
           </div>
         </form>
@@ -1154,47 +1264,59 @@ function Contact() {
 
 //Home page
 function Home() {
+  const [showMore, setShowMore] = useState(false);
+
   return (
-    <>
+    
       <div
-        className="bg-white md:min-h-screen pt-10 pb-10 lg:pt-32 px-2 2xl:w-[80%] m-auto"
+        className="bg-white pt-10 lg:pt-4 pb-10 px-2 2xl:w-[80%] m-auto"
         id="home"
       >
         
-        <div className="flex flex-col lg:flex-row gap-7 lg:py-3 px-6 lg:px-20 ">
-        <Fade direction="down" duration={2000}>
-          <div className="flex lg:hidden profile visible pr-4 justify-center pt-6 items-center flex-1 hover:scale-110">
-            <img
-              src={Profile}
-              alt=""
-              className="w-[100px] md:300px "
-            />
-          </div>
+        <div className="flex flex-col  gap-7 lg:py-3 px-6 lg:px-20 ">
+          <Fade direction="down" duration={2000}>
+            <div className="flex profile visible pr-4 justify-center pt-6 items-center flex-1 md:pb-4">
+              <img
+                src={Profile}
+                alt=""
+                className="w-[100px] md:300px  lg:w-[400px] xl:w-[350px]"
+              />
+            </div>
           </Fade>
-          <div className="md:px-3 flex lg:flex-col gap-8 items-center justify-center mt-0 lg:mt-16">
+
+          {/* <Fade direction="down" duration={2000}>
+              <div className="hidden lg:flex profile visible pr-4 lg:pr-0 justify-center pt-6 lg:pt-0 items-center flex-1 hover:scale-110">
+                <img
+                  src={Profile}
+                  alt=""
+                  className="w-[250px] md:300px lg:ml-14"
+                />
+              </div>
+          </Fade> */}
+          <div className="md:px-3 flex gap-8 items-center justify-center mt-0">
             <a
               href="https://web.facebook.com/edem.kwaku.581"
               className="hover:translate-y-2"
             >
-              <FaFacebook className="text-2xl text-yellow-600" />
+              <FaFacebook className="text-2xl text-yellow-500" />
             </a>
             <a
               href="https://github.com/kwakuedem"
               className="hover:translate-y-2"
             >
-              <FaGithub className="text-2xl text-yellow-600" />
+              <FaGithub className="text-2xl text-yellow-500" />
             </a>
             <a
               href="https://twitter.com/edemkwaku4"
               className="hover:translate-y-2"
             >
-              <FaTwitter className="text-2xl text-yellow-600" />
+              <FaTwitter className="text-2xl text-yellow-500" />
             </a>
             <a
               href="https://www.linkedin.com/in/edem-kwaku-avorley-b1ab48232"
               className="hover:translate-y-2"
             >
-              <FaLinkedin className="text-2xl text-yellow-600" />
+              <FaLinkedin className="text-2xl text-yellow-500" />
             </a>
           </div>
 
@@ -1202,68 +1324,54 @@ function Home() {
             <div className="intro-text-wrapper flex flex-col md:flex-row">
               <div className="flex flex-col flex-1">
                 
-                <div className="name flex md:pl-3 lg:pl-0 lg:flex-col lg:pb-4 hover:scale-105 cursor-pointer gap-2 md:gap-0">
-                  <span className=" opacity-80 dark:text-gray-600 lg:text-2xl font-bold pb-4 leading-3 lg:leading-6 lg:tracking-wide">
-                    Hi, I am
-                  </span>
-                  <span className=" opacity-80 dark:text-gray-600 lg:text-2xl font-bold pb-4 leading-3 lg:leading-6 lg:tracking-wide">
-                    Edem Kwaku
-                  </span>
-                  <span className=" opacity-80 dark:text-gray-600 lg:text-2xl font-bold pb-4 leading-3 lg:leading-6 lg:tracking-wide">
-                    Avorley
-                  </span>
+                <div className="name md:pl-3 lg:pl-0 flex-col lg:pb-4 cursor-pointer gap-2 md:gap-0">
+                  <p className=" opacity-80 dark:text-gray-600 md:text-xl lg:text-2xl font-semibold py-1 leading-3 lg:leading-6 lg:tracking-wide">
+                    Hello, and welcome to my digital space!
+                  </p>
+                  <p className=" opacity-80 dark:text-gray-600 md:text-xl lg:text-2xl font-semibold py-1 leading-3 lg:leading-6 lg:tracking-wide">
+                    I’m Edem Kwaku Avorley, 
+                  </p>
+                 
                 </div>
-
-                <span className="text-gray-500 font-normal pb-3 hover:scale-105 cursor-pointer md:px-4">
-                  <i>I am an IT Professional,</i>
-                </span>
                 <Fade direction="left" duration={2000}>
-                <span className="text-gray-500 md:text-lg hover:scale-105 cursor-pointer md:px-4">
-                  Attentive, focused and highly motivated IT professional
-                  seeking to utilize his skills for the enhancement of the next
-                  team he joins. Committed to driving continuous improvements
-                  for IT operations through identification of process
-                  enhancement opportunities. My goal is to be part of a
-                  challenging organization to utilize and enhance his knowledge
-                  and skills to gain professional experience whiles helping the
-                  organization to achieve its goals.
-                  <br />
-                </span>
+                 <div className="text-gray-500 md:text-lg py-2">
+                    <p className=" pb-2 cursor-pointer flex flex-col">
+                    a Cybersecurity Specialist, Network Administrator, 
+                    IT Support Engineer, and Full-Stack Developer. With expertise in cybersecurity, 
+                    networking, system administration (Linux & Windows), and web development (Laravel, React, Inertia.js), 
+                    I am passionate about creating secure, efficient, and scalable IT solutions. 
+                    My goal is to leverage technology to enhance productivity, security, and user experience.
+
+                    <span className=" pt-2 font-semibold"> 📩 Let’s Connect! Whether you’re looking for an IT expert or a cybersecurity consultant, 
+                    I’m open to collaborations and new opportunities</span>
+                    </p>
+                  </div>
+                </Fade>
+
+             
+                <Fade direction="up" duration={2000}>
+                  <AnchorLink
+                    href="#about"
+                    className="mt-12 md:mt-14  lg:mt-20 m-auto w-[50%] md:w-[40%] lg:w-[15%] gap-2 bg-yellow-500 flex justify-center items-center rounded-md ring-2 ring-yellow-500 hover:text-yellow-500 hover:bg-yellow-600 hover:ring-yellow-500"
+                  >
+                    <button className="py-2 lg:py-2 text-lg font-bold ">
+                      About Me
+                    </button>
+                    <FaArrowRight />
+                  </AnchorLink>
                 </Fade>
               </div>
-
-              <Fade direction="down" duration={2000}>
-              <div className="hidden lg:flex profile visible pr-4 lg:pr-0 justify-center pt-6 lg:pt-0 items-center flex-1 hover:scale-110">
-                <img
-                  src={Profile}
-                  alt=""
-                  className="w-[250px] md:300px lg:w-[400px] xl:w-[350px] lg:ml-14"
-                />
-              </div>
-              </Fade>
-            </div>
-            <Fade direction="up" duration={2000}>
-            <AnchorLink
-              href="#about"
-              className="mt-12 md:mt-14  lg:mt-20 m-auto w-[50%] md:w-[40%] lg:w-[15%] gap-2 bg-yellow-600 flex justify-center items-center rounded-md ring-2 ring-blue-800 hover:text-yellow-600 hover:bg-white hover:ring-yellow-600"
-            >
-              <button className="py-2 lg:py-2 text-lg font-bold ">
-                About Me
-              </button>
-              <FaArrowRight />
-            </AnchorLink>
-            </Fade>
           </div>
         </div>
       </div>
-    </>
+      </div>
   );
 }
 
 //Footer
 function Footer() {
   return (
-    <div className="bg-yellow-600 opacity-90 py-3 px-1 w-full">
+    <div className="bg-yellow-500 opacity-90 py-3 px-1 w-full">
       <div className="  grid grid-cols-1 lg:grid-cols-2 gap-y-1 lg:gap-y-6  px-10 md:px-20">
         <ul className="flex flex-col md:flex-row gap-2 md:gap-3 px-6 py-6 md:justify-center md:items-center">
           <div className="pb-4 md:flex md:flex-col md:justify-center  md:pt-3 md:gap-4">
