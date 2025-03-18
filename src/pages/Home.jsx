@@ -829,7 +829,7 @@ function Service() {
       <div className="sevice-wrapper grid grid-cols-2 pt-8 md:pt-20 px-6 lg:px-10 md:grid-cols-2 gap-5 gap-y-5 lg:grid-cols-3">
         <Slide direction="left" duration={2000}>
           <div className="software-wrapper flex flex-col gap-5 ring-1 h-56 lg:h-auto ring-yellow-500 shadow-lg shadow-blue-800 justify-bottom items-bottom py-5 md:py-10 px-3 rounded-md">
-            <FaLaptopCode className="text-4xl md:mt-10  text-yellow-500" />
+            <FaLaptopCode className="text-4xl lg:mt-10  text-yellow-500" />
             <p className="p-y text-semibold text-lg text-gray-700">
               Software Development
             </p>
@@ -1227,7 +1227,7 @@ function Contact() {
               type="text"
               name="user_name"
               placeholder="name"
-              className="bg-gray-100 ring-1 w-full px-2 py-3 rounded-md"
+              className="bg-gray-100 focus-within:border-collapse text-black outline-1 outline-yellow-500 ring-1  w-full px-2 py-3 rounded-md"
             />
           </div>
           <div className="form-group py-2">
@@ -1237,7 +1237,7 @@ function Contact() {
               onChange={(e) => setEmail(e.target.value)}
               name="user_email"
               placeholder="Email"
-              className="bg-gray-100 ring-1 w-full px-2 py-3 rounded-md"
+              className="bg-gray-100 focus-within:ring-yellow-500 text-black outline-1 outline-yellow-500 ring-1  w-full px-2 py-3 rounded-md"
             />
           </div>
           <div className="form-group py-2">
@@ -1247,7 +1247,7 @@ function Contact() {
               onChange={(e) => setSubject(e.target.value)}
               name="user_subject"
               placeholder="subject"
-              className="bg-gray-100 ring-1 w-full px-2 py-3 rounded-md"
+              className="bg-gray-100 focus-within:ring-yellow-500 text-black outline-1 outline-yellow-500 ring-1  w-full px-2 py-3 rounded-md"
             />
           </div>
           <div className="form-group py-3">
@@ -1259,7 +1259,7 @@ function Contact() {
               value={message}
               onChange={(e) => setMessage(e.target.value)}
               placeholder="Message"
-              className="bg-gray-100 ring-1 w-full px-2 py-3 rounded-md"
+              className="bg-gray-100 focus-within:ring-yellow-500 text-black outline-1 outline-yellow-500 ring-1  w-full px-2 py-3 rounded-md"
             ></textarea>
           </div>
 
@@ -1348,7 +1348,7 @@ function Home() {
                  
                 </div>
                 <Fade direction="left" duration={2000}>
-                 <div className="text-gray-500 md:text-lg py-2">
+                 <div className="text-gray-500 md:text-lg py-2 md:mx-3">
                     <p className=" pb-2 cursor-pointer flex flex-col">
                     a Cybersecurity Specialist, Network Administrator, 
                     IT Support Engineer, and Full-Stack Developer. With expertise in cybersecurity, 
@@ -1358,7 +1358,9 @@ function Home() {
 
                     <span className=" pt-2 font-semibold"> 📩 Let’s Connect! Whether you’re looking for an IT expert or a cybersecurity consultant, 
                     I’m open to collaborations and new opportunities</span>
-                    </p>
+                    </p>      
+                    <a className="libutton" href="https://www.linkedin.com/comm/mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&followMember=edem-kwaku-avorley-b1ab48232" target="_blank">Follow on LinkedIn</a>
+
                   </div>
                 </Fade>
 
@@ -1398,6 +1400,11 @@ function Footer() {
           <li>
             <AnchorLink href="#home" className="font-semibold">
               Home
+            </AnchorLink>
+          </li>
+          <li>
+            <AnchorLink href="#about" className="font-semibold">
+              About Me
             </AnchorLink>
           </li>
           <li>
