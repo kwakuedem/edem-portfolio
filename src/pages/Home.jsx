@@ -154,7 +154,7 @@ function NavigationBar() {
   }
   return (
     <>
-      <div className="bg-white px-2 md:px-10 lg:px-20 sticky py-4 z-10 w-full top-0 flex items-center justify-between xl:w-[80%] m-auto">
+      <div className="bg-white px-2 md:pr-8 md:pl-10 lg:px-20 sticky py-4 z-10 w-full top-0 flex items-center justify-between xl:w-[80%] m-auto">
         {/* Brand Name */}
         <div className="brand flex items-center">
           <span className="font-semibold cursor-pointer shadow-sm px-2 text-yellow-500">
@@ -280,7 +280,6 @@ function About() {
                 <li className="text-gray-500">IT Support & Troubleshooting</li>
                 <li className="text-gray-500">System Administration (Linux & Windows Servers)</li>
                 <li className="text-gray-500">Web Development (Laravel, React, Inertia.js)</li>
-                <li className="text-gray-500">Computer Hardware & Software Installation</li>
                 <li className="text-gray-500">Ethical Hacking</li>
               </p>
             </div>
@@ -466,25 +465,32 @@ function Skill() {
             <>
               <div className="ml-5">
                 <SkillSet heading={"Frontend Developer"}>
-                  <ul>
+                  <div className="px-10">
                     <li className="text-gray-500">HTML</li>
                     <li className="text-gray-500">CSS</li>
                     <li className="text-gray-500">JavaScript</li>
+                    <p className="pt-2">Frameworks</p>
                     <li className="text-gray-500">React</li>
-                    <li className="text-gray-500">Tailwind Css</li>
-                  </ul>
+                    <li className="text-gray-500">Tailwind-CSS(Framework)</li>
+                  </div>
                 </SkillSet>
               </div>
 
               <div className="ml-5">
                 <SkillSet heading={"Backend Developer"}>
-                  <ul>
+                  <div className="px-10">
+                  <p className="pt-2">Programming Languages</p>
                     <li className="text-gray-600">Python</li>
                     <li className="text-gray-600">Php</li>
-                    <li className="text-gray-600">Rust</li>
+                    <p className="pt-2">Frameworks</p>
                     <li className="text-gray-600">Laravel</li>
                     <li className="text-gray-600">Django</li>
-                  </ul>
+                  </div>
+                  <div className="px-10 pt-2">
+                    <p>Databases</p>
+                    <li className="text-gray-600">MySql</li>
+                    <li className="text-gray-600">PostgresSQL</li>
+                  </div>
                 </SkillSet>
               </div>
             </>
@@ -514,13 +520,13 @@ function Skill() {
           {showSkillNetworking && (
             <>
               <div className="ml-5 prose list-outside">
-                <ul>
-                  <li className="text-gray-600">Office Networking</li>
-                  <li className="text-gray-600">LAN</li>
+                <div className="px-10">
+                  <li className="text-gray-600">Office & Home Networking</li>
+                  <li className="text-gray-600">Local Area Network (LAN)</li>
                   <li className="text-gray-600">Wireless Networking</li>
                   <li className="text-gray-600">Switching</li>
                   <li className="text-gray-600">Routing</li>
-                </ul>
+                </div>
               </div>
             </>
           )}
@@ -549,14 +555,14 @@ function Skill() {
           {showSkillSecurity && (
             <>
               <div className="ml-5 prose list-outside">
-                <ul>
+                <div className="pl-14">
                   <li className="text-gray-600">SIEM Tool(Splunk Technology)</li>
                   <li className="text-gray-600">Python</li>
                   <li className="text-gray-600">Detection and Responds</li>
-                  <li className="text-gray-600">Assets, Threats and Vulneralbility</li>
+                  <li className="text-gray-600">Assets, Threats and Vdivneralbility</li>
                   <li className="text-gray-600">Manage Security Risks</li>
                   <li className="text-gray-600">Linux and SQL</li>
-                </ul>
+                </div>
               </div>
             </>
           )}

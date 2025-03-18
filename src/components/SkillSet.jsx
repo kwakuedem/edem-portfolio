@@ -11,8 +11,8 @@ function SkillSet({ heading, children }) {
           className="software-devision"
         >
           <span>{}</span>
-          <div className="flex space-x-2">
-            <FaSortDown className="text-xl text-yellow-600" />
+          <div className="flex space-x-2 px-8">
+            <FaSortDown className="text-xl text-yellow-500 " />
             <span className="text-lg  text-gray-600">{heading}</span>
           </div>
         </button>
