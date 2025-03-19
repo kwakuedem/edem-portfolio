@@ -298,6 +298,8 @@ function About() {
                 and adopt emerging technologies to drive efficiency. Whether it’s cybersecurity, IT support, 
                 or software development, I am always ready to take on new challenges.
                 <span className="pt-2">📩 Let’s Collaborate! If you’re looking for an IT professional to work on a project, I’d love to connect. </span>
+                <a className="libutton w-[160px] lg:w-[200px]" href="https://www.linkedin.com/comm/mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&followMember=edem-kwaku-avorley-b1ab48232" target="_blank">Follow on LinkedIn</a>
+
             </p>
             </div>
           </>
@@ -356,45 +358,47 @@ function About() {
           <div className="px-10">
             <Fade direction="right" duration={2000}>
               <div className="cursor-pointer">
-                <h3 className=" font-bold text-lg pt-3 pb-2">Education & Certifications</h3>
-                <p>I hold a Bachelor of Technology in ICT and an HND in ICT from Ho Technical University, 
+                <h3 className=" font-bold text-lg pt-3  text-gray-500 pb-2">Education & Certifications</h3>
+                <p className=" text-gray-500">I hold a Bachelor of Technology in ICT and an HND in ICT from Ho Technical University, 
                   as well as a Diploma in Network Administration & Engineering from GCOM Academy. 
                   I’ve also earned globally recognized certifications, including:
                 </p>
                 <p className="flex flex-col py-2 pl-2">
-                  <li>ISC² Certified in Cybersecurity (CC)</li>
-                  <li>Google Cybersecurity Certificate</li>
-                  <li>Google IT Support Specialist Certificate</li>
+                  <li className=" text-gray-500">ISC² Certified in Cybersecurity (CC)</li>
+                  <li className=" text-gray-500">Google Cybersecurity Certificate</li>
+                  <li className=" text-gray-500">Google IT Support Specialist Certificate</li>
                 </p>
               </div>
            
               <div className="cursor-pointer">
-                <h3 className=" font-bold text-lg pt-3 pb-2">Technical Expertise</h3>
-                <p>I have hands-on experience in:</p>
+                <h3 className=" font-bold text-lg  text-gray-500 pt-3 pb-2">Technical Expertise</h3>
+                <p className=" text-gray-500">I have hands-on experience in:</p>
                 <p className="flex flex-col py-2 pl-2">
-                  <li className="">Cybersecurity & Network Administration</li>
-                  <li className="">IT Support & Troubleshooting</li>
-                  <li className="">System Administration (Linux & Windows Servers)</li>
-                  <li className="">Web Development (Laravel, React, Inertia.js)</li>
-                  <li className="">Computer Hardware & Software Installation</li>
-                  <li className="">Ethical Hacking</li>
+                  <li className=" text-gray-500">Cybersecurity & Network Administration</li>
+                  <li className=" text-gray-500">IT Support & Troubleshooting</li>
+                  <li className=" text-gray-500">System Administration (Linux & Windows Servers)</li>
+                  <li className=" text-gray-500">Web Development (Laravel, React, Inertia.js)</li>
+                  <li className=" text-gray-500">Computer Hardware & Software Installation</li>
+                  <li className=" text-gray-500">Ethical Hacking</li>
                 </p>
               </div>
            
               <div className="cursor-pointer">
-                <h3 className=" font-bold text-lg pt-3 pb-2">Professional Experience</h3>
-                <p>I completed my national service at the Electricity Company of Ghana, Ho Regional Office,
+                <h3 className=" font-bold text-lg pt-3  text-gray-500 pb-2">Professional Experience</h3>
+                <p className=" text-gray-500">I completed my national service at the Electricity Company of Ghana, Ho Regional Office,
                   where I provided IT support, managed networks, and ensured system efficiency. Over the years, 
                   I have worked on multiple projects, helping businesses and institutions improve their IT infrastructure and security.
                 </p>
               </div>
             
               <div className=" cursor-pointer">
-                <h3 className=" font-bold text-lg pt-3 pb-2">My Mission</h3>
-                <p className="flex flex-col">I am committed to helping businesses secure their digital assets, streamline IT operations, 
+                <h3 className=" font-bold text-lg pt-3  text-gray-500 pb-2">My Mission</h3>
+                <p className="flex flex-col  text-gray-500">I am committed to helping businesses secure their digital assets, streamline IT operations, 
                   and adopt emerging technologies to drive efficiency. Whether it’s cybersecurity, IT support, 
                   or software development, I am always ready to take on new challenges.
-                  <span className="pt-2">📩 Let’s Collaborate! If you’re looking for an IT professional to work on a project, I’d love to connect. </span>
+                  <span className="pt-2  text-gray-500">📩 Let’s Collaborate! If you’re looking for an IT professional to work on a project, I’d love to connect. </span>
+                  <a className="libutton w-[160px] lg:w-[200px] mt-2" href="https://www.linkedin.com/comm/mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&followMember=edem-kwaku-avorley-b1ab48232" target="_blank">Follow on LinkedIn</a>
+
                 </p>
               </div>
             </Fade>
@@ -1338,7 +1342,7 @@ function Home() {
             <div className="intro-text-wrapper flex flex-col md:flex-row">
               <div className="flex flex-col flex-1">
                 
-                <div className="name md:pl-3 lg:pl-0 flex-col lg:pb-4 cursor-pointer gap-2 md:gap-0">
+                <div className="name md:pl-3  flex-col lg:pb-4 cursor-pointer gap-2 md:gap-0">
                   <p className=" opacity-80 dark:text-gray-600 md:text-xl lg:text-2xl font-semibold py-1 leading-3 lg:leading-6 lg:tracking-wide">
                     Hello, and welcome to my digital space!
                   </p>
@@ -1359,7 +1363,7 @@ function Home() {
                     <span className=" pt-2 font-semibold"> 📩 Let’s Connect! Whether you’re looking for an IT expert or a cybersecurity consultant, 
                     I’m open to collaborations and new opportunities</span>
                     </p>      
-                    <a className="libutton" href="https://www.linkedin.com/comm/mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&followMember=edem-kwaku-avorley-b1ab48232" target="_blank">Follow on LinkedIn</a>
+                    <a className="libutton w-[160px] lg:w-[200px] mt-2" href="https://www.linkedin.com/comm/mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&followMember=edem-kwaku-avorley-b1ab48232" target="_blank">Follow on LinkedIn</a>
 
                   </div>
                 </Fade>
