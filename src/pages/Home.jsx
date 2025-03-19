@@ -249,7 +249,7 @@ function About() {
           <div className="cursor-pointer w-[90%] m-auto md:m-0 md:w-full lg:pt-6 md:px-10 lg:px-8">
             <Fade direction="right" duration={2000}>
               <p className=" md:text-lg text-gray-500">
-                I’m Edem Kwaku Avorley, an experienced Cybersecurity Specialist, 
+                I’m Edem Kwaku Avorley, an experienced Cybersecurity Analyst, 
                 Network Administrator, IT Support Engineer, and Full-Stack Developer 
                 with a passion for building secure and scalable IT solutions. M
                 y journey into technology started with a deep curiosity about how networks, 
@@ -818,7 +818,7 @@ function Service() {
 
   return (
     <div
-      className="bg-white md:min-h-screen 2xl:w-[80%] m-auto pb-20 pt-8 md:pt-20 lg:px-20  relative"
+      className="bg-white  2xl:w-[80%] m-auto pb-20 pt-8 md:pt-20 lg:px-20  relative"
       id="services"
     >
       <div className="heading flex flex-col justify-center items-center hover:scale-105 cursor-pointer">
@@ -830,18 +830,18 @@ function Service() {
         </span>
       </div>
 
-      <div className="sevice-wrapper grid grid-cols-2 pt-8 md:pt-20 px-6 lg:px-10 md:grid-cols-2 gap-5 gap-y-5 lg:grid-cols-3">
+      <div className="sevice-wrapper grid grid-cols-2 pt-8 md:pt-20 px-6 lg:px-10 md:grid-cols-4 gap-5 gap-y-5 lg:grid-cols-4">
         <Slide direction="left" duration={2000}>
-          <div className="software-wrapper flex flex-col gap-5 ring-1 h-56 lg:h-auto ring-yellow-500 shadow-lg shadow-blue-800 justify-bottom items-bottom py-5 md:py-10 px-3 rounded-md">
-            <FaLaptopCode className="text-4xl lg:mt-10  text-yellow-500" />
-            <p className="p-y text-semibold text-lg text-gray-700">
+          <div className="software-wrapper block ring-1 h-56 lg:h-auto ring-yellow-500 shadow-lg shadow-blue-800 justify-bottom items-bottom py-5  px-3 rounded-md">
+            <FaLaptopCode className="text-4xl text-yellow-500" />
+            <p className="py-3 text-semibold text-lg text-gray-700">
               Software Development
             </p>
             <div
               onClick={() => {
                 onShowCardSoftware();
               }}
-              className="bg-yellow-500 block ring-1 ring-yellow-500 md:w-[40%] lg:w-[40%] hover:bg-yelow-700 hover:text-blue-800 hover:ring-2 hover:ring-yellow-500 rounded-md py-2 px-3"
+              className="bg-yellow-500 block mt-3 ring-1 ring-yellow-500  hover:bg-yelow-700 hover:text-blue-800 hover:ring-2 hover:ring-yellow-500 rounded-md py-2 px-3"
               >
                 <span className="cursor-pointer w-full flex flex-row items-center justify-center gap-2">View More <FaArrowRight /></span>
                 
@@ -850,16 +850,16 @@ function Service() {
         </Slide>
 
         <Slide direction="right" duration={2000}>
-          <div className="network-wrapper flex flex-col gap-5 ring-1 py-5 h-56 lg:h-auto ring-yellow-500 shadow-lg shadow-blue-800 justify-bottom items-bottom lg:py-10 px-3 rounded-md">
-            <FaNetworkWired className="text-4xl md:mt-10  text-yellow-500" />
-            <p className="p-y text-semibold text-lg text-gray-700">
+        <div className="software-networking block ring-1 h-56 lg:h-auto ring-yellow-500 shadow-lg shadow-blue-800 justify-bottom items-bottom py-5  px-3 rounded-md">
+            <FaNetworkWired className="text-4xl  text-yellow-500" />
+            <p className="py-3 text-semibold text-lg text-gray-700">
               Computer Networking
             </p>
             <div
               onClick={() => {
                 onShowCardNetworking();
               }}
-              className="bg-yellow-500 block ring-1 ring-yellow-500 md:w-[40%] lg:w-[40%] hover:bg-yelow-700 hover:text-blue-800 hover:ring-2 hover:ring-yellow-500 rounded-md py-2 px-3"
+              className="bg-yellow-500 block ring-1 mt-3 ring-yellow-500  hover:bg-yelow-700 hover:text-blue-800 hover:ring-2 hover:ring-yellow-500 rounded-md py-2 px-3"
               >
                 <span className="cursor-pointer w-full flex flex-row items-center justify-center gap-2">View More <FaArrowRight /></span>
                 
@@ -868,17 +868,17 @@ function Service() {
         </Slide>
 
         <Slide direction="left" duration={2000}>
-          <div className="hardware-wrapper flex flex-col gap-5 ring-1 py-5 h-56 lg:h-auto ring-yellow-500 shadow-lg shadow-blue-800 justify-bottom items-bottom lg:py-10 px-3 rounded-md">
-            <MdOutlineHardware className="text-4xl md:mt-10  text-yellow-500" />
-            <p className="p-y text-semibold text-lg text-gray-700">
+        <div className="hardware-wrapper block ring-1 h-56 lg:h-auto ring-yellow-500 shadow-lg shadow-blue-800 justify-bottom items-bottom py-5 px-3 rounded-md">
+            <MdOutlineHardware className="text-4xl   text-yellow-500" />
+            <p className="py-3 text-semibold text-lg text-gray-700">
               Computer Hardware and Software
             </p>
           
             <div
               onClick={() => {
                 onShowCardHardSoftWare();
-              }}
-              className="bg-yellow-500 block ring-1 ring-yellow-500 md:w-[40%] lg:w-[40%] hover:bg-yelow-700 hover:text-blue-800 hover:ring-2 hover:ring-yellow-500 rounded-md py-2 px-3"
+             }}
+              className="bg-yellow-500 block mt-3 ring-1 ring-yellow-500  hover:bg-yelow-700 hover:text-blue-800 hover:ring-2 hover:ring-yellow-500 rounded-md py-2 px-3"
             >
               <span className="cursor-pointer w-full flex flex-row items-center justify-center gap-2">View More <FaArrowRight /></span>
               
@@ -888,16 +888,16 @@ function Service() {
         </Slide>
 
         <Slide direction="right" duration={2000}>
-          <div className="security-wrapper flex flex-col gap-5 ring-1 py-5 h-56 lg:h-auto ring-yellow-500 shadow-lg shadow-blue-800 justify-bottom items-bottom lg:py-10 px-3 rounded-md">
-            <MdOutlineSecurity className="text-4xl md:mt-10  text-yellow-500" />
-            <p className="p-y text-semibold text-lg text-gray-700">
+        <div className="software-wrapper block ring-1 h-56 lg:h-auto ring-yellow-500 shadow-lg shadow-blue-800 justify-bottom items-bottom py-5 px-3 rounded-md">
+            <MdOutlineSecurity className="text-4xl   text-yellow-500" />
+            <p className="py-3 text-semibold text-lg text-gray-700">
               Computer Security
             </p>
             <div
               onClick={() => {
                 onShowCardSecurity();
               }}
-              className="bg-yellow-500 block ring-1 ring-yellow-500 md:w-[40%] lg:w-[40%] hover:bg-yelow-700 hover:text-blue-800 hover:ring-2 hover:ring-yellow-500 rounded-md py-2 px-3"
+              className="bg-yellow-500 block mt-3 ring-1 ring-yellow-500  hover:bg-yelow-700 hover:text-blue-800 hover:ring-2 hover:ring-yellow-500 rounded-md py-2 px-3"
             >
               <span className="cursor-pointer w-full flex flex-row items-center justify-center gap-2">View More <FaArrowRight /></span>
               
@@ -1354,7 +1354,7 @@ function Home() {
                 <Fade direction="left" duration={2000}>
                  <div className="text-gray-500 md:text-lg py-2 md:mx-3">
                     <p className=" pb-2 cursor-pointer flex flex-col">
-                    a Cybersecurity Specialist, Network Administrator, 
+                    a Cybersecurity Analyst, Network Administrator, 
                     IT Support Engineer, and Full-Stack Developer. With expertise in cybersecurity, 
                     networking, system administration (Linux & Windows), and web development (Laravel, React, Inertia.js), 
                     I am passionate about creating secure, efficient, and scalable IT solutions. 
