@@ -62,10 +62,10 @@ function NavigationBar() {
               <img src={Picture} className='rounded-full w-24 h-20' alt=""  />
             </div>
           <div className="bg-yellow-300 w-full h-full pt-4">
-          <div className='nav-menus py-3 flex flex-col w-full gap-4'>
+          <div className='nav-menus py-3 flex flex-col w-full gap-4 px-4'>
               <div className='flex items-center gap-4 px-3'>
               <img src={HomeIcon} className='w-6 h-6' alt=""  />
-                  <AnchorLink href="#home">
+                  <AnchorLink href="#home" onClick={()=>{setShowMenu(false)}}>
                    <span className="font-medium text-lg cursor-pointer text-blue-600 pt-4">
                      Home
                   </span>
@@ -74,7 +74,7 @@ function NavigationBar() {
              
               <div className='flex items-center gap-4 px-3'>
                   <img src={SkillIcon} className='w-6 h-6' alt=""  />
-                  <AnchorLink href="#skill">
+                  <AnchorLink href="#skill" onClick={()=>{setShowMenu(false)}}>
                    <span className="font-medium text-lg cursor-pointer text-blue-600 pt-4">
                      Skills
                   </span>
@@ -83,7 +83,7 @@ function NavigationBar() {
 
                <div className='flex items-center gap-4 px-3'>
                   <img src={ServiceIcon} className='w-6 h-6' alt=""  />
-                  <AnchorLink href="#services">
+                  <AnchorLink href="#services" onClick={()=>{setShowMenu(false)}}>
                    <span className="font-medium text-lg cursor-pointer text-blue-600 pt-4">
                      Services
                   </span>
@@ -91,7 +91,7 @@ function NavigationBar() {
               </div>
               <div className='flex items-center gap-4 px-3'>
                   <img src={PortfolioIcon} className='w-6 h-6' alt=""  />
-                  <AnchorLink href="#portfolio">
+                  <AnchorLink href="#portfolio" onClick={()=>{setShowMenu(false)}}>
                    <span className="font-medium text-lg cursor-pointer text-blue-600 pt-4">
                      Portfolio
                   </span>
@@ -99,7 +99,7 @@ function NavigationBar() {
               </div>
               <div className='flex items-center gap-4 px-3'>
                   <img src={ContactIcon} className='w-6 h-6' alt=""  />
-                  <AnchorLink href="#contact">
+                  <AnchorLink href="#contact" onClick={()=>{setShowMenu(false)}}>
                    <span className="font-medium text-lg cursor-pointer text-blue-600 pt-4">
                      Contact Me
                   </span>
@@ -108,7 +108,7 @@ function NavigationBar() {
           </div>
           <hr className='text-green-800 w-full mt-4'/>
           
-          <div className="px-4 py-3">
+          <div className="px-8 py-3">
             <p className="text-blue-600 font-medium text-xl py-2">Follow Me</p>
             <div className=" social-links flex gap-x-6 lg:gap-x-4 py-3">
               <a
